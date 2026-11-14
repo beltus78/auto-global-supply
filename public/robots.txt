@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /quote
+Disallow: /trade/account
+Disallow: /trade/verify
+
+Sitemap: https://autoglobalsupply.com/sitemap.xml

@@ -1,0 +1,404 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+@import "@fontsource/inter/latin-400.css";
+@import "@fontsource/inter/latin-500.css";
+@import "@fontsource/inter/latin-600.css";
+@import "@fontsource/barlow-condensed/latin-600.css";
+@import "@fontsource/barlow-condensed/latin-700.css";
+@import "@fontsource/ibm-plex-mono/latin-400.css";
+@import "@fontsource/ibm-plex-mono/latin-500.css";
+
+@theme inline {
+  --font-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --color-paper: var(--paper);
+  --color-panel: var(--panel);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-steel: var(--steel);
+  --color-steel-2: var(--steel-2);
+  --color-steel-3: var(--steel-3);
+  --color-steel-line: var(--steel-line);
+  --color-steel-text: var(--steel-text);
+  --color-steel-muted: var(--steel-muted);
+  --color-signal: var(--signal);
+  --color-signal-deep: var(--signal-deep);
+  --color-signal-ink: var(--signal-ink);
+  --color-ok: var(--ok);
+  --color-danger: var(--danger);
+  --color-whatsapp: var(--whatsapp);
+}
+
+:root {
+  --paper: oklch(0.972 0.003 250);
+  --panel: oklch(1 0 0);
+  --ink: oklch(0.21 0.014 255);
+  --ink-2: oklch(0.34 0.014 255);
+  --muted: oklch(0.48 0.012 255);
+  --line: oklch(0.89 0.006 255);
+  --line-strong: oklch(0.78 0.008 255);
+  --steel: oklch(0.2 0.014 255);
+  --steel-2: oklch(0.255 0.015 255);
+  --steel-3: oklch(0.32 0.016 255);
+  --steel-line: oklch(1 0 0 / 0.11);
+  --steel-text: oklch(0.96 0.004 250);
+  --steel-muted: oklch(0.74 0.012 255);
+  --signal: oklch(0.86 0.172 92);
+  --signal-deep: oklch(0.78 0.165 85);
+  --signal-ink: oklch(0.22 0.03 90);
+  --ok: oklch(0.55 0.13 155);
+  --danger: oklch(0.55 0.2 27);
+  --whatsapp: oklch(0.62 0.16 150);
+}
+
+@layer base {
+  * {
+    border-color: var(--line);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.005em;
+    line-height: 1.02;
+  }
+  :focus-visible {
+    outline: 2px solid var(--signal-deep);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: var(--signal);
+    color: var(--signal-ink);
+  }
+}
+
+@layer components {
+  .wrap {
+    width: 100%;
+    max-width: 82rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 640px) {
+    .wrap {
+      padding-inline: 1.5rem;
+    }
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 2.75rem;
+    padding-inline: 1.15rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.12s, color 0.12s, border-color 0.12s, transform 0.12s;
+  }
+  .btn:active {
+    transform: translateY(1px);
+  }
+  .btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  .btn-sm {
+    height: 2.15rem;
+    padding-inline: 0.8rem;
+    font-size: 0.875rem;
+  }
+  .btn-lg {
+    height: 3.25rem;
+    padding-inline: 1.6rem;
+    font-size: 1.125rem;
+  }
+  .btn-signal {
+    background: var(--signal);
+    color: var(--signal-ink);
+  }
+  .btn-signal:hover {
+    background: var(--signal-deep);
+  }
+  .btn-dark {
+    background: var(--steel);
+    color: var(--steel-text);
+  }
+  .btn-dark:hover {
+    background: var(--steel-3);
+  }
+  .btn-line {
+    background: var(--panel);
+    color: var(--ink);
+    border-color: var(--line-strong);
+  }
+  .btn-line:hover {
+    border-color: var(--ink);
+  }
+  .btn-ghost-dark {
+    color: var(--steel-text);
+    border-color: oklch(1 0 0 / 0.35);
+  }
+  .btn-ghost-dark:hover {
+    background: var(--steel-text);
+    color: var(--steel);
+  }
+  .field {
+    display: block;
+    width: 100%;
+    height: 2.75rem;
+    padding: 0 0.75rem;
+    background: var(--panel);
+    color: var(--ink);
+    border: 1px solid var(--line-strong);
+    border-radius: 2px;
+    font-size: 0.9375rem;
+  }
+  textarea.field {
+    height: auto;
+    min-height: 6.5rem;
+    padding-block: 0.6rem;
+  }
+  select.field {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23444b57' stroke-width='1.8'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    padding-right: 2.2rem;
+  }
+  .field:focus {
+    outline: none;
+    border-color: var(--ink);
+    box-shadow: 0 0 0 3px oklch(0.86 0.172 92 / 0.55);
+  }
+  .field:disabled {
+    background: var(--paper);
+    color: var(--muted);
+  }
+  .label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 1.4rem;
+    height: 2px;
+    background: var(--signal-deep);
+  }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 2px;
+  }
+  .mono {
+    font-family: var(--font-mono);
+    letter-spacing: 0;
+  }
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    height: 1.4rem;
+    padding-inline: 0.45rem;
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border: 1px solid var(--line-strong);
+    border-radius: 2px;
+    color: var(--ink-2);
+    background: var(--panel);
+    white-space: nowrap;
+  }
+  .prose-ags p {
+    margin-top: 0.85rem;
+    color: var(--ink-2);
+  }
+  .prose-ags h2 {
+    margin-top: 2.2rem;
+    font-size: 1.6rem;
+  }
+  .prose-ags h3 {
+    margin-top: 1.6rem;
+    font-size: 1.2rem;
+  }
+  .prose-ags ul, .prose-ags ol {
+    margin-top: 0.85rem;
+    padding-left: 1.2rem;
+    color: var(--ink-2);
+  }
+  .prose-ags ul {
+    list-style: square;
+  }
+  .prose-ags ol {
+    list-style: decimal;
+  }
+  .prose-ags li {
+    margin-top: 0.35rem;
+  }
+  .prose-ags li::marker {
+    color: var(--signal-deep);
+  }
+  .prose-ags a {
+    text-decoration: underline;
+    text-decoration-color: var(--signal-deep);
+    text-underline-offset: 3px;
+  }
+  .prose-ags strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+}
+@utility grid-steel {
+  background-image:
+    linear-gradient(oklch(1 0 0 / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(1 0 0 / 0.045) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+@utility grid-paper {
+  background-image:
+    linear-gradient(oklch(0.21 0.014 255 / 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.21 0.014 255 / 0.05) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+@utility hazard {
+  background-image: repeating-linear-gradient(-45deg, var(--signal) 0 10px, var(--steel) 10px 20px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ───────────── Motion system ─────────────
+   Everything below is progressive: content is fully visible without JS,
+   and prefers-reduced-motion (above) collapses every animation. */
+
+@keyframes ags-rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes ags-wipe {
+  from { clip-path: inset(0 99% 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+@keyframes ags-draw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes ags-scan {
+  0% { transform: translateY(-10%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(1100%); opacity: 0; }
+}
+@keyframes ags-stripes {
+  to { background-position: 56px 0; }
+}
+@keyframes ags-marquee {
+  to { transform: translateX(-50%); }
+}
+@keyframes ags-blink {
+  0%, 60% { opacity: 1; }
+  61%, 100% { opacity: 0; }
+}
+@keyframes ags-grid-drift {
+  to { background-position: 28px 28px; }
+}
+@keyframes ags-pulse {
+  0% { box-shadow: 0 0 0 0 oklch(0.86 0.172 92 / 0.55); }
+  100% { box-shadow: 0 0 0 10px oklch(0.86 0.172 92 / 0); }
+}
+
+/* Scroll reveal: elements start hidden only once the page knows JS is running. */
+html.js [data-reveal]:not(.is-in) { opacity: 0; transform: translateY(18px); }
+html.js [data-reveal].is-in { animation: ags-rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(var(--i, 0) * 70ms); }
+html.js [data-reveal="wipe"]:not(.is-in) { opacity: 1; transform: none; clip-path: inset(0 99% 0 0); }
+html.js [data-reveal="wipe"].is-in { animation: ags-wipe 0.9s cubic-bezier(0.7, 0, 0.2, 1) both; animation-delay: calc(var(--i, 0) * 90ms); }
+
+/* Blueprint drawing: illustrations trace themselves in when they enter the viewport. */
+.blueprint svg > * { stroke-dasharray: 520; stroke-dashoffset: 0; }
+html.js .blueprint:not(.is-drawn) svg > * { stroke-dashoffset: 520; }
+html.js .blueprint.is-drawn svg > * { animation: ags-draw 1.6s cubic-bezier(0.55, 0, 0.25, 1) both; }
+html.js .blueprint.is-drawn svg > .a { animation-delay: 0.45s; animation-duration: 1.2s; }
+
+/* Inspection scan line on hover. */
+.blueprint .scan { position: absolute; inset-inline: 0; top: 0; height: 9%; pointer-events: none; opacity: 0;
+  background: linear-gradient(to bottom, transparent, oklch(0.86 0.172 92 / 0.28) 70%, oklch(0.86 0.172 92 / 0.9) 96%, transparent); }
+.group:hover .blueprint .scan, .blueprint:hover .scan { animation: ags-scan 1.5s linear infinite; }
+.group:hover .blueprint svg, .blueprint:hover svg { color: var(--signal); transition: color 0.3s; }
+
+/* Moving hazard stripes. */
+.hazard-run { background-image: repeating-linear-gradient(-45deg, var(--signal) 0 14px, var(--steel) 14px 28px); background-size: 56px 100%; animation: ags-stripes 1.6s linear infinite; }
+
+/* Background grid that slowly drifts behind dark headers. */
+.grid-drift { animation: ags-grid-drift 6s linear infinite; }
+
+/* Ticker band. */
+.marquee { overflow: hidden; mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent); }
+.marquee > div { display: flex; width: max-content; animation: ags-marquee 48s linear infinite; }
+.marquee:hover > div { animation-play-state: paused; }
+
+/* Buttons: signal fill wipes in from the left. */
+.btn-dark, .btn-line, .btn-ghost-dark { background-image: linear-gradient(var(--signal), var(--signal)); background-repeat: no-repeat; background-size: 0% 100%; transition: background-size 0.28s cubic-bezier(0.7, 0, 0.2, 1), color 0.2s, border-color 0.2s, transform 0.12s; }
+.btn-dark:hover, .btn-line:hover, .btn-ghost-dark:hover { background-size: 100% 100%; color: var(--signal-ink); border-color: var(--signal); }
+.btn-dark:hover { background-color: var(--steel); }
+
+/* Corner brackets tighten on card hover. */
+.bracket { position: relative; }
+.bracket::before, .bracket::after { content: ""; position: absolute; width: 14px; height: 14px; border-color: var(--signal-deep); opacity: 0; transition: all 0.25s cubic-bezier(0.2, 0.7, 0.2, 1); pointer-events: none; z-index: 2; }
+.bracket::before { top: 8px; left: 8px; border-top: 2px solid; border-left: 2px solid; }
+.bracket::after { bottom: 8px; right: 8px; border-bottom: 2px solid; border-right: 2px solid; }
+.bracket:hover::before { top: -4px; left: -4px; opacity: 1; }
+.bracket:hover::after { bottom: -4px; right: -4px; opacity: 1; }
+
+.cursor-blink::after { content: "▍"; margin-left: 2px; color: var(--signal); animation: ags-blink 1s steps(1) infinite; }
+.pulse-dot { animation: ags-pulse 1.8s ease-out infinite; }
+
+/* Header compresses once the page scrolls. */
+header[data-scrolled="true"] .header-main { height: 3.75rem; }
+.header-main { transition: height 0.25s ease; }

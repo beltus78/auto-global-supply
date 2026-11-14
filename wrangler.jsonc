@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "auto-global-supply",
+  "main": "src/server.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  "assets": { "directory": "./dist/client", "not_found_handling": "none" },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "auto-global-supply", "database_id": "cc74d12c-1635-4c19-8411-ccbd35d37243", "migrations_dir": "migrations" }
+  ],
+  "r2_buckets": [
+    { "binding": "MEDIA", "bucket_name": "auto-global-supply-media" }
+  ],
+  "vars": {
+    "SITE_URL": "https://autoglobalsupply.com",
+    "MAIL_FROM": "Auto Global Supply <noreply@notify.autoglobalsupply.com>",
+    "SALES_EMAIL": "sales@autoglobalsupply.com"
+  }
+}
