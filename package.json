@@ -19,7 +19,8 @@
     "catalogue": "node scripts/build-catalogue.mjs",
     "db:seed:local": "wrangler d1 execute DB --local --file=seed/catalogue.sql",
     "db:seed:remote": "wrangler d1 execute DB --remote --yes --file=seed/catalogue.sql",
-    "golive": "npm run db:migrate:remote && npm run db:seed:remote && npm run deploy"
+    "golive": "vite build && node scripts/deploy-ci.mjs",
+    "deploy:ci": "node scripts/deploy-ci.mjs"
   },
   "dependencies": {
     "@fontsource/inter": "^5.3.0",
