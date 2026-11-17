@@ -17,8 +17,11 @@ Hub copy, FAQs and linked guides: src/content/hubs.ts. Most requested configurat
 ## Where things live
 - Guides: src/content/guides.ts (append an object; `published: "YYYY-MM-DD"`; body markdown with ##, -, 1., **bold**, [text](/link)).
 - Static page copy: src/content/pages.ts. FAQ page: FAQ in the same file.
-- Catalogue: generated. Edit scripts/data-vehicles.mjs (makes, engines, vehicles, gearboxes), scripts/data-parts.mjs (part types) and scripts/data-extra.mjs (individual listings), then `npm run catalogue`. This rewrites src/data/taxonomy.json and seed/catalogue.sql. Commit both. On deploy, `npm run deploy:ci` syncs the live D1 table automatically (inserts new listings, removes dropped ones, updates changed names/search text), so no manual reseed is needed. Never rename existing listings: product URLs come from names. Never run a full reseed (FORCE_RESEED) without the owner: it writes ~100k rows.
+- Catalogue: generated. Edit scripts/data-vehicles.mjs (makes, engines, vehicles, gearboxes), scripts/data-parts.mjs (part types) and scripts/data-extra.mjs (individual listings), then `npm run catalogue`. This rewrites src/data/taxonomy.json, src/data/catalogue-index.json and seed/catalogue.sql. Commit all three. On deploy, `npm run deploy:ci` syncs the live D1 table automatically (inserts new listings, removes dropped ones, updates changed names/search text), so no manual reseed is needed. Never rename existing listings: product URLs come from names. Never run a full reseed (FORCE_RESEED) without the owner: it writes ~100k rows.
 - Search terms that fail because of wording (e.g. "hood" vs "bonnet") are fixed by adding words to SYN in scripts/build-catalogue.mjs.
+
+## D1 usage (important)
+- Catalogue filtering, counts, facets, related parts, hub tables and the sitemap run in memory from src/data/catalogue-index.json (src/lib/catalog-index.server.ts). D1 is read only for the rows a page shows (by slug), product pages (by slug), forms and the search log. Never add queries that scan or COUNT/GROUP BY the whole products table on page views: the account is limited to 5M D1 row reads per day on the free plan.
 
 ## Client search log
 - Visitors' catalogue searches are stored in D1 table `search_log` (q, make, model, gen, engine, category, part, results, path, country, created_at), sent by the browser after results render (POST /api/search-log). Rows with results = 0 are the main signal. Also read `part_requests` (part_name, make, model, year, engine, oem) for what customers asked for by form.
