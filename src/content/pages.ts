@@ -109,7 +109,7 @@ export const PAGES: Record<string, PageContent> = {
   returns: {
     path: "/returns",
     title: "Returns Information | Auto Global Supply",
-    description: "Our returns process for incorrect, damaged or faulty parts, including timescales and freight responsibility.",
+    description: "How returns work at Auto Global Supply for incorrect, damaged or faulty parts: inspecting on arrival, the review process, fitted parts and refunds.",
     eyebrow: "After sales",
     h1: "Returns information",
     intro: "Return and cancellation terms vary by supplier, part condition and order type. The applicable terms are stated in the quotation before an order is confirmed.",
@@ -125,7 +125,7 @@ export const PAGES: Record<string, PageContent> = {
   warranty: {
     path: "/warranty",
     title: "Warranty Information | Auto Global Supply",
-    description: "How warranty works on engines, gearboxes and components, what is covered and what invalidates cover.",
+    description: "How warranty works on engines, gearboxes and other parts from Auto Global Supply: product-specific terms, checks before fitting and making a claim.",
     eyebrow: "Cover",
     h1: "Warranty",
     intro: "Warranty length and terms depend on the part and its condition. The exact cover for your order is stated in your written quotation before you pay.",
@@ -139,7 +139,7 @@ export const PAGES: Record<string, PageContent> = {
   terms: {
     path: "/terms",
     title: "Terms & Conditions | Auto Global Supply",
-    description: "Terms covering quotations, orders, payment, delivery, risk and liability for parts supplied by us.",
+    description: "Auto Global Supply terms for quotations, orders, payment, catalogue information, fitment, delivery, warranty, returns and trade accounts.",
     eyebrow: "Legal",
     h1: "Terms & conditions",
     intro: "These general terms explain how enquiries and quotations are handled. The written quotation records the specific terms for an order.",
@@ -157,7 +157,7 @@ export const PAGES: Record<string, PageContent> = {
   privacy: {
     path: "/privacy",
     title: "Privacy Policy | Auto Global Supply",
-    description: "What personal data we collect through enquiries and accounts, how we use it and how to contact us about it.",
+    description: "What personal data Auto Global Supply collects through enquiries and trade accounts, how it is used and shared, how long it is kept, and your rights.",
     eyebrow: "Legal",
     h1: "Privacy policy",
     intro: "This policy explains what we collect when you enquire or apply for a trade account.",

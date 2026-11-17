@@ -52,11 +52,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Automotive parts import, export and supply. Send your VIN or part number for a quotation." },
       { property: "og:site_name", content: "Auto Global Supply" },
       { property: "og:type", content: "website" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      { rel: "icon", href: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
+      { rel: "manifest", href: "/site.webmanifest" },
       { rel: "preload", href: displayFont, as: "font", type: "font/woff2", crossOrigin: "anonymous" },
     ],
     scripts: [

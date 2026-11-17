@@ -2,8 +2,35 @@ import { BUSINESS } from "./business";
 
 const abs = (path: string) => `${BUSINESS.website}${path.startsWith("/") ? path : `/${path}`}`;
 
+// [text to add, word that means the description already says it]
+const PADDING: [string, RegExp][] = [
+  [" Fitment is confirmed against your VIN before quoting.", /\bVIN\b/],
+  [" Worldwide shipping from our supplier network.", /shipping/i],
+  [" Written quotation before purchase.", /quot/i],
+  [" Auto Global Supply.", /Auto Global Supply/],
+];
+
+/**
+ * Keeps meta descriptions inside what search results show (about 120–160 characters):
+ * long ones are cut at the last full sentence (or word) that fits, short ones get a closing line.
+ */
+export function fitDescription(text: string, min = 120, max = 160): string {
+  let d = text.replace(/\s+/g, " ").trim();
+  if (d.length > max) {
+    const cut = d.slice(0, max + 1);
+    const sentence = cut.lastIndexOf(". ");
+    d = sentence >= min - 20 ? cut.slice(0, sentence + 1) : `${cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:.\s]+$/, "")}.`;
+  }
+  for (const [pad, has] of PADDING) {
+    if (d.length >= min) break;
+    if (!has.test(d) && d.length + pad.length <= max) d += pad;
+  }
+  return d;
+}
+
 /** Standard head for a page: title, description, canonical and Open Graph. */
 export function pageHead(opts: { title: string; description: string; path: string; noindex?: boolean; ld?: unknown[] }) {
+  opts = { ...opts, description: fitDescription(opts.description) };
   // Keep titles inside what search results display: drop the brand suffix when it would push past ~65 characters.
   const title = opts.title.includes(BUSINESS.brand) || opts.title.length > 44 ? opts.title : `${opts.title} | ${BUSINESS.brand}`;
   return {

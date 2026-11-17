@@ -31,7 +31,7 @@ export const gearboxBy = by(GEARBOXES, "slug");
 export const years = (v: Pick<Vehicle, "from" | "to">) => `${v.from}–${v.to || "present"}`;
 export const fuelName = (f: string) => (f === "D" ? "Diesel" : "Petrol");
 export const aspName = (a: string) => (a === "T" ? "Turbocharged" : a === "S" ? "Supercharged" : "Naturally aspirated");
-export const CONDITION_NAMES: Record<string, string> = { N: "New", U: "Used, tested", R: "Remanufactured" };
+export const CONDITION_NAMES: Record<string, string> = { N: "New", U: "Used and tested", R: "Remanufactured" };
 export const conditions = (pt: PartType | undefined) => (pt?.cond ?? "N").split("").map((c) => CONDITION_NAMES[c] ?? c);
 
 /** Models of a make with their generations, in catalogue order. */
@@ -69,7 +69,7 @@ export function fitmentLine(p: Pick<ProductRow, "veh" | "eng" | "gbx">): string 
 
 export function productDescription(p: ProductRow): string {
   const pt = partTypeBy.get(p.ptype);
-  const cond = conditions(pt).join(", ").toLowerCase();
-  const base = `${p.name}. Offered ${cond}, subject to availability. Send your VIN or part number and we confirm fitment before quoting. Worldwide shipping.`;
-  return base.length > 158 ? `${p.name}. Offered ${cond}. Send your VIN for fitment confirmation and a quotation.` : base;
+  const c = conditions(pt).map((x) => x.toLowerCase());
+  const cond = c.length > 1 ? `${c.slice(0, -1).join(", ")} or ${c[c.length - 1]}` : c[0];
+  return `${p.name}, supplied ${cond} to order. Fitment confirmed against your VIN before quoting. Worldwide shipping.`;
 }

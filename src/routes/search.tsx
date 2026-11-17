@@ -13,7 +13,7 @@ export const Route = createFileRoute("/search")({
   head: ({ match }) =>
     pageHead({
       title: "Search Automotive Parts | Auto Global Supply",
-      description: "Search the Auto Global Supply catalogue by part name, part number, engine code or vehicle model.",
+      description: "Search 15,000+ automotive parts by part name, part number, engine code or vehicle model, then send your list for a written quotation with shipping.",
       path: "/search",
       noindex: Object.keys(match.search).length > 0,
     }),

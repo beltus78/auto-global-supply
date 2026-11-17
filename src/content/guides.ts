@@ -5,7 +5,7 @@ export const GUIDES: Guide[] = [
     slug: "how-to-identify-the-correct-bmw-engine",
     title: "How to Identify the Correct BMW Engine",
     excerpt: "The engine code is stamped on the block and encoded in your VIN. Here is how to read both before ordering.",
-    description: "Read your BMW engine code and VIN correctly before buying a replacement engine. A practical identification guide.",
+    description: "Read your BMW engine code and VIN correctly before buying a replacement engine: where the code is, why the index matters and what photos to send.",
     tags: ["BMW", "Engines"],
     published: "2026-09-12",
     body: `Ordering the wrong engine is expensive, and BMW uses several engine families that look similar from the outside.
@@ -26,7 +26,7 @@ Turbocharger position, wiring plugs and mounting brackets vary between applicati
     slug: "how-to-find-your-oem-part-number",
     title: "How to Find Your OEM Part Number",
     excerpt: "OEM numbers are the fastest way to order the right part. Here is where to find them.",
-    description: "Where OEM part numbers are printed, why they matter and what to send if you cannot find one.",
+    description: "Where OEM part numbers are printed on car parts, why they matter more than the part name, and what to send us if you cannot find the number.",
     tags: ["Guides", "OEM"],
     published: "2026-09-12",
     body: `An OEM number identifies a part exactly as the manufacturer catalogued it.
@@ -46,7 +46,7 @@ Send photos of the part from several angles, plus your VIN. We can usually ident
     slug: "used-engine-vs-reconditioned-engine",
     title: "Used Engine vs Reconditioned Engine",
     excerpt: "The difference matters for price, warranty and expected life.",
-    description: "What separates a used engine from a reconditioned one, and how to choose between them.",
+    description: "Used engine or reconditioned engine? What separates them on price, condition and expected life, and how to choose the right one for your car.",
     tags: ["Engines", "Buying"],
     published: "2026-09-12",
     body: `## Used engine
@@ -64,7 +64,7 @@ Always agree the test and warranty terms in writing before payment.`,
     slug: "how-to-check-engine-compatibility-before-buying",
     title: "How to Check Engine Compatibility Before Buying",
     excerpt: "A short checklist that prevents the most common fitment mistakes.",
-    description: "A five-point checklist for verifying engine fitment before you pay.",
+    description: "A five-point checklist for confirming replacement engine fitment before you pay: VIN, engine code and index, gearbox type, ancillaries and electronics.",
     tags: ["Guides", "Compatibility"],
     published: "2026-09-12",
     body: `Before you confirm an order, check these five points.
@@ -81,7 +81,7 @@ Send us the details and we will confirm fitment in writing before dispatch.`,
     slug: "what-information-to-send-when-ordering-a-spare-part",
     title: "What Information Should You Send When Ordering a Spare Part?",
     excerpt: "Send these details and we can usually quote the same day.",
-    description: "The information our team needs to quote an auto part accurately and quickly.",
+    description: "The information our parts team needs to quote an auto part accurately and quickly: VIN, part number, photos, quantity and destination country.",
     tags: ["Guides", "Ordering"],
     published: "2026-09-12",
     body: `To quote accurately we need:
@@ -101,7 +101,7 @@ If you do not know the technical name of the part, send a photo. That is usually
     slug: "how-to-import-auto-parts-from-china",
     title: "How to Import Auto Parts From China",
     excerpt: "Packaging, freight, documents and lead times explained simply.",
-    description: "Packaging, freight options, documents and lead times when importing auto parts from China.",
+    description: "Importing auto parts from China: how engines and smaller parts are packed, air and sea freight options, shipping documents and realistic lead times.",
     tags: ["Export", "Guides"],
     published: "2026-09-12",
     body: `## Packaging
@@ -146,7 +146,7 @@ We supply the kit. Fitting is carried out by your own workshop, so agree the lab
     slug: "front-cut-or-individual-parts-after-front-end-damage",
     title: "Front Cut or Individual Parts After Front-End Damage?",
     excerpt: "After a frontal impact you can buy every part separately or one complete front end. Here is how to decide.",
-    description: "When a complete front cut makes sense after front-end damage, what it includes and what to confirm before ordering.",
+    description: "Front cut or individual parts after front-end damage? When a complete front end makes sense, what it includes and what to confirm before ordering.",
     tags: ["Body", "Buying"],
     published: "2026-11-09",
     body: `A front cut is the complete front section of a donor vehicle: typically the bumper, headlights, bonnet, wings, front panel and radiator pack, supplied together.
@@ -173,7 +173,7 @@ Send your VIN and photographs of the damage, and we will quote both routes where
     slug: "air-suspension-faults-which-part-do-you-need",
     title: "Air Suspension Faults: Which Part Do You Need?",
     excerpt: "A car sitting low can mean a strut, a compressor or a valve block. Replacing the wrong one is a common mistake.",
-    description: "How to tell whether an air suspension fault points to a strut, compressor or valve block before ordering parts.",
+    description: "Car sitting low? How to tell whether an air suspension fault points to an air strut, the compressor or the valve block before you order parts.",
     tags: ["Suspension", "Guides"],
     published: "2026-11-09",
     body: `Air suspension parts are among the most requested items for large SUVs and saloons. The symptoms overlap, so it helps to narrow the fault before ordering.
@@ -314,6 +314,271 @@ Interior upgrade packages and VIP van conversions are specified to your layout. 
 
 ## Next step
 Browse [all car interior parts](/interior-parts) by brand and model, or [send a request](/request-a-part) with your VIN and photographs.`,
+  },
+  {
+    slug: "mercedes-s-class-w222-dashboard-peeling-replacement",
+    title: "Mercedes S-Class W222 Dashboard Peeling: Repair or Replace?",
+    excerpt: "The leather-covered upper dashboard on some W222 S-Class cars lifts and curls after long spells of heat. Here are your options and what to check before buying a replacement.",
+    description: "W222 S-Class dashboard lifting, curling or peeling? Compare re-bonding, a used dashboard and a new one, and see what to check before you order.",
+    tags: ["Mercedes-Benz", "Dashboards"],
+    published: "2026-11-17",
+    body: `The Mercedes-Benz S-Class W222 was built from 2013 to 2020, with a facelift in 2017. Many cars have a leather-covered upper dashboard, and owners in hot climates regularly report the same fault: the leather starts to lift along the edges, curls back near the windscreen and wrinkles across the top of the dashboard. There are usually no tears. The covering simply lets go of the panel underneath.
+
+If that is happening to your car, you have three routes. Which one makes sense depends on how far the damage has gone, how long you plan to keep the car and how close the replacement needs to match.
+
+## Why the dashboard lifts
+The upper dashboard is a moulded panel with leather bonded over it. Long periods of strong sun and high cabin temperature soften the adhesive, and the leather shrinks slightly as it dries out. Once an edge lifts, heat gets under it and the problem spreads. Parking in shade and using a reflective windscreen shade slows it down, but it does not reverse it.
+
+## Option 1: re-bond the existing covering
+An experienced trimmer can sometimes soften the leather and glue it back down. On the W222 this is not a quick job. The dashboard top sits under the windscreen and around the display, so the panel normally has to come out to do it properly.
+
+- **Best for:** early lifting along one edge, with the leather still in good condition.
+- **Watch out for:** leather that has shrunk. If it no longer covers the panel, re-bonding will not look right.
+
+## Option 2: a used dashboard in the original design
+A good used dashboard from a donor car is usually the most economical way to get an undamaged surface. It keeps the cabin exactly as it was.
+
+- Ask for **photographs of the actual unit**, especially the leather along the windscreen edge and around the display.
+- Check the **trim colour and stitching** match the rest of your interior.
+- Confirm whether the part is the **complete dashboard assembly** or only the upper section. Listings are not always clear.
+- A used dashboard from a car that lived in the same climate may already be starting to lift. Look closely at the edges in the photos.
+
+## Option 3: a new dashboard
+A new dashboard suits a car you plan to keep for years, or when the existing one also has other damage. Availability and lead time depend on the exact version, so the quotation states both.
+
+## Pre-facelift or facelift: does it matter?
+Yes. The W222 changed in 2017, and the dashboard was updated with it. When ordering a replacement in the original design, match it to your car's model year and equipment. Some owners use the opportunity to fit the later style. That is a conversion rather than a straight swap: the instrument cluster, displays, wiring and coding all need to suit, and it should be planned with your installer.
+
+## What to check before you order
+1. **VIN.** It settles the version, trim and equipment.
+2. **Steering side.** Left- and right-hand drive dashboards are different parts.
+3. **Leather colour and stitching.** Photograph the current dashboard in daylight.
+4. **Head-up display.** Cars with a head-up display have a different dashboard opening.
+5. **Speaker and sensor openings.** Premium sound systems and sun sensors change the cut-outs.
+6. **Trim strips.** Wood, aluminium or piano black inlays may need to be ordered separately.
+
+## Fitting
+Replacing a W222 dashboard is a workshop job. The windscreen area, airbags, displays and wiring are all involved. Agree the labour and the timescale with your installer before you order, and ask whether they have done one on this model before.
+
+## While the dashboard is out
+If the dashboard is coming out anyway, it is a good moment to deal with anything else in that area: a failing display, a worn trim strip or a cracked vent. Our [W222 parts list](/parts?make=mercedes-benz&model=s-class&gen=w222) shows the interior and electrical parts we supply for this model.
+
+## Common questions
+**Will the new dashboard lift in the same way?** Any leather-covered dashboard can lift if the car is kept in strong heat for long periods. A new panel starts with fresh adhesive, and shade, a reflective windscreen shade and leather care all slow the process down.
+
+**Can I fit a dashboard from a different S-Class version?** Only within the same layout. The coupe and convertible (C217 and A217) are separate models and should be matched on their own, and Maybach and AMG versions can carry different trim. The VIN is the safest guide.
+
+**Do I lose any settings when the dashboard is replaced?** The dashboard panel itself stores nothing. Displays, the instrument cluster and control units do, so keep the originals unless they are also being replaced, and ask your workshop to check for fault codes after fitting.
+
+**Is it worth replacing the dashboard on an older car?** If the rest of the interior is in good condition, a used dashboard in the original design usually restores the cabin for the lowest cost. If the car also needs seats, trim or displays, look at the interior as a whole before deciding. Our [interior parts for Mercedes-Benz](/interior-parts/mercedes-benz) page lists the options by model.
+
+## How the parts are shipped
+A dashboard is large and easy to damage. We ship dashboards crated or in reinforced cartons, with the leather surface protected and loose trims packed separately. Air freight suits an urgent single dashboard. Sea freight is more economical when the dashboard ships with other parts. The method and cost are stated in the quotation.
+
+## Getting a quotation
+Send your VIN, the steering side, photographs of the current dashboard and the route you prefer: used, new or a later-style conversion. Browse [Mercedes-Benz dashboards](/dashboards/mercedes-benz) or all [dashboards and dashboard kits](/dashboards), and [request a quote](/request-a-part) when you are ready.`,
+  },
+  {
+    slug: "mercedes-v-class-vip-interior-conversion-guide",
+    title: "Mercedes V-Class VIP Interior Conversion: Planning Guide",
+    excerpt: "Captain chairs, a partition, a new roof lining, lighting and screens. How to plan a V-Class or Vito VIP cabin so the parts arrive complete and fit your van.",
+    description: "Planning a Mercedes V-Class or Vito W447 VIP interior conversion? Seat layout, partition, trim, lighting, electrics and what to send for a quotation.",
+    tags: ["Mercedes-Benz", "Interior", "Upgrades"],
+    published: "2026-11-17",
+    body: `The Mercedes-Benz V-Class and Vito (W447) are the most common base for VIP and executive van interiors. A full conversion replaces most of the passenger cabin: seats, partition, roof and floor trim, lighting, tables and entertainment equipment. Done well, it turns a people carrier into a mobile office or a chauffeur vehicle. Done without a plan, it leads to parts that do not fit, wiring that has to be redesigned and weeks of delay.
+
+This guide covers what to decide before you request a quotation.
+
+## 1. Decide what the van is for
+The use decides the layout.
+
+- **Chauffeur and airport transfers:** two or four captain chairs facing forward, a partition with a screen, and easy entry through the sliding doors.
+- **Mobile office or meetings:** face-to-face seating, a fold-out table, power outlets and a screen.
+- **Family or private use:** more seats, more storage, and simpler trim that is easy to clean.
+
+Write down how many passengers must travel and where the luggage goes. Every other choice follows from that.
+
+## 2. Choose the seat layout
+Captain chairs are the centre of most VIP builds. Each chair adds weight and needs a secure mounting. Before you choose a layout, confirm:
+
+- the wheelbase of your van (compact, long or extra long), because it decides how many rows fit
+- whether the existing seat rails will be used or new mounting points are needed
+- which functions the chairs need: electric recline, leg rest, heating, ventilation or massage
+- whether the seats must face forward for the routes you drive. Rules on seating and seat belts vary by country, so check what applies where the van is registered.
+
+## 3. Partition, roof and floor
+- **Partition:** separates the driver's cab from the passengers. It can include a screen, a sliding window or a privacy glass panel, and it needs wiring for whatever it carries.
+- **Roof lining:** a new headliner, often with a starlight or ambient lighting design, and the routing for lights and air vents.
+- **Floor:** new flooring or a raised floor that hides wiring. Raising the floor changes the headroom, so measure it first.
+
+## 4. Electrics and equipment
+This is where most conversions run into trouble. Every screen, light, fridge, power outlet and seat motor draws power and needs a route back to the battery. Plan:
+
+- the total electrical load and whether a second battery is needed
+- where the wiring will run, and how it will be fused
+- which controls the passengers use: a touch panel, switches or a phone app
+- how the new equipment connects to the van's existing systems, if at all
+
+Your installer should approve the electrical plan before the parts are ordered.
+
+## 5. The dashboard
+Many owners combine a VIP rear cabin with the later-style dashboard at the front. A [W447 dashboard upgrade](/guides/mercedes-w447-dashboard-upgrade-guide) is a separate conversion with its own wiring and coding, so tell us at the start if you want both.
+
+## 6. Kit contents
+Ask for a component list, not a description. A good quotation lists every seat, panel, light, screen, cable set and fixing in the package, so you and your installer can check it against the plan. We supply the parts. Fitting is carried out by your own workshop.
+
+## Common mistakes to avoid
+- **Ordering seats before measuring.** Chair width, recline angle and leg rests all need space. Measure the cabin from the partition position to the tailgate first.
+- **Forgetting access.** Wide chairs can block the path to the rear row or the luggage area. Check how passengers get in and out through the sliding doors.
+- **Leaving the electrics to the end.** Wiring routes are much easier to plan before the roof lining and floor go in.
+- **Mixing styles from different suppliers.** Leather colour, stitching and wood or carbon finishes rarely match exactly between suppliers. Ordering the trim as one package keeps the cabin consistent.
+- **Ignoring weight.** Captain chairs, a partition, a fridge and a second battery add a lot of weight. Check the van's payload with your installer.
+
+## Timeline and shipping
+A full conversion is specified, supplied and then installed, and each stage takes time. Seats and trim in a particular colour may be made to order. Large items such as chairs and partitions ship crated, usually by sea freight, so the quotation states the lead time and the shipping method for the whole package. If the van is needed by a fixed date, tell us at the start so we can plan around it.
+
+## After the conversion
+Keep the component list and the wiring plan with the van. They make later repairs and changes much easier, and they help when the van is sold.
+
+## What to send us
+- VIN, model (V-Class, Vito Tourer or Vito panel van) and wheelbase
+- the seat layout you want, ideally as a simple sketch
+- photographs of the current interior
+- the equipment list: screens, fridge, tables, lighting, sound
+- the country where the van is registered
+
+See [VIP interior conversions](/parts?part=vip-interior-conversion), the parts we list for the [V-Class W447](/parts?make=mercedes-benz&model=v-class&gen=w447) and examples on our [parts and upgrades page](/parts-upgrades). Browse all [interior parts](/interior-parts), then [request a quote](/request-a-part) with your plan.`,
+  },
+  {
+    slug: "replacement-car-seats-wiring-airbags-fitment",
+    title: "Replacement Car Seats: Wiring, Airbags & Fitment Checklist",
+    excerpt: "Modern seats carry motors, heaters, sensors and airbags. Use this checklist before you buy replacement front seats or a complete set.",
+    description: "Buying replacement car seats? Check airbags, occupant sensors, wiring plugs, functions, rails and trim before you order front seats or a full set.",
+    tags: ["Interior", "Seats", "Buying"],
+    published: "2026-11-17",
+    body: `A front seat used to be a frame, foam and a cover. On a modern car it is also a piece of electrical equipment: motors, heating and ventilation, memory modules, seat-belt sensors and, in many cars, a side airbag. That is why a seat that looks right can still turn on a warning light or leave a function dead once it is fitted.
+
+Use this checklist before you buy replacement seats, whether it is one damaged seat, a matching pair or a complete front and rear set.
+
+## 1. Airbags and safety systems
+- **Side airbags in the seat.** Many seats have a side airbag in the backrest. The replacement must have the same airbag arrangement as the original.
+- **Occupant detection.** Many passenger seats have a sensor that tells the airbag system whether someone is sitting there. A seat without the right sensor can turn on the airbag warning light.
+- **Seat-belt buckle sensors and pretensioners** may be part of the seat assembly.
+
+Airbag components are safety equipment. Have them fitted and checked by a qualified workshop, and make sure the warning light is off afterwards.
+
+## 2. Functions and wiring
+List every function your current seats have, then make sure the replacements match:
+
+- electric adjustment, and how many directions
+- memory positions
+- lumbar support
+- heating and ventilation
+- massage
+- adjustable side bolsters on sport seats
+
+More functions usually mean more connectors under the seat. A seat with fewer functions than the car expects may need the car's settings changed. A seat with more functions than the car expects may not work without extra wiring and coding.
+
+## 3. Rails and mounting
+Seat rails and mounting points are usually shared within a model generation, but not always across generations or body styles. Coupe and convertible seats often differ from saloon seats, for example in how the backrest folds for rear access.
+
+## 4. Trim, colour and condition
+- Leather colour, stitching and perforation pattern
+- Headrest design, and whether screens are built into the headrests
+- Wear on the outer bolster of the driver's seat, which is the first place to show age
+
+For used seats, always ask for photographs of the actual seats, taken in daylight, before you confirm.
+
+## 5. One seat, a pair or a complete set?
+Replacing a single seat is the cheapest option, but matching the colour and wear of the other seats can be hard. A [front seat pair](/parts?part=front-seat-set) keeps the front of the cabin consistent. A [complete front and rear set](/parts?part=complete-seat-set) is the usual choice for a colour change or an upgrade to sport or comfort seats.
+
+## 6. Upgrading to a different seat design
+Fitting seats from a higher trim level, such as sport or comfort seats, is a popular upgrade. Treat it as a conversion: confirm the wiring, the airbag arrangement and the coding with your installer first, and send us the VIN so we can check what the car was built with.
+
+## Common mistakes
+- **Buying by model name only.** The same model can be built with several seat designs and equipment levels. The VIN shows what your car has.
+- **Ignoring the passenger seat sensor.** It is the most common cause of an airbag warning light after a seat swap.
+- **Mixing colours.** Two shades of the same leather colour look very different side by side, especially after years of sun. Compare photos in daylight.
+- **Forgetting the rear seats.** If you change the front seats to a new colour, the rear seats, door panels and centre console may also need to match. See [door panels and other interior trim](/interior-parts).
+- **Not checking the headrests.** Headrests with built-in screens or adjustable wings must match the seat they go on.
+
+## How seats are shipped
+Seats are heavy and bulky. We pack them on pallets or in strong cartons with the leather and the plugs protected. A pair of front seats can travel by air freight if it is urgent. Complete sets and conversions are usually more economical by sea freight. The method and cost are stated in the quotation.
+
+## After fitting
+Ask your workshop to clear and re-check the airbag system, test every function and, where needed, set up the memory positions. Keep the old seats until everything has been checked.
+
+## What to send for a quotation
+- VIN and steering side
+- photographs of your current seats and the plugs underneath, if you can reach them
+- the functions you want
+- one seat, a pair or a full set, and the condition you prefer
+
+Browse seats and other [car interior parts by brand](/interior-parts), read our [interior parts buying checklist](/guides/car-interior-parts-buying-checklist), and [request a quote](/request-a-part) when you have the details.`,
+  },
+  {
+    slug: "zf-8hp-gearbox-identify-right-replacement",
+    title: "ZF 8HP Gearbox: How to Identify the Right Replacement",
+    excerpt: "The ZF eight-speed automatic is fitted to BMW, Audi, Jaguar, Land Rover, Rolls-Royce and more. Here is how to match the exact version before you buy.",
+    description: "Replacing a ZF 8HP automatic gearbox? How to read the variant and type plate, why bellhousings differ, and what to send for an exact match.",
+    tags: ["Gearboxes", "Buying"],
+    published: "2026-11-17",
+    body: `The ZF 8HP eight-speed automatic is one of the most widely used gearboxes in modern cars. It is fitted to BMW, Audi, Jaguar, Land Rover, Rolls-Royce, Maserati, Alfa Romeo, Stellantis models and others, behind petrol, diesel and hybrid engines. That popularity makes used and remanufactured units easy to find. It also makes it easy to buy the wrong one.
+
+## The family name is not enough
+"8HP" is the family. The number that follows tells you the size and torque class:
+
+- **8HP45 / 8HP50 / 8HP51 / 8HP55:** smaller and mid-torque applications
+- **8HP70 / 8HP75 / 8HP76:** larger six-cylinder, V8 and diesel applications
+- **8HP90 / 8HP95:** the highest-torque versions
+
+The family has also been updated over the years in generations, and the later numbers within each class (for example 8HP50 after 8HP45, or 8HP75 after 8HP70) belong to later generations. A gearbox from a different generation can need a different control unit and different software, even when the size class is the same.
+
+## Why two "identical" gearboxes do not interchange
+Even within one variant, the gearbox is built for a specific vehicle and engine:
+
+- **Bellhousing and case:** the bolt pattern, starter position and torque converter depth are specific to the engine. Two 8HP70 gearboxes from different BMW engines can have different bolt patterns.
+- **Output flange:** the connection to the propshaft varies between manufacturers and models.
+- **All-wheel drive versions** differ from rear-wheel drive versions, including how the transfer case attaches.
+- **Mechatronic unit and software:** the control unit inside the gearbox is matched to the vehicle and usually needs coding or adaptation after fitting.
+
+## How to identify your gearbox
+1. **Read the type plate.** ZF gearboxes carry a plate or label on the case with the ZF part number and the vehicle manufacturer's number. Photograph it. It is the single most useful piece of information.
+2. **Send the VIN.** It confirms the engine, drive type and build date.
+3. **Note the engine code** if you have it.
+4. **Note the drive type:** rear-wheel drive or all-wheel drive.
+
+With the type plate and the VIN, we can match the replacement to your car rather than to the family name.
+
+## Used, remanufactured or just the mechatronic unit?
+- **Used and tested:** removed from a running vehicle. The most economical option.
+- **Remanufactured:** rebuilt with new wear parts. Suits a car you plan to keep.
+- **Mechatronic unit only:** some faults, such as harsh or erratic shifting, come from the control unit or valve body rather than the mechanical gearbox. A workshop diagnosis tells you which you need. See [mechatronic units](/parts?part=mechatronic-unit).
+
+## Torque converter and service parts
+If the gearbox is being replaced because of contamination or overheating, the torque converter and the oil cooler should be considered at the same time. A new gearbox fitted to a contaminated cooler can fail early. Ask your workshop, and add the parts to the same quotation if needed.
+
+## Is it really the gearbox?
+A gearbox is an expensive part, so it is worth confirming the fault before ordering one. Several problems can look like a failing gearbox:
+
+- **Harsh or delayed shifts** can come from old or low fluid, or from the adaptation values in the control unit, and sometimes improve after a fluid service and a reset.
+- **A shudder at low speed** can come from the torque converter rather than the gearbox itself.
+- **A gear warning or limp mode** can be caused by a wiring fault, a sensor or the mechatronic unit.
+- **Noises** can come from the propshaft, the centre bearing, the differential or the engine mounts.
+
+Ask your workshop for the fault codes and a short description of the symptoms. Send them with your request, and we will tell you whether the complete gearbox, the mechatronic unit or a service kit is the right part to quote.
+
+## The same gearbox under other names
+Manufacturers give the 8HP their own names. Stellantis uses its own numbers for the versions it builds under licence, and some manufacturers simply call it an eight-speed automatic. The ZF part number on the type plate is what links them, so a photograph of the plate is worth more than the name on a listing.
+
+## Other gearboxes we supply
+We also supply Mercedes-Benz 7G-Tronic and 9G-Tronic, Porsche PDK, Audi S tronic and DSG, Aisin and other automatic and dual-clutch gearboxes. The same advice applies: the type plate and the VIN decide the match.
+
+## Fitting
+Fitting a gearbox is a workshop job. Allow for the fluid, the coding or adaptation of the mechatronic unit and a test drive with an adaptation run.
+
+## Getting a quotation
+Send photographs of the type plate, your VIN, the engine code and the drive type. Browse [automatic and dual-clutch gearboxes](/parts?part=gearbox), including the [ZF 8HP70](/part/zf-8hp70-automatic-gearbox), and [request a quote](/request-a-part).`,
   },
 ];
 
