@@ -21,7 +21,7 @@ Hub copy, FAQs and linked guides: src/content/hubs.ts. Most requested configurat
 - Search terms that fail because of wording (e.g. "hood" vs "bonnet") are fixed by adding words to SYN in scripts/build-catalogue.mjs.
 
 ## D1 usage (important)
-- Catalogue filtering, counts, facets, related parts, hub tables and the sitemap run in memory from src/data/catalogue-index.json (src/lib/catalog-index.server.ts). D1 is read only for the rows a page shows (by slug), product pages (by slug), forms and the search log. Never add queries that scan or COUNT/GROUP BY the whole products table on page views: the account is limited to 5M D1 row reads per day on the free plan.
+- Catalogue filtering, counts, facets, related parts, hub tables and the sitemap run in memory from src/data/catalogue-index.json (src/lib/catalog-index.server.ts). Listing cards, product pages, related parts and hubs are built from the index too. D1 is read only for text search (one pass returning slugs, with an in-memory fallback), forms, trade accounts and the search log. Never add queries that scan or COUNT/GROUP BY the whole products table on page views: the account is limited to 5M D1 row reads per day on the free plan.
 
 ## Client search log
 - Visitors' catalogue searches are stored in D1 table `search_log` (q, make, model, gen, engine, category, part, results, path, country, created_at), sent by the browser after results render (POST /api/search-log). Rows with results = 0 are the main signal. Also read `part_requests` (part_name, make, model, year, engine, oem) for what customers asked for by form.

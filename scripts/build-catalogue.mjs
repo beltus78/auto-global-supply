@@ -208,7 +208,8 @@ writeFileSync(new URL("../src/data/taxonomy.json", import.meta.url), JSON.string
 
 // Compact catalogue index bundled into the Worker: filtering, counting, related parts and the
 // sitemap run in memory, so a page view reads only the rows it shows from D1.
-// Row: [slug, catIdx, ptypeIdx, makeIdx, extraMakeIdxs|0, vehIdx|-1, engIdx|-1, gbxIdx|-1] in display order (most requested first).
+// Row: [slug, catIdx, ptypeIdx, makeIdx, extraMakeIdxs|0, vehIdx|-1, engIdx|-1, gbxIdx|-1, name, sku, side|0, oem|0, note|0]
+// in display order (most requested first).
 {
   const lists = { cats: [], ptypes: [], makes: [], vehs: [], engs: [], gbxs: [] };
   const idx = (list, v) => {
@@ -219,7 +220,7 @@ writeFileSync(new URL("../src/data/taxonomy.json", import.meta.url), JSON.string
   };
   const rows = products.map((p) => {
     const extra = p.makes.filter((m) => m !== p.make).map((m) => idx("makes", m));
-    return [p.slug, idx("cats", p.cat), idx("ptypes", p.ptype), idx("makes", p.make), extra.length ? extra : 0, idx("vehs", p.veh), idx("engs", p.eng), idx("gbxs", p.gbx)];
+    return [p.slug, idx("cats", p.cat), idx("ptypes", p.ptype), idx("makes", p.make), extra.length ? extra : 0, idx("vehs", p.veh), idx("engs", p.eng), idx("gbxs", p.gbx), p.name, p.sku, p.side ?? 0, p.oem ?? 0, p.note ?? 0];
   });
   writeFileSync(new URL("../src/data/catalogue-index.json", import.meta.url), JSON.stringify({ ...lists, rows }));
 }

@@ -31,14 +31,21 @@ export const searchCatalogue = createServerFn({ method: "GET" })
     let pool = ITEMS;
     const words = tokens(s.q);
     if (words.length) {
-      // Text search is the one case that still reads D1 broadly: one pass returning only slugs.
-      const { getDb } = await import("./env.server");
-      const { results } = await getDb()
-        .prepare(`SELECT slug FROM products WHERE ${words.map(() => "search LIKE ?").join(" AND ")}`)
-        .bind(...words.map((w) => `%${w}%`))
-        .all<{ slug: string }>();
-      const hit = new Set(results.map((r) => r.slug));
-      pool = ITEMS.filter((i) => hit.has(i.slug));
+      // Text search reads D1 once (slugs only, full synonym/fitment search text). If D1 is unavailable,
+      // fall back to matching names, SKUs, part numbers and vehicle names from the bundled index.
+      try {
+        const { getDb } = await import("./env.server");
+        const { results } = await getDb()
+          .prepare(`SELECT slug FROM products WHERE ${words.map(() => "search LIKE ?").join(" AND ")}`)
+          .bind(...words.map((w) => `%${w}%`))
+          .all<{ slug: string }>();
+        const hit = new Set(results.map((r) => r.slug));
+        pool = ITEMS.filter((i) => hit.has(i.slug));
+      } catch (e) {
+        console.error("search fell back to index", e);
+        const { haystack } = await import("./catalog-index.server");
+        pool = ITEMS.filter((i) => words.every((w) => haystack(i).includes(w)));
+      }
     }
     const all = pool.filter(matcher(s));
     const categories: Record<string, number> = {};
@@ -53,13 +60,12 @@ export const catalogueQuery = (s: CatalogueSearch) =>
 export const getProduct = createServerFn({ method: "GET" })
   .inputValidator((d: unknown) => z.object({ slug: z.string().min(1).max(160) }).parse(d))
   .handler(async ({ data }) => {
-    const { getDb } = await import("./env.server");
-    const db = getDb();
-    const product = await db.prepare(`SELECT ${COLS},oem,note FROM products WHERE slug = ?`).bind(data.slug).first<ProductRow>();
-    if (!product) return null;
-    const { relatedSlugs, rowsFor } = await import("./catalog-index.server");
-    const related = await rowsFor(relatedSlugs(product));
-    return { product, related };
+    const { BY_SLUG, toRow, relatedSlugs, rowsFor } = await import("./catalog-index.server");
+    const item = BY_SLUG.get(data.slug);
+    if (!item) return null;
+    const [product] = await rowsFor([item.slug]);
+    const related = await rowsFor(relatedSlugs(item));
+    return { product: product ?? toRow(item), related };
   });
 
 export const productQuery = (slug: string) => queryOptions({ queryKey: ["product", slug], queryFn: () => getProduct({ data: { slug } }), staleTime: 300_000 });

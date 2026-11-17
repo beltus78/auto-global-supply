@@ -4,10 +4,10 @@
 import data from "@/data/catalogue-index.json";
 import { findVehicles, vehicleBy, type ProductRow } from "./taxonomy";
 
-type Raw = [string, number, number, number, number[] | 0, number, number, number];
+type Raw = [string, number, number, number, number[] | 0, number, number, number, string, string, string | 0, string | 0, string | 0];
 const D = data as unknown as { cats: string[]; ptypes: string[]; makes: string[]; vehs: string[]; engs: string[]; gbxs: string[]; rows: Raw[] };
 
-export type Item = { slug: string; cat: string; ptype: string; make: string; makes: string[]; veh: string | null; eng: string | null; gbx: string | null; rank: number };
+export type Item = { slug: string; cat: string; ptype: string; make: string; makes: string[]; veh: string | null; eng: string | null; gbx: string | null; rank: number; name: string; sku: string; side: string | null; oem: string | null; note: string | null };
 
 export const ITEMS: Item[] = D.rows.map((r, rank) => ({
   slug: r[0],
@@ -19,7 +19,30 @@ export const ITEMS: Item[] = D.rows.map((r, rank) => ({
   eng: r[6] >= 0 ? D.engs[r[6]]! : null,
   gbx: r[7] >= 0 ? D.gbxs[r[7]]! : null,
   rank,
+  name: r[8],
+  sku: r[9],
+  side: r[10] || null,
+  oem: r[11] || null,
+  note: r[12] || null,
 }));
+
+/** Lower-case text used by the fallback search: name, SKU, part number, make, model and generation. */
+const hayCache = new Map<string, string>();
+export function haystack(i: Item): string {
+  let h = hayCache.get(i.slug);
+  if (!h) {
+    const v = i.veh ? vehicleBy.get(i.veh) : undefined;
+    h = `${i.name} ${i.sku} ${i.oem ?? ""} ${i.makes.join(" ")} ${v ? `${v.model} ${v.gen}` : ""} ${i.eng ?? ""}`.toLowerCase();
+    hayCache.set(i.slug, h);
+  }
+  return h;
+}
+
+export const BY_SLUG = new Map(ITEMS.map((i) => [i.slug, i]));
+
+export function toRow(i: Item): ProductRow {
+  return { slug: i.slug, sku: i.sku, name: i.name, cat: i.cat, ptype: i.ptype, make: i.make, veh: i.veh, eng: i.eng, gbx: i.gbx, side: i.side, image: null, oem: i.oem, note: i.note };
+}
 
 export type Filters = { category?: string; part?: string; engine?: string; make?: string; model?: string; gen?: string };
 
@@ -43,27 +66,30 @@ export function matcher(f: Filters, skipCategory = false): (i: Item) => boolean 
   };
 }
 
-/** Rows for the given slugs from D1, returned in the order of the slugs. One indexed lookup per row. */
+/**
+ * Rows for the given slugs, built from the bundled index (no D1 read). Product photos are the only
+ * per-row data that lives in D1; they are merged in with one small indexed query when any exist.
+ */
 export async function rowsFor(slugs: string[]): Promise<ProductRow[]> {
-  if (!slugs.length) return [];
-  const { getDb } = await import("./env.server");
-  const out: ProductRow[] = [];
-  try {
-    for (let i = 0; i < slugs.length; i += 90) {
-      const part = slugs.slice(i, i + 90);
+  const rows = slugs.map((s) => BY_SLUG.get(s)).filter((i): i is Item => !!i).map(toRow);
+  if (rows.length && HAS_IMAGES) {
+    try {
+      const { getDb } = await import("./env.server");
       const { results } = await getDb()
-        .prepare(`SELECT slug,sku,name,cat,ptype,make,veh,eng,gbx,side,image FROM products WHERE slug IN (${part.map(() => "?").join(",")})`)
-        .bind(...part)
-        .all<ProductRow>();
-      out.push(...results);
+        .prepare(`SELECT slug, image FROM products WHERE image IS NOT NULL AND slug IN (${rows.map(() => "?").join(",")})`)
+        .bind(...rows.map((r) => r.slug))
+        .all<{ slug: string; image: string }>();
+      const img = new Map(results.map((r) => [r.slug, r.image]));
+      for (const r of rows) r.image = img.get(r.slug) ?? null;
+    } catch (e) {
+      console.error("image lookup failed", e);
     }
-  } catch (e) {
-    // Keep pages up if D1 is unavailable (e.g. a daily limit): listings are omitted, counts and links still render.
-    console.error("rowsFor failed", e);
   }
-  const pos = new Map(slugs.map((s, n) => [s, n]));
-  return out.sort((a, b) => (pos.get(a.slug) ?? 0) - (pos.get(b.slug) ?? 0));
+  return rows;
 }
+
+/** Set to true once product photos are uploaded (R2) and recorded in products.image. */
+const HAS_IMAGES = false;
 
 /** Related listings for a product page: same vehicle (and its engines), same engine, or same gearbox family. */
 export function relatedSlugs(p: { slug: string; cat: string; make: string; veh: string | null; eng: string | null; gbx: string | null }, limit = 8): string[] {
