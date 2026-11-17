@@ -4,5 +4,9 @@ Disallow: /admin
 Disallow: /quote
 Disallow: /trade/account
 Disallow: /trade/verify
+Disallow: /search
+Disallow: /*?q=
+Disallow: /*&q=
+Disallow: /api/
 
 Sitemap: https://autoglobalsupply.com/sitemap.xml

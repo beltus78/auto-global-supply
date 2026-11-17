@@ -13,8 +13,8 @@ export const Route = createFileRoute("/interior-parts/$make")({
     const make = makeForHub(params.make);
     if (!make) throw notFound();
     const data = await context.queryClient.ensureQueryData(hubQuery({ types: hub.types, make: make.slug, limit: 600 }));
-    if (!data.items.length) throw notFound();
-    return { make, count: data.items.length };
+    if (!data.total) throw notFound();
+    return { make, count: data.total };
   },
   head: ({ loaderData, params }) => {
     if (!loaderData) return { meta: [{ title: "Not found" }, { name: "robots", content: "noindex" }] };

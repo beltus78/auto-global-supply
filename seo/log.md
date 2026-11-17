@@ -26,3 +26,9 @@ Linked from the /dashboards and /interior-parts hubs.
 - Missing apple-touch-icon, 32px PNG favicon, 192/512 icons and site.webmanifest (the other sites have them) → added and linked.
 - 68 meta descriptions outside 120–160 chars (brand, category, hub, legal and product pages) → `fitDescription()` in src/lib/seo.ts now trims long ones at a sentence and completes short ones; product descriptions rewritten; legal/search descriptions rewritten by hand; 8 older guide descriptions lengthened.
 - "Used, tested" condition label read badly in sentences → "Used and tested".
+
+## 2026-11-17 (evening) — D1 daily read limit hit; catalogue reads moved to an in-memory index
+- Symptom: every page reading the catalogue (home, /parts, hubs, brand, category and part pages) returned the error page. Cause: the account exceeded D1's free daily read limit (5M rows). Catalogue pages counted and grouped all 15,535 rows on every view (30k–45k rows per filtered page), and Googlebot started crawling the many filter links after the sitemap was submitted.
+- Fix: scripts/build-catalogue.mjs now also writes src/data/catalogue-index.json (slug + category/type/make/vehicle/engine/gearbox per listing, 84 KB gzipped). src/lib/catalog-index.server.ts does filtering, counts, facets, related parts, hub tables and the sitemap in memory; D1 is read only for the rows a page displays (by slug). Text search (?q=) is the only remaining full scan (one pass returning slugs).
+- If D1 is unavailable, listing pages still render (counts, links, tables) without the product cards instead of failing.
+- robots.txt: disallow /search, ?q= URLs and /api/.

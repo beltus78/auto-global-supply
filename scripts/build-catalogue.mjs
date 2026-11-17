@@ -206,6 +206,24 @@ const taxonomy = {
 mkdirSync(new URL("../src/data/", import.meta.url), { recursive: true });
 writeFileSync(new URL("../src/data/taxonomy.json", import.meta.url), JSON.stringify(taxonomy));
 
+// Compact catalogue index bundled into the Worker: filtering, counting, related parts and the
+// sitemap run in memory, so a page view reads only the rows it shows from D1.
+// Row: [slug, catIdx, ptypeIdx, makeIdx, extraMakeIdxs|0, vehIdx|-1, engIdx|-1, gbxIdx|-1] in display order (most requested first).
+{
+  const lists = { cats: [], ptypes: [], makes: [], vehs: [], engs: [], gbxs: [] };
+  const idx = (list, v) => {
+    if (v == null) return -1;
+    let i = lists[list].indexOf(v);
+    if (i < 0) i = lists[list].push(v) - 1;
+    return i;
+  };
+  const rows = products.map((p) => {
+    const extra = p.makes.filter((m) => m !== p.make).map((m) => idx("makes", m));
+    return [p.slug, idx("cats", p.cat), idx("ptypes", p.ptype), idx("makes", p.make), extra.length ? extra : 0, idx("vehs", p.veh), idx("engs", p.eng), idx("gbxs", p.gbx)];
+  });
+  writeFileSync(new URL("../src/data/catalogue-index.json", import.meta.url), JSON.stringify({ ...lists, rows }));
+}
+
 const q = (v) => (v == null ? "NULL" : typeof v === "number" ? String(v) : `'${String(v).replace(/'/g, "''")}'`);
 const lines = ["DELETE FROM products;"];
 const cols = "id,slug,sku,name,cat,ptype,make,makes,veh,eng,gbx,side,pop,search,oem,note";

@@ -157,7 +157,7 @@ export function HubPage({ hub }: { hub: Hub }) {
 export function HubMakePage({ hub, make }: { hub: Hub; make: Make }) {
   const { data } = useSuspenseQuery(hubQuery({ types: hub.types, make: make.slug, limit: 600 }));
   const models = modelsOf(make.slug);
-  const bySlot = new Map(data.items.map((p) => [`${p.veh}|${p.ptype}`, p]));
+  const slots = data.slots as Record<string, string>;
   const featured = data.items.filter((p) => hub.featuredTypes.includes(p.ptype)).slice(0, 8);
   const base = hub.key === "dashboards" ? "/dashboards" : "/interior-parts";
   const others = MAKES.filter((m) => m.slug !== make.slug && (data.byMake[m.slug] ?? 0) > 0).slice(0, 14);
@@ -187,10 +187,10 @@ export function HubMakePage({ hub, make }: { hub: Hub; make: Make }) {
                     <span className="mono block text-[11px] text-muted">{years(v)}</span>
                   </td>
                   {hub.tableTypes.map((c) => {
-                    const p = bySlot.get(`${v.id}|${c.s}`);
+                    const slugFor = slots[`${v.id}|${c.s}`];
                     return (
                       <td key={c.s} className="px-3 py-3">
-                        {p ? <Link to="/part/$slug" params={{ slug: p.slug }} className="mono inline-flex h-7 items-center border border-line-strong px-2 text-[11px] uppercase hover:border-ink hover:bg-signal hover:text-signal-ink">View</Link> : <Link to="/request-a-part" search={{ part: `${v.name} ${c.label}` }} className="mono text-[11px] uppercase text-muted underline-offset-4 hover:underline">Ask</Link>}
+                        {slugFor ? <Link to="/part/$slug" params={{ slug: slugFor }} className="mono inline-flex h-7 items-center border border-line-strong px-2 text-[11px] uppercase hover:border-ink hover:bg-signal hover:text-signal-ink">View</Link> : <Link to="/request-a-part" search={{ part: `${v.name} ${c.label}` }} className="mono text-[11px] uppercase text-muted underline-offset-4 hover:underline">Ask</Link>}
                       </td>
                     );
                   })}
@@ -209,7 +209,7 @@ export function HubMakePage({ hub, make }: { hub: Hub; make: Make }) {
 
       <Section eyebrow="Full list" title={`Every ${make.name} ${hub.key === "dashboards" ? "dashboard" : "interior"} listing`} className="!pt-0">
         <div className="border border-line">{data.items.slice(0, 60).map((p) => <ProductRowItem key={p.slug} p={p} />)}</div>
-        {data.items.length > 60 ? <Link to="/parts" search={{ make: make.slug, category: "interior" }} className="btn btn-line mt-4">Show more in the catalogue</Link> : null}
+        {data.total > 60 ? <Link to="/parts" search={{ make: make.slug, category: "interior" }} className="btn btn-line mt-4">Show more in the catalogue</Link> : null}
       </Section>
 
       <section className="border-y border-line bg-panel">

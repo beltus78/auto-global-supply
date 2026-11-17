@@ -16,9 +16,8 @@ export const Route = createFileRoute("/sitemap.xml")({
         for (const m of MAKES) entries.push({ path: `/brands/${m.slug}`, lastmod: CATALOGUE_DATE });
         for (const m of MAKES) entries.push({ path: `/dashboards/${m.slug}`, lastmod: CATALOGUE_DATE }, { path: `/interior-parts/${m.slug}`, lastmod: CATALOGUE_DATE });
         for (const g of GUIDES) entries.push({ path: `/guides/${g.slug}`, lastmod: g.published });
-        const { getDb } = await import("@/lib/env.server");
-        const { results } = await getDb().prepare("SELECT slug FROM products ORDER BY pop DESC, id LIMIT 45000").all<{ slug: string }>();
-        for (const row of results) entries.push({ path: `/part/${row.slug}`, lastmod: CATALOGUE_DATE });
+        const { ITEMS } = await import("@/lib/catalog-index.server");
+        for (const i of ITEMS.slice(0, 45000)) entries.push({ path: `/part/${i.slug}`, lastmod: CATALOGUE_DATE });
         return new Response(sitemapXML(BUSINESS.website, entries), { headers: { "Content-Type": "application/xml", "Cache-Control": "public, max-age=3600" } });
       },
     },
