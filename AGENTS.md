@@ -17,10 +17,15 @@ Hub copy, FAQs and linked guides: src/content/hubs.ts. Most requested configurat
 ## Where things live
 - Guides: src/content/guides.ts (append an object; `published: "YYYY-MM-DD"`; body markdown with ##, -, 1., **bold**, [text](/link)).
 - Static page copy: src/content/pages.ts. FAQ page: FAQ in the same file.
-- Catalogue: generated. Edit scripts/data-vehicles.mjs (makes, engines, vehicles, gearboxes) and scripts/data-parts.mjs (part types), then `npm run catalogue`. This rewrites src/data/taxonomy.json and seed/catalogue.sql. The live D1 database must then be reseeded: a build with the build variable FORCE_RESEED=1, or `npm run db:seed:remote` from the owner's computer. Do not change existing slugs: product URLs come from names.
+- Catalogue: generated. Edit scripts/data-vehicles.mjs (makes, engines, vehicles, gearboxes), scripts/data-parts.mjs (part types) and scripts/data-extra.mjs (individual listings), then `npm run catalogue`. This rewrites src/data/taxonomy.json and seed/catalogue.sql. Commit both. On deploy, `npm run deploy:ci` syncs the live D1 table automatically (inserts new listings, removes dropped ones, updates changed names/search text), so no manual reseed is needed. Never rename existing listings: product URLs come from names. Never run a full reseed (FORCE_RESEED) without the owner: it writes ~100k rows.
+- Search terms that fail because of wording (e.g. "hood" vs "bonnet") are fixed by adding words to SYN in scripts/build-catalogue.mjs.
+
+## Client search log
+- Visitors' catalogue searches are stored in D1 table `search_log` (q, make, model, gen, engine, category, part, results, path, country, created_at), sent by the browser after results render (POST /api/search-log). Rows with results = 0 are the main signal. Also read `part_requests` (part_name, make, model, year, engine, oem) for what customers asked for by form.
+- Weekly review: add genuine automotive parts that customers searched for and did not find. Real vehicles, engines and parts only; verify model years/engine codes with a reliable source; part numbers only when confirmed. Ignore spam, tests, gibberish and non-automotive searches.
 - Real internal URLs: /parts (filters: ?make=&model=&gen=&engine=&category=&part=), /category/<slug>, /brands/<make>, /part/<slug>, /dashboards, /dashboards/<make>, /interior-parts, /interior-parts/<make>, /parts-upgrades, /guides/<slug>, /request-a-part, /quote, /trade, /wholesale, /faq, /shipping, /contact, /about.
 - Part type slugs for ?part=: see `s` values in scripts/data-parts.mjs (e.g. dashboard, dashboard-upgrade-kit, instrument-cluster, infotainment-screen, steering-wheel, front-seat-set, complete-seat-set, vip-interior-conversion).
 - SEO helpers: src/lib/seo.ts (pageHead adds title, description, canonical, OG, JSON-LD). Sitemap: src/routes/sitemap[.]xml.ts.
 
 ## Checks before pushing
-`npm install --legacy-peer-deps && npx vite build`. Local data: `npx wrangler d1 migrations apply DB --local && npm run db:seed:local`, then `npx vite preview --port 4173`.
+`npm install --legacy-peer-deps && npx vite build`. Local data: `npx wrangler d1 migrations apply DB --local && npm run db:seed:local`; test the remote sync logic locally with `D1_LOCAL=1 node scripts/deploy-ci.mjs`, then `npx vite preview --port 4173`.

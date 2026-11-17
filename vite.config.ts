@@ -6,6 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 import tsConfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
+  define: { __BUILD_ID__: JSON.stringify(process.env.WORKERS_CI_COMMIT_SHA?.slice(0, 12) || Date.now().toString(36)) },
   plugins: [
     tsConfigPaths({ projects: ["./tsconfig.json"] }),
     cloudflare({ viteEnvironment: { name: "ssr" } }),

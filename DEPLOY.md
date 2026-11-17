@@ -24,7 +24,11 @@ Workers & Pages > auto-global-supply > Settings > Variables and Secrets (type: S
 Settings > Domains & Routes > add `autoglobalsupply.com` and `www.autoglobalsupply.com`. This replaces the Lovable site.
 
 ## After changing the catalogue
-`npm run catalogue`, commit, then run a build with the build variable `FORCE_RESEED=1` (or `npm run db:seed:remote` from a computer).
+`npm run catalogue`, commit and push. The deploy step adds new listings and removes dropped ones automatically.
+A full reload (build variable `FORCE_RESEED=1`) writes about 100,000 rows: avoid it on the Workers Free plan (daily limit 100,000 writes for the whole account).
+
+## Caching
+Anonymous page views and catalogue data are cached at Cloudflare's edge for an hour (custom domain only; workers.dev isn't cached). Each deploy starts a fresh cache. Quote, trade, admin and API routes are never cached.
 
 ## Approving trade accounts
 Open /admin with your ADMIN_KEY. Approve sends the applicant a sign-in link (and shows it so you can also send it on WhatsApp).

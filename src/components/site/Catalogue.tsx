@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useSuspenseQuery } from "@tanstack/react-query";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { LayoutGrid, List, SlidersHorizontal, X } from "lucide-react";
 import { catalogueQuery, PAGE_SIZE, type CatalogueSearch } from "@/lib/catalog.functions";
 import { CATEGORIES, PART_TYPES, categoryBy, engineBy, findVehicles, makeBy, partTypeBy } from "@/lib/taxonomy";
@@ -25,6 +25,19 @@ export function Catalogue({ search, target, lockCategory }: { search: CatalogueS
   const pages = Math.max(1, Math.ceil(data.total / PAGE_SIZE));
   const vehicle = effective.make && effective.model && effective.gen ? findVehicles(effective.make, effective.model, effective.gen)[0] : undefined;
   const allCount = Object.values(data.categories).reduce((a, b) => a + b, 0);
+
+  // Report text searches and empty results so the weekly review can add what customers look for.
+  useEffect(() => {
+    if (!effective.q && data.total > 0) return;
+    if (!effective.q && !effective.make && !effective.part && !effective.engine) return;
+    try {
+      const payload = JSON.stringify({ q: effective.q, make: effective.make, model: effective.model, gen: effective.gen, engine: effective.engine, category: effective.category, part: effective.part, results: data.total, path: window.location.pathname.slice(0, 80) });
+      navigator.sendBeacon?.("/api/search-log", new Blob([payload], { type: "application/json" }));
+    } catch {
+      /* ignore */
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [effective.q, effective.make, effective.model, effective.gen, effective.engine, effective.category, effective.part, data.total]);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const linkTo = (s: CatalogueSearch) => ({ ...(target as any), search: s }) as any;
   const partOptions = PART_TYPES.filter((p) => !effective.category || p.c === effective.category);

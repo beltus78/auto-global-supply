@@ -28,6 +28,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as WarrantyRouteImport } from './routes/warranty'
 import { Route as WholesaleRouteImport } from './routes/wholesale'
+import { Route as ApiSearchLogRouteImport } from './routes/api/search-log'
 import { Route as BrandsIndexRouteImport } from './routes/brands.index'
 import { Route as BrandsSlugRouteImport } from './routes/brands.$slug'
 import { Route as CategorySlugRouteImport } from './routes/category.$slug'
@@ -138,6 +139,11 @@ const WholesaleRoute = WholesaleRouteImport.update({
   path: '/wholesale',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiSearchLogRoute = ApiSearchLogRouteImport.update({
+  id: '/api/search-log',
+  path: '/api/search-log',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BrandsIndexRoute = BrandsIndexRouteImport.update({
   id: '/brands/',
   path: '/brands/',
@@ -229,6 +235,7 @@ export interface FileRoutesByFullPath {
   '/terms': typeof TermsRoute
   '/warranty': typeof WarrantyRoute
   '/wholesale': typeof WholesaleRoute
+  '/api/search-log': typeof ApiSearchLogRoute
   '/brands/$slug': typeof BrandsSlugRoute
   '/category/$slug': typeof CategorySlugRoute
   '/dashboards/$make': typeof DashboardsMakeRoute
@@ -264,6 +271,7 @@ export interface FileRoutesByTo {
   '/terms': typeof TermsRoute
   '/warranty': typeof WarrantyRoute
   '/wholesale': typeof WholesaleRoute
+  '/api/search-log': typeof ApiSearchLogRoute
   '/brands/$slug': typeof BrandsSlugRoute
   '/category/$slug': typeof CategorySlugRoute
   '/dashboards/$make': typeof DashboardsMakeRoute
@@ -300,6 +308,7 @@ export interface FileRoutesById {
   '/terms': typeof TermsRoute
   '/warranty': typeof WarrantyRoute
   '/wholesale': typeof WholesaleRoute
+  '/api/search-log': typeof ApiSearchLogRoute
   '/brands/$slug': typeof BrandsSlugRoute
   '/category/$slug': typeof CategorySlugRoute
   '/dashboards/$make': typeof DashboardsMakeRoute
@@ -337,6 +346,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/warranty'
     | '/wholesale'
+    | '/api/search-log'
     | '/brands/$slug'
     | '/category/$slug'
     | '/dashboards/$make'
@@ -372,6 +382,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/warranty'
     | '/wholesale'
+    | '/api/search-log'
     | '/brands/$slug'
     | '/category/$slug'
     | '/dashboards/$make'
@@ -407,6 +418,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/warranty'
     | '/wholesale'
+    | '/api/search-log'
     | '/brands/$slug'
     | '/category/$slug'
     | '/dashboards/$make'
@@ -443,6 +455,7 @@ export interface RootRouteChildren {
   TermsRoute: typeof TermsRoute
   WarrantyRoute: typeof WarrantyRoute
   WholesaleRoute: typeof WholesaleRoute
+  ApiSearchLogRoute: typeof ApiSearchLogRoute
   BrandsSlugRoute: typeof BrandsSlugRoute
   CategorySlugRoute: typeof CategorySlugRoute
   DashboardsMakeRoute: typeof DashboardsMakeRoute
@@ -594,6 +607,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WholesaleRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/search-log': {
+      id: '/api/search-log'
+      path: '/api/search-log'
+      fullPath: '/api/search-log'
+      preLoaderRoute: typeof ApiSearchLogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/brands/': {
       id: '/brands/'
       path: '/brands'
@@ -715,6 +735,7 @@ const rootRouteChildren: RootRouteChildren = {
   TermsRoute: TermsRoute,
   WarrantyRoute: WarrantyRoute,
   WholesaleRoute: WholesaleRoute,
+  ApiSearchLogRoute: ApiSearchLogRoute,
   BrandsSlugRoute: BrandsSlugRoute,
   CategorySlugRoute: CategorySlugRoute,
   DashboardsMakeRoute: DashboardsMakeRoute,

@@ -31,8 +31,50 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
   return new Response(renderErrorPage(), { status: 500, headers: { "content-type": "text/html; charset=utf-8" } });
 }
 
+declare const __BUILD_ID__: string;
+
+// Edge cache for anonymous GET traffic (pages, catalogue data calls, sitemap). Keys include the
+// build id so a new deploy never serves pages that point at old JS/CSS files.
+const NO_CACHE = [/^\/admin/, /^\/trade/, /^\/quote/, /^\/api\//, /^\/media\//];
+const TTL_SECONDS = 3600;
+
+function cacheable(request: Request, url: URL) {
+  if (request.method !== "GET") return false;
+  if (NO_CACHE.some((r) => r.test(url.pathname))) return false;
+  if ((request.headers.get("cookie") ?? "").includes("ags_trade=")) return false;
+  return true;
+}
+
+type Ctx = { waitUntil?: (p: Promise<unknown>) => void };
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    const url0 = new URL(request.url);
+    if (typeof caches !== "undefined" && cacheable(request, url0)) {
+      const key = new Request(`${url0.origin}${url0.pathname}${url0.search}${url0.search ? "&" : "?"}__b=${__BUILD_ID__}`, { method: "GET" });
+      const cache = (caches as unknown as { default: Cache }).default;
+      const hit = await cache.match(key);
+      if (hit) {
+        const res = new Response(hit.body, hit);
+        res.headers.set("x-ags-cache", "HIT");
+        return res;
+      }
+      const fresh = await handle(request, env, ctx);
+      if (fresh.status !== 200 || fresh.headers.has("set-cookie")) return fresh;
+      const res = new Response(fresh.body, fresh);
+      const copy = new Response(res.clone().body, res);
+      copy.headers.set("Cache-Control", `public, max-age=${TTL_SECONDS}`);
+      const put = cache.put(key, copy).catch(() => undefined);
+      (ctx as Ctx)?.waitUntil?.(put);
+      res.headers.set("x-ags-cache", "MISS");
+      return res;
+    }
+    return handle(request, env, ctx);
+  },
+};
+
+async function handle(request: Request, env: unknown, ctx: unknown): Promise<Response> {
+  {
     try {
       const url = new URL(request.url);
       if (url.hostname.startsWith("www.")) {
@@ -51,5 +93,5 @@ export default {
       console.error(error);
       return new Response(renderErrorPage(), { status: 500, headers: { "content-type": "text/html; charset=utf-8" } });
     }
-  },
-};
+  }
+}

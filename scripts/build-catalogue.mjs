@@ -3,6 +3,7 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 import { MAKES, ENGINES, VEHICLES, GEARBOXES } from "./data-vehicles.mjs";
 import { CATEGORIES, PART_TYPES, LEGACY } from "./data-parts.mjs";
+import { EXTRA } from "./data-extra.mjs";
 
 const slugify = (s) =>
   s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/&/g, " and ").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
@@ -150,6 +151,7 @@ for (const e of engines) {
 }
 for (const g of gearboxes) {
   for (const pt of PART_TYPES.filter((p) => p.scope === "g")) {
+    if (pt.tier > 3) continue;
     if (pt.req === "auto" && g.kind !== "auto") continue;
     if (pt.req === "dct" && g.kind !== "dct") continue;
     const part = pt.s === "gearbox" ? (g.kind === "dct" ? "Dual-Clutch Gearbox" : "Automatic Gearbox") : pt.n;
@@ -159,6 +161,24 @@ for (const g of gearboxes) {
     });
   }
 }
+// Individual listings (weekly client-search review and one-off additions)
+const ptByS = Object.fromEntries(PART_TYPES.map((p) => [p.s, p]));
+const engineCodes = new Set(engines.map((e) => e.code));
+for (const x of EXTRA) {
+  const pt = ptByS[x.ptype];
+  if (!pt) throw new Error(`EXTRA ${x.key}: unknown ptype ${x.ptype}`);
+  if (!makeBy[x.make]) throw new Error(`EXTRA ${x.key}: unknown make ${x.make}`);
+  if (x.veh && !vehicleBy[x.veh]) throw new Error(`EXTRA ${x.key}: unknown vehicle ${x.veh}`);
+  if (x.eng && !engineCodes.has(x.eng)) throw new Error(`EXTRA ${x.key}: unknown engine ${x.eng}`);
+  if (x.gbx && !gearboxes.some((g) => g.slug === x.gbx)) throw new Error(`EXTRA ${x.key}: unknown gearbox ${x.gbx}`);
+  const v = x.veh ? vehicleBy[x.veh] : null;
+  push(x.key, {
+    name: x.name, cat: pt.c, ptype: pt.s, make: x.make, makes: [x.make], veh: x.veh ?? null, eng: x.eng ?? null, gbx: x.gbx ?? null, side: x.side ?? null,
+    pop: pt.pop * 2 + 3, oem: x.oem ?? null, note: x.note ?? null,
+    search: `${x.search ?? ""} ${v ? `${v.model} ${v.gen}` : ""} ${makeBy[x.make].name} ${x.oem ?? ""}`,
+  });
+}
+
 const missing = Object.keys(LEGACY).filter((k) => !legacyUsed.has(k));
 if (missing.length) throw new Error(`Legacy keys not matched: ${missing.join(", ")}`);
 
@@ -188,10 +208,10 @@ writeFileSync(new URL("../src/data/taxonomy.json", import.meta.url), JSON.string
 
 const q = (v) => (v == null ? "NULL" : typeof v === "number" ? String(v) : `'${String(v).replace(/'/g, "''")}'`);
 const lines = ["DELETE FROM products;"];
-const cols = "id,slug,sku,name,cat,ptype,make,makes,veh,eng,gbx,side,pop,search";
+const cols = "id,slug,sku,name,cat,ptype,make,makes,veh,eng,gbx,side,pop,search,oem,note";
 for (let i = 0; i < products.length; i += 40) {
   const rows = products.slice(i, i + 40).map((p, j) =>
-    `(${[i + j + 1, p.slug, p.sku, p.name, p.cat, p.ptype, p.make, `,${p.makes.join(",")},`, p.veh, p.eng, p.gbx, p.side, p.pop, p.search].map(q).join(",")})`);
+    `(${[i + j + 1, p.slug, p.sku, p.name, p.cat, p.ptype, p.make, `,${p.makes.join(",")},`, p.veh, p.eng, p.gbx, p.side, p.pop, p.search, p.oem ?? null, p.note ?? null].map(q).join(",")})`);
   lines.push(`INSERT INTO products (${cols}) VALUES\n${rows.join(",\n")};`);
 }
 mkdirSync(new URL("../seed/", import.meta.url), { recursive: true });
