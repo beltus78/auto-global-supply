@@ -6,7 +6,7 @@ import { catalogueParams } from "@/lib/search-params";
 import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/search")({
-  staticData: { sitemap: true },
+  staticData: { sitemap: false },
   validateSearch: catalogueParams,
   loaderDeps: ({ search }) => search,
   loader: ({ context, deps }) => context.queryClient.ensureQueryData(catalogueQuery(deps)),
