@@ -11,7 +11,7 @@ export function Logo({ tone = "dark", className }: { tone?: "dark" | "light"; cl
       </svg>
       <span className="leading-none">
         <span className={cn("block font-display text-[1.35rem] font-bold uppercase tracking-wide", tone === "dark" ? "text-steel-text" : "text-ink")}>Auto Global Supply</span>
-        <span className={cn("mono mt-0.5 block text-[9.5px] uppercase tracking-[0.2em]", tone === "dark" ? "text-steel-muted" : "text-muted")}>Parts Import & Export</span>
+        <span className={cn("mono mt-0.5 block text-[9.5px] uppercase tracking-[0.2em]", tone === "dark" ? "text-steel-muted" : "text-muted")}>Wholesale Auto Parts</span>
       </span>
     </span>
   );

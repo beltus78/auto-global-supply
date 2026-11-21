@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { whatsappUrl } from "@/lib/business";
 import { WhatsAppIcon } from "./WhatsAppButton";
 
-export function CtaBand({ title = "Can't find the exact part?", text = "Send your VIN, part number or a photo. We identify the correct specification and reply with a quotation when an option is available." }: { title?: string; text?: string }) {
+export function CtaBand({ title = "Buying parts in volume?", text = "Send your parts list, part numbers or VINs. We check every line against our warehouse stock and reply with one written quotation including shipping." }: { title?: string; text?: string }) {
   return (
     <section className="bg-signal text-signal-ink">
       <div className="wrap flex flex-col gap-6 py-10 lg:flex-row lg:items-center lg:justify-between">

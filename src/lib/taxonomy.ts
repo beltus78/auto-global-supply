@@ -71,5 +71,5 @@ export function productDescription(p: ProductRow): string {
   const pt = partTypeBy.get(p.ptype);
   const c = conditions(pt).map((x) => x.toLowerCase());
   const cond = c.length > 1 ? `${c.slice(0, -1).join(", ")} or ${c[c.length - 1]}` : c[0];
-  return `${p.name}, supplied ${cond} to order. Fitment confirmed against your VIN before quoting. Worldwide shipping.`;
+  return `${p.name}, ${cond}, shipped from our Guangzhou warehouse. Single units or bulk quantities. Fitment confirmed against your VIN before quoting.`;
 }

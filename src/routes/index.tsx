@@ -15,16 +15,16 @@ import { pageHead } from "@/lib/seo";
 
 const FEATURES = [
   { Icon: CarFront, title: "VIN-based fitment", text: "Vehicle details identify the required specification before an order is finalized." },
-  { Icon: Globe2, title: "Global supplier network", text: "We search across manufacturers, distributors, dealers and specialized suppliers." },
+  { Icon: Globe2, title: "Our own warehouse stock", text: "Parts are held and dispatched from our warehouse in Guangzhou, China." },
   { Icon: Boxes, title: "New & replacement parts", text: "New, used and remanufactured options, depending on the part and your preference." },
-  { Icon: PackageSearch, title: "Wholesale & bulk orders", text: "Parts lists and repeat requirements are handled through one quotation." },
+  { Icon: PackageSearch, title: "Built for bulk buyers", text: "Send a full parts list and get one quotation, with volume pricing for repeat orders." },
   { Icon: Truck, title: "Worldwide shipping support", text: "Air, sea and courier options, with customs documentation where applicable." },
 ];
 
 const STEPS = [
   ["Send your details", "VIN, part number, vehicle details or a photo of the part."],
   ["We verify the specification", "The information is checked against the vehicle build before anything is offered."],
-  ["We find the part", "Options are matched by condition, quality level and budget."],
+  ["We check our stock", "Availability and quantities are confirmed in our warehouse."],
   ["You receive a quotation", "Price, condition, lead time and shipping, in writing."],
   ["Shipping is arranged", "Packed for export and shipped by the agreed method."],
 ];
@@ -49,8 +49,8 @@ export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
   head: () =>
     pageHead({
-      title: "Auto Global Supply | Automotive Parts & Quotes in Florida",
-      description: "Find car spare parts using your VIN, part number or vehicle details. Auto Global Supply supports individual and wholesale automotive parts enquiries.",
+      title: "Auto Global Supply | Wholesale Car Parts from Our China Warehouse",
+      description: "Wholesale car parts for workshops, dealers, retailers and importers, stocked in our Guangzhou warehouse. Send a parts list for a bulk quotation.",
       path: "/",
     }),
   loader: ({ context }) => context.queryClient.ensureQueryData(featuredQuery({ limit: 8 })),
@@ -65,20 +65,20 @@ function HomePage() {
       <section className="relative overflow-hidden bg-steel text-steel-text grid-steel grid-drift">
         <div className="wrap grid gap-10 pb-28 pt-12 sm:pt-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pb-32 lg:pt-20">
           <div>
-            <p data-reveal="wipe" className="eyebrow text-signal">Automotive parts import, export & supply</p>
+            <p data-reveal="wipe" className="eyebrow text-signal">Wholesale automotive parts · own warehouse stock</p>
             <h1 className="mt-5 text-[2.9rem] sm:text-6xl lg:text-7xl">
-              <span data-reveal className="block" style={{ "--i": 1 } as React.CSSProperties}>Find the right</span>
-              <span data-reveal className="block" style={{ "--i": 2 } as React.CSSProperties}>automotive part.</span>
-              <span data-reveal className="block text-signal" style={{ "--i": 3 } as React.CSSProperties}>Supplied globally.</span>
+              <span data-reveal className="block" style={{ "--i": 1 } as React.CSSProperties}>Car parts in volume.</span>
+              <span data-reveal className="block" style={{ "--i": 2 } as React.CSSProperties}>From our own warehouse.</span>
+              <span data-reveal className="block text-signal" style={{ "--i": 3 } as React.CSSProperties}>Shipped worldwide.</span>
             </h1>
             <p data-reveal style={{ "--i": 4 } as React.CSSProperties} className="mt-5 max-w-xl text-base text-steel-muted sm:text-lg">
-              Auto Global Supply helps customers and businesses find automotive parts through a network of manufacturers, distributors, dealers and specialized suppliers. Our registered U.S. business is in Opa-locka, Florida. Send your vehicle details or part number for a quotation.
+              Auto Global Supply holds automotive parts in its own warehouse in Guangzhou, China and sells them to workshops, dealers, parts retailers, fleets and importers. Our registered U.S. business is in Opa-locka, Florida. Send your parts list for a bulk quotation.
             </p>
             <p data-reveal style={{ "--i": 5 } as React.CSSProperties} className="mono mt-5 text-[12px] uppercase tracking-[0.1em] text-steel-muted">
               Customers are searching for: <TypeCycle className="text-steel-text" phrases={["W447 V-Class dashboard kit", "S-Class W222 dashboard", "X5 G05 front seats", "Range Rover L405 steering wheel", "B58 turbocharger", "Cayenne 9YA matrix headlight"]} />
             </p>
             <div data-reveal style={{ "--i": 6 } as React.CSSProperties} className="mt-7 flex flex-wrap gap-3">
-              <Link to="/request-a-part" className="btn btn-signal btn-lg">Request a quote</Link>
+              <Link to="/request-a-part" className="btn btn-signal btn-lg">Get a bulk quote</Link>
               <Link to="/parts" className="btn btn-ghost-dark btn-lg">Browse {n(TOTAL_PRODUCTS)} parts <ArrowRight className="h-4 w-4" /></Link>
             </div>
           </div>
@@ -218,7 +218,7 @@ function HomePage() {
           <div className="p-6 sm:p-10">
             <p className="eyebrow text-muted">Workshops · dealers · fleets · resellers</p>
             <h2 className="mt-2 text-3xl sm:text-4xl">Trade accounts for regular buyers</h2>
-            <p className="mt-3 max-w-xl text-ink-2">Approved trade buyers send multi-line parts lists in one request and keep every quotation in one place. Apply once. We review each application and reply by email.</p>
+            <p className="mt-3 max-w-xl text-ink-2">For businesses that buy parts in volume. Approved trade buyers send multi-line parts lists in one request, get volume pricing on repeat lines and keep every quotation in one place.</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link to="/trade" className="btn btn-signal">Apply for a trade account</Link>
               <Link to="/wholesale" className="btn btn-line">Wholesale orders</Link>

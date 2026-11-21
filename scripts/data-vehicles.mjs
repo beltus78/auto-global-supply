@@ -11,7 +11,7 @@ export const MAKES = [
   ["land-rover", "Land Rover", 1, "Parts for Discovery, Discovery Sport and Defender, including Ingenium and V6/V8 engines, air suspension and steering."],
   ["jaguar", "Jaguar", 1, "Parts for F-Pace, E-Pace, XE, XF, XJ and F-Type across Ingenium, V6 and V8 engines."],
   ["bentley", "Bentley", 1, "Parts for Bentayga, Continental GT and Flying Spur, including W12 and V8 engines, air suspension and body panels."],
-  ["rolls-royce", "Rolls-Royce", 1, "Parts for Cullinan, Ghost, Wraith, Dawn and Phantom, supplied to order with VIN verification."],
+  ["rolls-royce", "Rolls-Royce", 1, "Parts for Cullinan, Ghost, Wraith, Dawn and Phantom, with VIN verification before quoting."],
   ["maserati", "Maserati", 1, "Parts for Levante, Ghibli, Quattroporte and Grecale, including V6 and V8 engines and ZF gearboxes."],
   ["lamborghini", "Lamborghini", 1, "Parts for Urus and Huracán, including body panels, lighting, brakes and drivetrain components."],
   ["volvo", "Volvo", 1, "Parts for XC90, XC60, XC40, S90 and S60 on the SPA and CMA platforms."],

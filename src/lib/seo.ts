@@ -5,7 +5,7 @@ const abs = (path: string) => `${BUSINESS.website}${path.startsWith("/") ? path 
 // [text to add, word that means the description already says it]
 const PADDING: [string, RegExp][] = [
   [" Fitment is confirmed against your VIN before quoting.", /\bVIN\b/],
-  [" Worldwide shipping from our supplier network.", /shipping/i],
+  [" Shipped worldwide from our warehouse in China.", /shipping/i],
   [" Written quotation before purchase.", /quot/i],
   [" Auto Global Supply.", /Auto Global Supply/],
 ];

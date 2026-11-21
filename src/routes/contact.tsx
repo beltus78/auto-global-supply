@@ -38,7 +38,7 @@ function ContactPage() {
 
   return (
     <>
-      <PageHeader crumbs={[{ name: "Contact" }]} eyebrow="Contact" title="Contact us" intro="For a quotation, the request form or WhatsApp is fastest. For anything else, use the details below." />
+      <PageHeader crumbs={[{ name: "Contact" }]} eyebrow="Contact" title="Contact us" intro="For a quotation, the request form or WhatsApp is fastest. We hold our own stock and do not take on new suppliers, sourcing agents or partnership offers, so those messages are not answered." />
       <div className="wrap grid gap-8 py-8 lg:grid-cols-[1fr_1fr] lg:py-12">
         <div className="space-y-4">
           <div className="grid gap-px border border-line bg-line sm:grid-cols-2">

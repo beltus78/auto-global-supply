@@ -8,6 +8,7 @@ TanStack Start on Cloudflare Workers + D1 (`DB`) + R2 (`MEDIA`). Deploys from br
 - Contact details, company details and addresses live in src/lib/business.ts. Do not edit them.
 - Do not promise plug-and-play fitment for upgrade/conversion kits, fixed delivery times, guarantees, or manufacturer affiliation.
 - No invented statistics, reviews, testimonials or customer names.
+- Positioning (owner, Nov 2026): Auto Global Supply holds its own stock in its Guangzhou, China warehouse and sells to bulk and trade buyers (workshops, dealers, parts retailers, fleets, importers). Never describe it as sourcing parts, searching a supplier network or working with suppliers/partners: that attracts supplier and partnership pitches. Do not claim every listing is in stock; availability and quantities are confirmed in each quotation.
 
 ## Priority search themes
 1. Dashboards (car dashboards, dashboard upgrade kits, W447 V-Class/Vito dashboards, clusters, screens) — hub /dashboards, brand pages /dashboards/<make>.

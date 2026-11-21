@@ -161,7 +161,7 @@ function PartPage() {
                   <Spec label="Applications">{g.apps}</Spec>
                 </>
               ) : null}
-              <Spec label="Ships from">Supplier network. Origin is stated in the quotation</Spec>
+              <Spec label="Ships from">Our warehouse in Guangzhou, China</Spec>
             </dl>
 
             {fitVehicles.length ? (

@@ -14,7 +14,7 @@ import { pageHead } from "@/lib/seo";
 export const Route = createFileRoute("/request-a-part")({
   staticData: { sitemap: true },
   validateSearch: z.object({ part: z.string().max(300).optional().catch(undefined) }),
-  head: () => pageHead({ title: "Request an Automotive Parts Quote | Auto Global Supply", description: "Send your VIN, part number or vehicle details. We identify the correct part and reply with a written quotation including shipping.", path: "/request-a-part" }),
+  head: () => pageHead({ title: "Request an Automotive Parts Quote | Auto Global Supply", description: "Send a parts list, part numbers or VINs. We check stock in our Guangzhou warehouse and reply with a written quotation including shipping.", path: "/request-a-part" }),
   component: RequestPage,
 });
 
@@ -52,7 +52,7 @@ function RequestPage() {
 
   return (
     <>
-      <PageHeader crumbs={[{ name: "Request a part" }]} eyebrow="Send VIN / part number" title="Request a quote" intro="Tell us the part and the vehicle. A VIN or part number is the fastest route to the correct part. If you only have a photo, that works too." />
+      <PageHeader crumbs={[{ name: "Request a part" }]} eyebrow="Send VIN / part number" title="Request a quote" intro="Tell us the parts, quantities and vehicles. A parts list with part numbers or VINs gets the fastest quotation. This form is for buyers only: supplier and partnership offers are not answered." />
       <div className="wrap grid gap-8 py-8 lg:grid-cols-[1.25fr_0.75fr] lg:py-12">
         {done !== null ? (
           <Success title="Request received" reference={done || undefined}>
@@ -109,7 +109,7 @@ function RequestPage() {
           <div className="panel p-6">
             <h2 className="text-xl">What happens next</h2>
             <ol className="mt-3 space-y-3 text-[14px] text-ink-2">
-              {["We check the part against your vehicle build.", "We search our supplier network for matching options.", "You receive a written quotation: part, condition, price, lead time and shipping.", "Nothing is ordered until you approve it."].map((t, i) => (
+              {["We check the part against your vehicle build.", "We check availability and quantity in our warehouse.", "You receive a written quotation: part, condition, price, lead time and shipping.", "Nothing is ordered until you approve it."].map((t, i) => (
                 <li key={t} className="flex gap-3"><span className="mono mt-0.5 text-[11px] text-muted">{String(i + 1).padStart(2, "0")}</span><span>{t}</span></li>
               ))}
             </ol>

@@ -14,7 +14,7 @@ export function SiteFooter() {
       <div className="wrap grid gap-10 py-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <Logo />
-          <p className="mt-5 max-w-sm text-[14px] text-steel-muted">Automotive parts import and export for vehicle owners, workshops, dealers and trade buyers, through a network of manufacturers, distributors, dealers and specialised suppliers.</p>
+          <p className="mt-5 max-w-sm text-[14px] text-steel-muted">Wholesale automotive parts shipped from our own warehouse in Guangzhou, China. We sell to workshops, dealers, parts retailers, fleets and importers buying in volume.</p>
           <div className="mt-5 grid gap-1.5 text-[14px]">
             <a href={`mailto:${BUSINESS.email}`} className="hover:text-signal">{BUSINESS.email}</a>
             <a href={BUSINESS.usPhoneHref} className="hover:text-signal"><span className="text-steel-muted">US contact</span> {BUSINESS.usPhone}</a>
@@ -73,7 +73,7 @@ export function SiteFooter() {
           <p className="flex gap-4"><Link to="/privacy" className="hover:text-signal">Privacy Policy</Link><Link to="/terms" className="hover:text-signal">Terms & Conditions</Link></p>
         </div>
         <div className="wrap pb-24 text-[11.5px] leading-relaxed text-steel-muted/80 lg:pb-6">
-          <p>Vehicle manufacturer names, model names and part numbers are used for identification and fitment reference only. Auto Global Supply is an independent parts supplier and is not affiliated with or endorsed by any vehicle manufacturer.</p>
+          <p>Vehicle manufacturer names, model names and part numbers are used for identification and fitment reference only. Auto Global Supply is an independent parts wholesaler and is not affiliated with or endorsed by any vehicle manufacturer.</p>
         </div>
       </div>
     </footer>
