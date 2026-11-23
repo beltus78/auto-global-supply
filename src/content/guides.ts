@@ -352,7 +352,7 @@ If the dashboard is coming out anyway, it is a good moment to deal with anything
 **Is it worth replacing the dashboard on an older car?** If the rest of the interior is in good condition, a used dashboard in the original design usually restores the cabin for the lowest cost. If the car also needs seats, trim or displays, look at the interior as a whole before deciding. Our [interior parts for Mercedes-Benz](/interior-parts/mercedes-benz) page lists the options by model.
 
 ## How the parts are shipped
-A dashboard is large and easy to damage. We ship dashboards crated or in reinforced cartons, with the leather surface protected and loose trims packed separately. Express courier suits an urgent single dashboard. Freight is more economical when the dashboard ships with other parts. The method and cost are stated in the quotation.
+A dashboard is large and easy to damage. We ship dashboards crated or in reinforced cartons, with the leather surface protected and loose trims packed separately. Shipping is free within the US and takes 1 to 3 business days. The packing method is stated in the quotation.
 
 ## Getting a quotation
 Send your VIN, the steering side, photographs of the current dashboard and the route you prefer: used, new or a later-style conversion. Browse [Mercedes-Benz dashboards](/dashboards/mercedes-benz) or all [dashboards and dashboard kits](/dashboards), and [request a quote](/request-a-part) when you are ready.`,
@@ -414,7 +414,7 @@ Ask for a component list, not a description. A good quotation lists every seat, 
 - **Ignoring weight.** Captain chairs, a partition, a fridge and a second battery add a lot of weight. Check the van's payload with your installer.
 
 ## Timeline and shipping
-A full conversion is specified, supplied and then installed, and each stage takes time. Seats and trim in a particular color may be made to order. Large items such as chairs and partitions ship crated by freight, so the quotation states the lead time and the shipping method for the whole package. If the van is needed by a fixed date, tell us at the start so we can plan around it.
+A full conversion is specified, supplied and then installed, and each stage takes time. Seats and trim in a particular color may be made to order. Large items such as chairs and partitions ship crated by freight, so the quotation states the lead time for the whole package. Shipping within the US is free. If the van is needed by a fixed date, tell us at the start so we can plan around it.
 
 ## After the conversion
 Keep the component list and the wiring plan with the van. They make later repairs and changes much easier, and they help when the van is sold.
@@ -482,7 +482,7 @@ Fitting seats from a higher trim level, such as sport or comfort seats, is a pop
 - **Not checking the headrests.** Headrests with built-in screens or adjustable wings must match the seat they go on.
 
 ## How seats are shipped
-Seats are heavy and bulky. We pack them on pallets or in strong cartons with the leather and the plugs protected. A pair of front seats can travel by express courier if it is urgent. Complete sets and conversions are usually more economical by pallet freight. The method and cost are stated in the quotation.
+Seats are heavy and bulky. We pack them on pallets or in strong cartons with the leather and the plugs protected. Shipping is free within the US and takes 1 to 3 business days, complete sets included. The packing method is stated in the quotation.
 
 ## After fitting
 Ask your repair shop to clear and re-check the airbag system, test every function and, where needed, set up the memory positions. Keep the old seats until everything has been checked.

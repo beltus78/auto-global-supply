@@ -100,7 +100,7 @@ function PartPage() {
           </div>
 
           <ul className="mt-6 grid gap-3 text-[13.5px] sm:grid-cols-2">
-            {[[FileSearch, "Fitment checked against your VIN"], [ClipboardCheck, "Written quotation before purchase"], [ShieldCheck, "Warranty terms stated in the quotation"], [Truck, "Secure packing and shipping across the US"]].map(([Icon, text]) => {
+            {[[FileSearch, "Fitment checked against your VIN"], [ClipboardCheck, "Written quotation before purchase"], [ShieldCheck, "Warranty terms stated in the quotation"], [Truck, "Free US shipping, 1 to 3 business days"]].map(([Icon, text]) => {
               const I = Icon as typeof Truck;
               return <li key={text as string} className="flex items-center gap-2.5"><I className="h-4.5 w-4.5 shrink-0 text-ink" />{text as string}</li>;
             })}

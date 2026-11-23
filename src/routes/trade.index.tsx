@@ -20,7 +20,7 @@ const BENEFITS = [
   ["One request, whole parts list", "Send a multi-line list with part numbers or VINs and receive one consolidated quotation."],
   ["Quotation history", "Every request sent while signed in is kept in your trade area with its reference."],
   ["A consistent parts desk", "Repeat requirements are handled with your previous orders and preferences on file."],
-  ["Consolidated shipping", "Mixed orders are packed and shipped together where it reduces your freight cost."],
+  ["Free US shipping", "Free to every US state, delivered in 1 to 3 business days, bulk orders included."],
 ];
 
 function SignIn({ expired }: { expired: boolean }) {

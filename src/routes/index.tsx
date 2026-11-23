@@ -18,7 +18,7 @@ const FEATURES = [
   { Icon: Globe2, title: "US registered company", text: "AUTO SPARE PARTS IMPORT EXPORT LLC, registered in Opa-locka, Florida." },
   { Icon: Boxes, title: "New & replacement parts", text: "New, used and remanufactured options, depending on the part and your preference." },
   { Icon: PackageSearch, title: "Built for bulk buyers", text: "Send a full parts list and get one quotation, with volume pricing for repeat orders." },
-  { Icon: Truck, title: "Shipping to every US state", text: "Courier, freight and pallet delivery, consolidated into one shipment for mixed orders." },
+  { Icon: Truck, title: "Free shipping, 1–3 business days", text: "Free to every US state, bulk orders included. Courier, freight and pallet delivery." },
 ];
 
 const STEPS = [
@@ -69,7 +69,7 @@ function HomePage() {
             <h1 className="mt-5 text-[2.9rem] sm:text-6xl lg:text-7xl">
               <span data-reveal className="block" style={{ "--i": 1 } as React.CSSProperties}>Car parts in volume.</span>
               <span data-reveal className="block" style={{ "--i": 2 } as React.CSSProperties}>From our own warehouse.</span>
-              <span data-reveal className="block text-signal" style={{ "--i": 3 } as React.CSSProperties}>Shipped across the US.</span>
+              <span data-reveal className="block text-signal" style={{ "--i": 3 } as React.CSSProperties}>Free US shipping.</span>
             </h1>
             <p data-reveal style={{ "--i": 4 } as React.CSSProperties} className="mt-5 max-w-xl text-base text-steel-muted sm:text-lg">
               Auto Global Supply is a Florida-registered parts wholesaler selling to repair shops, dealers, parts stores and fleets across the United States, from its own stock. Send your parts list for a bulk quotation in US dollars.

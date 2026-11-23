@@ -44,3 +44,6 @@ Linked from the /dashboards and /interior-parts hubs.
 - Shipping page rewritten for every US state (courier, freight, pallet); "worldwide", air/sea freight and export wording removed; forms ask for US state instead of country.
 - Guide how-to-import-auto-parts-from-china removed; its URL 301-redirects to /shipping.
 - Quotations state where each order ships from and any duties, so the site makes no claim about shipping origin.
+
+## 2026-11-23 — Free US shipping
+- Owner: shipping is free within the US and takes 1 to 3 business days, bulk orders included. Updated shipping page, US page, FAQ, hubs, guides, product pages, trade page, home and meta descriptions; removed customs/duties wording.

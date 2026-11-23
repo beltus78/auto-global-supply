@@ -71,5 +71,5 @@ export function productDescription(p: ProductRow): string {
   const pt = partTypeBy.get(p.ptype);
   const c = conditions(pt).map((x) => x.toLowerCase());
   const cond = c.length > 1 ? `${c.slice(0, -1).join(", ")} or ${c[c.length - 1]}` : c[0];
-  return `${p.name}, ${cond}, from our own stock, shipped to every US state. Single units or bulk quantities. Fitment confirmed against your VIN before quoting.`;
+  return `${p.name}, ${cond}, from our own stock, with free US shipping in 1 to 3 business days. Single units or bulk quantities. Fitment confirmed against your VIN before quoting.`;
 }
