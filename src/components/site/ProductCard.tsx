@@ -54,7 +54,7 @@ export function ProductCard({ p }: { p: ProductRow }) {
   );
 }
 
-/** Dense catalogue row for the trade list view. */
+/** Dense catalog row for the trade list view. */
 export function ProductRowItem({ p }: { p: ProductRow }) {
   const pt = partTypeBy.get(p.ptype);
   return (

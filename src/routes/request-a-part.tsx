@@ -73,11 +73,11 @@ function RequestPage() {
 
             <h2 className="mt-8 text-2xl">02 · The vehicle</h2>
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
-              <Field label="VIN" htmlFor="r-vin" className="sm:col-span-2" hint="17 characters, on the registration document or the lower corner of the windscreen."><input id="r-vin" className="field mono uppercase" maxLength={20} value={form.vin} onChange={set("vin")} placeholder="WBA…" /></Field>
+              <Field label="VIN" htmlFor="r-vin" className="sm:col-span-2" hint="17 characters, on the registration document or the lower corner of the windshield."><input id="r-vin" className="field mono uppercase" maxLength={20} value={form.vin} onChange={set("vin")} placeholder="WBA…" /></Field>
               <Field label="Make" htmlFor="r-make"><input id="r-make" className="field" list="r-makes" value={form.make} onChange={set("make")} /><datalist id="r-makes">{MAKES.map((m) => <option key={m.slug} value={m.name} />)}</datalist></Field>
               <Field label="Model" htmlFor="r-model"><input id="r-model" className="field" value={form.model} onChange={set("model")} placeholder="e.g. X5 G05" /></Field>
               <Field label="Year" htmlFor="r-year"><input id="r-year" className="field" value={form.year} onChange={set("year")} /></Field>
-              <Field label="Engine" htmlFor="r-engine"><input id="r-engine" className="field" value={form.engine} onChange={set("engine")} placeholder="e.g. B58 3.0 petrol" /></Field>
+              <Field label="Engine" htmlFor="r-engine"><input id="r-engine" className="field" value={form.engine} onChange={set("engine")} placeholder="e.g. B58 3.0 gas" /></Field>
             </div>
 
             <h2 className="mt-8 text-2xl">03 · Your details</h2>

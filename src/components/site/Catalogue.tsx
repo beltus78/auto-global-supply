@@ -122,7 +122,7 @@ export function Catalogue({ search, target, lockCategory }: { search: CatalogueS
         ) : (
           <div className="panel mt-4 p-8">
             <h2 className="text-2xl">No listing matches those filters</h2>
-            <p className="mt-2 max-w-xl text-ink-2">The catalogue shows our most requested lines, not every part we hold. Send the part name or number with your VIN and we will check our stock.</p>
+            <p className="mt-2 max-w-xl text-ink-2">The catalog shows our most requested lines, not every part we hold. Send the part name or number with your VIN and we will check our stock.</p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Link to="/request-a-part" className="btn btn-signal">Request this part</Link>
               <Link {...linkTo({})} className="btn btn-line">Clear filters</Link>

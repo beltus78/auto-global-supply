@@ -115,7 +115,7 @@ export function SiteHeader() {
           </div>
           <div className="wrap pb-10">
             <ul className="font-display text-2xl font-semibold uppercase">
-              {[{ to: "/parts", label: "Parts catalogue" }, { to: "/brands", label: "Brands" }, { to: "/request-a-part", label: "Request a part" }, ...NAV, { to: "/wholesale", label: "Wholesale orders" }, { to: "/about", label: "About" }, { to: "/contact", label: "Contact" }].map((n) => (
+              {[{ to: "/parts", label: "Parts catalog" }, { to: "/brands", label: "Brands" }, { to: "/request-a-part", label: "Request a part" }, ...NAV, { to: "/wholesale", label: "Wholesale orders" }, { to: "/about", label: "About" }, { to: "/contact", label: "Contact" }].map((n) => (
                 <li key={n.to} className="border-b border-steel-line"><Link to={n.to} onClick={() => setOpen(false)} className="block py-3.5">{n.label}</Link></li>
               ))}
             </ul>

@@ -38,7 +38,7 @@ function BrandsPage() {
         </Section>
       ))}
       <div className="h-12" />
-      <CtaBand title="Brand or model not listed?" text="We supply parts for many more vehicles than the catalogue shows. Send the vehicle details and the part you need." />
+      <CtaBand title="Brand or model not listed?" text="We supply parts for many more vehicles than the catalog shows. Send the vehicle details and the part you need." />
     </>
   );
 }

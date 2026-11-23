@@ -17,9 +17,9 @@ function NotFoundComponent() {
     <div className="wrap flex min-h-[60vh] flex-col items-start justify-center py-16">
       <p className="mono text-sm text-muted">ERROR 404</p>
       <h1 className="mt-2 text-6xl">Page not found</h1>
-      <p className="mt-3 max-w-md text-ink-2">That page does not exist or has moved. Search the catalogue, or send us the part you need and we will find it.</p>
+      <p className="mt-3 max-w-md text-ink-2">That page does not exist or has moved. Search the catalog, or send us the part you need and we will find it.</p>
       <div className="mt-6 flex flex-wrap gap-3">
-        <Link to="/parts" className="btn btn-signal">Browse the catalogue</Link>
+        <Link to="/parts" className="btn btn-signal">Browse the catalog</Link>
         <Link to="/request-a-part" className="btn btn-line">Request a part</Link>
       </div>
     </div>
@@ -49,9 +49,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#1c2330" },
       { title: "Auto Global Supply" },
-      { name: "description", content: "Wholesale automotive parts from our warehouse in Guangzhou, China, for workshops, dealers and importers. Send a parts list for a quotation." },
+      { name: "description", content: "Wholesale automotive parts from our warehouse in Guangzhou, China, for repair shops, dealers and importers. Send a parts list for a quotation." },
       { property: "og:site_name", content: "Auto Global Supply" },
       { property: "og:type", content: "website" },
+      { property: "og:locale", content: "en_US" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -78,7 +79,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en-US">
       <head>
         <HeadContent />
       </head>

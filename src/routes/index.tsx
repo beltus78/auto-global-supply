@@ -29,7 +29,7 @@ const STEPS = [
   ["Shipping is arranged", "Packed for export and shipped by the agreed method."],
 ];
 
-// Requests our parts desk handles most often. Each links to the matching catalogue view.
+// Requests our parts desk handles most often. Each links to the matching catalog view.
 const REQUESTED: { label: string; search: Record<string, string> }[] = [
   { label: "V-Class & Vito W447 dashboard kits", search: { make: "mercedes-benz", model: "v-class", part: "dashboard-upgrade-kit" } },
   { label: "Van VIP interior conversions", search: { part: "vip-interior-conversion" } },
@@ -49,8 +49,8 @@ export const Route = createFileRoute("/")({
   staticData: { sitemap: true },
   head: () =>
     pageHead({
-      title: "Auto Global Supply | Wholesale Car Parts from Our China Warehouse",
-      description: "Wholesale car parts for workshops, dealers, retailers and importers, stocked in our Guangzhou warehouse. Send a parts list for a bulk quotation.",
+      title: "Wholesale Car Parts for US Buyers | Auto Global Supply",
+      description: "Wholesale car parts for US repair shops, dealers, parts stores and fleets, from a Florida-registered company with its own Guangzhou warehouse. Bulk quotes in USD.",
       path: "/",
     }),
   loader: ({ context }) => context.queryClient.ensureQueryData(featuredQuery({ limit: 8 })),
@@ -72,7 +72,7 @@ function HomePage() {
               <span data-reveal className="block text-signal" style={{ "--i": 3 } as React.CSSProperties}>Shipped worldwide.</span>
             </h1>
             <p data-reveal style={{ "--i": 4 } as React.CSSProperties} className="mt-5 max-w-xl text-base text-steel-muted sm:text-lg">
-              Auto Global Supply holds automotive parts in its own warehouse in Guangzhou, China and sells them to workshops, dealers, parts retailers, fleets and importers. Our registered U.S. business is in Opa-locka, Florida. Send your parts list for a bulk quotation.
+              Auto Global Supply holds automotive parts in its own warehouse in Guangzhou, China and sells them to repair shops, dealers, parts retailers, fleets and importers. Our registered U.S. business is in Opa-locka, Florida. Send your parts list for a bulk quotation.
             </p>
             <p data-reveal style={{ "--i": 5 } as React.CSSProperties} className="mono mt-5 text-[12px] uppercase tracking-[0.1em] text-steel-muted">
               Customers are searching for: <TypeCycle className="text-steel-text" phrases={["W447 V-Class dashboard kit", "S-Class W222 dashboard", "X5 G05 front seats", "Range Rover L405 steering wheel", "B58 turbocharger", "Cayenne 9YA matrix headlight"]} />
@@ -119,7 +119,7 @@ function HomePage() {
         ))}
       </section>
 
-      <Section eyebrow="Catalogue" title="Shop by category" intro="Twelve component groups, each filterable by make, model, generation and engine." action={<Link to="/parts" className="btn btn-line">View full catalogue</Link>}>
+      <Section eyebrow="Catalog" title="Shop by category" intro="Twelve component groups, each filterable by make, model, generation and engine." action={<Link to="/parts" className="btn btn-line">View full catalog</Link>}>
         <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
           {CATEGORIES.map((c) => (
             <Link key={c.slug} data-reveal style={{ "--i": CATEGORIES.indexOf(c) % 4 } as React.CSSProperties} to="/category/$slug" params={{ slug: c.slug }} className="panel bracket group flex flex-col transition-colors hover:border-ink">
@@ -141,7 +141,7 @@ function HomePage() {
           <div>
             <p className="eyebrow text-muted">From our enquiry desk</p>
             <h2 className="mt-2 text-3xl sm:text-4xl">What customers ask us for most</h2>
-            <p className="mt-3 text-ink-2">These are the requests that reach our parts desk most often, from single components to complete conversions. Each opens the matching part of the catalogue.</p>
+            <p className="mt-3 text-ink-2">These are the requests that reach our parts desk most often, from single components to complete conversions. Each opens the matching part of the catalog.</p>
             <Link to="/parts-upgrades" className="btn btn-dark mt-5">Parts & upgrades</Link>
           </div>
           <ul className="grid gap-x-8 sm:grid-cols-2">
@@ -216,12 +216,13 @@ function HomePage() {
       <section className="wrap pb-14">
         <div className="grid border border-line bg-panel lg:grid-cols-[1.2fr_0.8fr]">
           <div className="p-6 sm:p-10">
-            <p className="eyebrow text-muted">Workshops · dealers · fleets · resellers</p>
+            <p className="eyebrow text-muted">Repair shops · dealers · fleets · parts stores</p>
             <h2 className="mt-2 text-3xl sm:text-4xl">Trade accounts for regular buyers</h2>
             <p className="mt-3 max-w-xl text-ink-2">For businesses that buy parts in volume. Approved trade buyers send multi-line parts lists in one request, get volume pricing on repeat lines and keep every quotation in one place.</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link to="/trade" className="btn btn-signal">Apply for a trade account</Link>
               <Link to="/wholesale" className="btn btn-line">Wholesale orders</Link>
+              <Link to="/wholesale-auto-parts-usa" className="btn btn-line">US buyers</Link>
             </div>
           </div>
           <ul className="grid content-center gap-px border-t border-line bg-line lg:border-l lg:border-t-0">

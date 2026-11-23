@@ -40,7 +40,7 @@ function GuidePage() {
           <Markdown source={guide.body} />
           <div className="mt-10 flex flex-wrap gap-3">
             <Link to="/request-a-part" className="btn btn-signal">Request a part</Link>
-            <Link to="/parts" className="btn btn-line">Browse the catalogue</Link>
+            <Link to="/parts" className="btn btn-line">Browse the catalog</Link>
           </div>
         </article>
         <aside>

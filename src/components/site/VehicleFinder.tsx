@@ -5,7 +5,7 @@ import { MAKES, engineBy, modelsOf, years } from "@/lib/taxonomy";
 
 type Initial = { make?: string; model?: string; gen?: string; engine?: string; category?: string };
 
-/** Make > model > generation > engine selector. Submits to the catalogue with the chosen filters. */
+/** Make > model > generation > engine selector. Submits to the catalog with the chosen filters. */
 export function VehicleFinder({ initial = {}, tone = "dark", compact = false }: { initial?: Initial; tone?: "dark" | "light"; compact?: boolean }) {
   const navigate = useNavigate();
   const [make, setMake] = useState(initial.make ?? "");
@@ -50,7 +50,7 @@ export function VehicleFinder({ initial = {}, tone = "dark", compact = false }: 
         <label className={label} htmlFor="vf-engine">04 Engine</label>
         <select id="vf-engine" className="field" value={engine} disabled={!gen || !engines.length} onChange={(e) => setEngine(e.target.value)}>
           <option value="">{gen ? (engines.length ? "Any engine" : "Not applicable") : "Select generation first"}</option>
-          {engines.map((e) => <option key={e!.code} value={e!.code}>{e!.code} · {e!.disp} {e!.fuel === "D" ? "diesel" : "petrol"}</option>)}
+          {engines.map((e) => <option key={e!.code} value={e!.code}>{e!.code} · {e!.disp} {e!.fuel === "D" ? "diesel" : "gas"}</option>)}
         </select>
       </div>
       <button type="submit" className="btn btn-signal"><Search className="h-4 w-4" /> Find parts</button>

@@ -33,3 +33,8 @@ Linked from the /dashboards and /interior-parts hubs.
 - If D1 is unavailable, listing pages still render (counts, links, tables) without the product cards instead of failing.
 - robots.txt: disallow /search, ?q= URLs and /api/.
 - Follow-up: the index now also carries name, SKU, side, part number and note, so listing cards, product pages, related parts, hubs and the sitemap need no D1 reads at all. Text search reads D1 once (slugs) and falls back to matching names/SKUs/vehicles from the index if D1 is unavailable. Tested with the local products table emptied and dropped: every page and search still renders. D1 is now only needed for forms, trade accounts, the search log and (later) product photos.
+
+## 2026-11-23 — US focus
+- Owner: focus SEO on US buyers for now. Switched site copy to American English (catalog, color, center, windshield, hood, gas, repair shop), html lang en-US, og:locale en_US, Organization areaServed United States first.
+- New landing page /wholesale-auto-parts-usa (US buyers, USD quotes, shipping and customs to the US), linked from footer and home. Home title now "Wholesale Car Parts for US Buyers".
+- Listing names and slugs left unchanged (British spellings in part type names stay, to keep URLs).

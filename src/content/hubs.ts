@@ -46,8 +46,8 @@ export const HUBS: Record<Hub["key"], Hub> = {
       {
         h: "Replacement dashboard or upgrade kit?",
         p: [
-          "A replacement dashboard is the same design your car left the factory with. It is the right choice after airbag deployment, cracking, sun damage or a fire, when you want the cabin to look and work exactly as before. We match it by steering side, trim colour and equipment, so the vents, display and head-up unit line up with what is already in the car.",
-          "A dashboard upgrade kit replaces the original design with a later one. On the Mercedes-Benz V-Class and Vito W447, for example, customers fit the later wide-screen dashboard to earlier vans. A kit normally includes the dashboard, vents, screens, centre console, controller or touchpad and wiring. Some kits also include the steering wheel and airbag. Because a kit changes the electrical layout, it is a conversion rather than a bolt-on part.",
+          "A replacement dashboard is the same design your car left the factory with. It is the right choice after airbag deployment, cracking, sun damage or a fire, when you want the cabin to look and work exactly as before. We match it by steering side, trim color and equipment, so the vents, display and head-up unit line up with what is already in the car.",
+          "A dashboard upgrade kit replaces the original design with a later one. On the Mercedes-Benz V-Class and Vito W447, for example, customers fit the later wide-screen dashboard to earlier vans. A kit normally includes the dashboard, vents, screens, center console, controller or touchpad and wiring. Some kits also include the steering wheel and airbag. Because a kit changes the electrical layout, it is a conversion rather than a bolt-on part.",
         ],
       },
       {
@@ -55,7 +55,7 @@ export const HUBS: Record<Hub["key"], Hub> = {
         p: ["A dashboard that arrives in the wrong configuration cannot be fitted, so we confirm these points against your VIN first:"],
         list: [
           "Left- or right-hand drive. Dashboards are built for one steering side only.",
-          "Trim material and colour, including leather-covered or stitched upper sections.",
+          "Trim material and color, including leather-covered or stitched upper sections.",
           "Head-up display, passenger airbag position and knee airbags.",
           "Infotainment generation and screen size, which change the dashboard cut-outs.",
           "For upgrade kits: every component included, the wiring adaptation needed and whether coding is required.",
@@ -64,7 +64,7 @@ export const HUBS: Record<Hub["key"], Hub> = {
       {
         h: "Instrument clusters, screens and head units",
         p: [
-          "Digital instrument clusters and infotainment screens fail more often than the dashboard itself. A cluster stores mileage and vehicle data and must be coded to the car by a qualified workshop after fitting. Screens are matched by size and connector type, and head units by hardware number and region. Send the part number printed on the back of your unit and we can usually identify the replacement straight away.",
+          "Digital instrument clusters and infotainment screens fail more often than the dashboard itself. A cluster stores mileage and vehicle data and must be coded to the car by a qualified repair shop after fitting. Screens are matched by size and connector type, and head units by hardware number and region. Send the part number printed on the back of your unit and we can usually identify the replacement straight away.",
         ],
       },
       {
@@ -77,8 +77,8 @@ export const HUBS: Record<Hub["key"], Hub> = {
     faq: [
       ["Do you sell dashboards for the Mercedes V-Class and Vito W447?", "Yes. W447 dashboards and dashboard upgrade kits are the interior parts we are asked for most. We supply replacement dashboards and complete upgrade kits with vents, screens, console, controller and wiring, matched to left- or right-hand drive."],
       ["Is a dashboard upgrade kit plug-and-play?", "No. A kit changes the dashboard design and the wiring behind it, so treat it as a conversion. We check the kit against your VIN and list every component in the quotation, and your installer handles wiring adaptation and coding."],
-      ["Can I replace a cracked or airbag-damaged dashboard?", "Yes. We supply replacement dashboards in the original design, matched by steering side, trim colour and equipment. After airbag deployment the airbag modules and control unit also need replacing, and we can quote those with the dashboard."],
-      ["Do I need coding after replacing an instrument cluster?", "Almost always. Clusters store mileage and vehicle data and must be coded to the car by a qualified workshop. We match the cluster by part number so that coding is possible."],
+      ["Can I replace a cracked or airbag-damaged dashboard?", "Yes. We supply replacement dashboards in the original design, matched by steering side, trim color and equipment. After airbag deployment the airbag modules and control unit also need replacing, and we can quote those with the dashboard."],
+      ["Do I need coding after replacing an instrument cluster?", "Almost always. Clusters store mileage and vehicle data and must be coded to the car by a qualified repair shop. We match the cluster by part number so that coding is possible."],
       ["What do you need to quote a dashboard?", "Your VIN, the steering side, photographs of the current dashboard and, for upgrade kits, a description or photo of the look you want. The VIN settles most of the fitment questions."],
       ["Do you ship dashboards outside the US?", "Yes. We ship worldwide by air or sea freight. Dashboards are crated or packed in reinforced cartons. The method and cost are in your quotation."],
     ],
@@ -96,7 +96,7 @@ export const HUBS: Record<Hub["key"], Hub> = {
     description: "Car interior parts for BMW, Mercedes-Benz, Range Rover, Porsche and more: seats, dashboards, steering wheels, consoles, door panels, trim and VIP van interiors.",
     eyebrow: "Seats · dashboards · steering wheels · trim · conversions",
     h1: "Car interior parts",
-    intro: "Seats and seat sets, dashboards, steering wheels, centre consoles, door panels, headliners, trim and complete interior conversions, including VIP interiors for the Mercedes-Benz V-Class, Vito and Sprinter.",
+    intro: "Seats and seat sets, dashboards, steering wheels, center consoles, door panels, headliners, trim and complete interior conversions, including VIP interiors for the Mercedes-Benz V-Class, Vito and Sprinter.",
     types: ["front-seat-set", "complete-seat-set", "rear-seat", "dashboard", "dashboard-upgrade-kit", "steering-wheel", "centre-console", "door-panel-set", "headliner", "interior-trim-set", "interior-upgrade-package", "vip-interior-conversion"],
     featuredTypes: ["complete-seat-set", "dashboard", "steering-wheel", "vip-interior-conversion"],
     tableTypes: [
@@ -117,13 +117,13 @@ export const HUBS: Record<Hub["key"], Hub> = {
       {
         h: "Seats and seat sets",
         p: [
-          "Front seat pairs, rear seats and complete front-and-rear sets. Heating, ventilation, massage, memory and side airbags all change the seat and its wiring, so we check each function against your vehicle. Complete sets are popular for colour changes and for upgrading to a sport or comfort seat design.",
+          "Front seat pairs, rear seats and complete front-and-rear sets. Heating, ventilation, massage, memory and side airbags all change the seat and its wiring, so we check each function against your vehicle. Complete sets are popular for color changes and for upgrading to a sport or comfort seat design.",
         ],
       },
       {
         h: "Dashboards, steering wheels and consoles",
         p: [
-          "Replacement dashboards and dashboard upgrade kits are covered on our dashboards page. Steering wheels are matched by rim design, heating, shift paddles and driver-assistance buttons, and are supplied without the airbag module. Centre consoles are matched by colour and by the controls they carry.",
+          "Replacement dashboards and dashboard upgrade kits are covered on our dashboards page. Steering wheels are matched by rim design, heating, shift paddles and driver-assistance buttons, and are supplied without the airbag module. Center consoles are matched by color and by the controls they carry.",
         ],
       },
       {
@@ -139,7 +139,7 @@ export const HUBS: Record<Hub["key"], Hub> = {
       },
     ],
     faq: [
-      ["Can you match my interior colour?", "Yes. We match by VIN and by photographs of your current interior. For used parts we send photographs of the actual items before you confirm, so you can check the colour and condition."],
+      ["Can you match my interior color?", "Yes. We match by VIN and by photographs of your current interior. For used parts we send photographs of the actual items before you confirm, so you can check the color and condition."],
       ["Do replacement seats come with airbags and electrics?", "Seats are supplied with the functions of the original unit, such as heating, ventilation and memory. Side airbags fitted in the seat are confirmed in the quotation. All electrical connections are checked against your vehicle."],
       ["Do you supply VIP interiors for the V-Class, Vito and Sprinter?", "Yes. We supply complete passenger-cabin conversions built to the layout you specify, including captain chairs, partitions, trim, lighting, tables and entertainment equipment."],
       ["Do steering wheels include the airbag?", "Steering wheels are supplied without the airbag module as standard. If you need an airbag module, ask for it in your request and we will quote it separately where it can be supplied."],
@@ -150,7 +150,7 @@ export const HUBS: Record<Hub["key"], Hub> = {
     upgradeCategories: ["Interior & Infotainment", "VIP Interiors", "Seats"],
     makeTitle: (make) => `${make} Interior Parts: Seats, Dashboards & Trim`,
     makeDescription: (make, models, count) => `${make} interior parts for ${models}: seats, dashboards, steering wheels, consoles and door panels. ${count} listings, matched to your VIN.`,
-    makeIntro: (make, models) => `Seats, dashboards, steering wheels, centre consoles, door panels, headliners and trim for the ${make} ${models}. Choose your model and generation below. Interior parts are matched by VIN and by photographs of your current interior.`,
+    makeIntro: (make, models) => `Seats, dashboards, steering wheels, center consoles, door panels, headliners and trim for the ${make} ${models}. Choose your model and generation below. Interior parts are matched by VIN and by photographs of your current interior.`,
     searchPhrases: ["X5 G05 front seats", "S-Class W223 steering wheel", "V-Class VIP interior", "Range Rover L405 seats", "Cayenne 9YA dashboard"],
   },
 };

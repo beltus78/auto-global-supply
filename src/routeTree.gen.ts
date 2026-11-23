@@ -28,6 +28,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as WarrantyRouteImport } from './routes/warranty'
 import { Route as WholesaleRouteImport } from './routes/wholesale'
+import { Route as WholesaleAutoPartsUsaRouteImport } from './routes/wholesale-auto-parts-usa'
 import { Route as ApiSearchLogRouteImport } from './routes/api/search-log'
 import { Route as BrandsIndexRouteImport } from './routes/brands.index'
 import { Route as BrandsSlugRouteImport } from './routes/brands.$slug'
@@ -139,6 +140,11 @@ const WholesaleRoute = WholesaleRouteImport.update({
   path: '/wholesale',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WholesaleAutoPartsUsaRoute = WholesaleAutoPartsUsaRouteImport.update({
+  id: '/wholesale-auto-parts-usa',
+  path: '/wholesale-auto-parts-usa',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiSearchLogRoute = ApiSearchLogRouteImport.update({
   id: '/api/search-log',
   path: '/api/search-log',
@@ -235,6 +241,7 @@ export interface FileRoutesByFullPath {
   '/terms': typeof TermsRoute
   '/warranty': typeof WarrantyRoute
   '/wholesale': typeof WholesaleRoute
+  '/wholesale-auto-parts-usa': typeof WholesaleAutoPartsUsaRoute
   '/api/search-log': typeof ApiSearchLogRoute
   '/brands/$slug': typeof BrandsSlugRoute
   '/category/$slug': typeof CategorySlugRoute
@@ -271,6 +278,7 @@ export interface FileRoutesByTo {
   '/terms': typeof TermsRoute
   '/warranty': typeof WarrantyRoute
   '/wholesale': typeof WholesaleRoute
+  '/wholesale-auto-parts-usa': typeof WholesaleAutoPartsUsaRoute
   '/api/search-log': typeof ApiSearchLogRoute
   '/brands/$slug': typeof BrandsSlugRoute
   '/category/$slug': typeof CategorySlugRoute
@@ -308,6 +316,7 @@ export interface FileRoutesById {
   '/terms': typeof TermsRoute
   '/warranty': typeof WarrantyRoute
   '/wholesale': typeof WholesaleRoute
+  '/wholesale-auto-parts-usa': typeof WholesaleAutoPartsUsaRoute
   '/api/search-log': typeof ApiSearchLogRoute
   '/brands/$slug': typeof BrandsSlugRoute
   '/category/$slug': typeof CategorySlugRoute
@@ -346,6 +355,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/warranty'
     | '/wholesale'
+    | '/wholesale-auto-parts-usa'
     | '/api/search-log'
     | '/brands/$slug'
     | '/category/$slug'
@@ -382,6 +392,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/warranty'
     | '/wholesale'
+    | '/wholesale-auto-parts-usa'
     | '/api/search-log'
     | '/brands/$slug'
     | '/category/$slug'
@@ -418,6 +429,7 @@ export interface FileRouteTypes {
     | '/terms'
     | '/warranty'
     | '/wholesale'
+    | '/wholesale-auto-parts-usa'
     | '/api/search-log'
     | '/brands/$slug'
     | '/category/$slug'
@@ -455,6 +467,7 @@ export interface RootRouteChildren {
   TermsRoute: typeof TermsRoute
   WarrantyRoute: typeof WarrantyRoute
   WholesaleRoute: typeof WholesaleRoute
+  WholesaleAutoPartsUsaRoute: typeof WholesaleAutoPartsUsaRoute
   ApiSearchLogRoute: typeof ApiSearchLogRoute
   BrandsSlugRoute: typeof BrandsSlugRoute
   CategorySlugRoute: typeof CategorySlugRoute
@@ -607,6 +620,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WholesaleRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/wholesale-auto-parts-usa': {
+      id: '/wholesale-auto-parts-usa'
+      path: '/wholesale-auto-parts-usa'
+      fullPath: '/wholesale-auto-parts-usa'
+      preLoaderRoute: typeof WholesaleAutoPartsUsaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/search-log': {
       id: '/api/search-log'
       path: '/api/search-log'
@@ -735,6 +755,7 @@ const rootRouteChildren: RootRouteChildren = {
   TermsRoute: TermsRoute,
   WarrantyRoute: WarrantyRoute,
   WholesaleRoute: WholesaleRoute,
+  WholesaleAutoPartsUsaRoute: WholesaleAutoPartsUsaRoute,
   ApiSearchLogRoute: ApiSearchLogRoute,
   BrandsSlugRoute: BrandsSlugRoute,
   CategorySlugRoute: CategorySlugRoute,

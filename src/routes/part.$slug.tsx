@@ -25,7 +25,7 @@ export const Route = createFileRoute("/part/$slug")({
       description: loaderData.description,
       path: `/part/${params.slug}`,
       ld: [
-        breadcrumbLd([{ name: "Parts catalogue", path: "/parts" }, ...(cat ? [{ name: cat.name, path: `/category/${cat.slug}` }] : []), { name: loaderData.name, path: `/part/${params.slug}` }]),
+        breadcrumbLd([{ name: "Parts catalog", path: "/parts" }, ...(cat ? [{ name: cat.name, path: `/category/${cat.slug}` }] : []), { name: loaderData.name, path: `/part/${params.slug}` }]),
         { "@context": "https://schema.org", "@type": "Product", name: loaderData.name, sku: loaderData.sku, description: loaderData.description, category: cat?.name, brand: { "@type": "Brand", name: BUSINESS.brand }, url: `${BUSINESS.website}/part/${params.slug}` },
       ],
     });
@@ -60,7 +60,7 @@ function PartPage() {
     <>
       <div className="border-b border-line bg-panel">
         <div className="wrap py-3.5">
-          <Breadcrumbs tone="light" items={[{ name: "Parts catalogue", to: "/parts" }, ...(cat ? [{ name: cat.name, to: "/category/$slug", params: { slug: cat.slug } }] : []), { name: p.name }]} />
+          <Breadcrumbs tone="light" items={[{ name: "Parts catalog", to: "/parts" }, ...(cat ? [{ name: cat.name, to: "/category/$slug", params: { slug: cat.slug } }] : []), { name: p.name }]} />
         </div>
       </div>
 
@@ -116,7 +116,7 @@ function PartPage() {
               {p.note ? <p>{p.note}</p> : null}
               <p>{pt?.d}</p>
               <p>
-                Catalogue listings describe the part type and the vehicles it is listed for. The exact part number depends on the build of your vehicle, so we confirm it from your VIN before quoting. If more than one version exists for your car, the quotation shows which one we matched and why.
+                Catalog listings describe the part type and the vehicles it is listed for. The exact part number depends on the build of your vehicle, so we confirm it from your VIN before quoting. If more than one version exists for your car, the quotation shows which one we matched and why.
               </p>
               <h3>What to send for a quotation</h3>
               <ul>

@@ -11,11 +11,11 @@ import { pageHead } from "@/lib/seo";
 export const Route = createFileRoute("/trade/")({
   staticData: { sitemap: true },
   validateSearch: z.object({ link: z.string().optional().catch(undefined) }),
-  head: () => pageHead({ title: "Trade Accounts for Workshops, Dealers & Resellers", description: "Apply for an Auto Global Supply trade account. For workshops, parts retailers, dealers, fleets and exporters who buy automotive parts regularly.", path: "/trade" }),
+  head: () => pageHead({ title: "Trade Accounts for Repair Shops, Dealers & Parts Stores", description: "Apply for an Auto Global Supply trade account. For repair shops, parts retailers, dealers, fleets and exporters who buy automotive parts regularly.", path: "/trade" }),
   component: TradePage,
 });
 
-const TYPES = ["Workshop / garage", "Parts retailer", "Parts wholesaler / distributor", "Vehicle dealer", "Fleet operator", "Body shop", "Exporter / importer", "Other"] as const;
+const TYPES = ["Repair shop / garage", "Parts retailer", "Parts wholesaler / distributor", "Vehicle dealer", "Fleet operator", "Body shop", "Exporter / importer", "Other"] as const;
 const BENEFITS = [
   ["One request, whole parts list", "Send a multi-line list with part numbers or VINs and receive one consolidated quotation."],
   ["Quotation history", "Every request sent while signed in is kept in your trade area with its reference."],
@@ -64,7 +64,7 @@ function SignIn({ expired }: { expired: boolean }) {
 function TradePage() {
   const { link } = Route.useSearch();
   const { data: trade } = useQuery(tradeProfileQuery);
-  const [form, setForm] = useState({ company: "", contact_name: "", email: "", phone: "", country: "", city: "", business_type: "Workshop / garage" as (typeof TYPES)[number], website: "", monthly_volume: "", brands: "", notes: "", hp: "" });
+  const [form, setForm] = useState({ company: "", contact_name: "", email: "", phone: "", country: "", city: "", business_type: "Repair shop / garage" as (typeof TYPES)[number], website: "", monthly_volume: "", brands: "", notes: "", hp: "" });
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [done, setDone] = useState(false);
@@ -86,7 +86,7 @@ function TradePage() {
 
   return (
     <>
-      <PageHeader crumbs={[{ name: "Trade accounts" }]} eyebrow="Workshops · dealers · fleets · resellers" title="Trade accounts" intro="For businesses that buy automotive parts regularly. Apply once. We review each application and reply by email. Anyone can request a quotation without an account." />
+      <PageHeader crumbs={[{ name: "Trade accounts" }]} eyebrow="Repair shops · dealers · fleets · parts stores" title="Trade accounts" intro="For businesses that buy automotive parts regularly. Apply once. We review each application and reply by email. Anyone can request a quotation without an account." />
       <div className="wrap py-8 lg:py-12">
         <ul className="grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
           {BENEFITS.map(([t, d], i) => (

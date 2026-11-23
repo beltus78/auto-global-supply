@@ -126,7 +126,7 @@ export function HubPage({ hub }: { hub: Hub }) {
                 {s.list ? <ul>{s.list.map((t) => <li key={t}>{t}</li>)}</ul> : null}
               </section>
             ))}
-            {hub.key === "interior-parts" ? <p><Link to="/dashboards">See all dashboards and dashboard upgrade kits</Link>, or browse the <Link to="/category/$slug" params={{ slug: "interior" }}>full interior catalogue</Link>.</p> : <p>Looking for seats or trim? See <Link to="/interior-parts">all interior parts</Link>.</p>}
+            {hub.key === "interior-parts" ? <p><Link to="/dashboards">See all dashboards and dashboard upgrade kits</Link>, or browse the <Link to="/category/$slug" params={{ slug: "interior" }}>full interior catalog</Link>.</p> : <p>Looking for seats or trim? See <Link to="/interior-parts">all interior parts</Link>.</p>}
           </article>
           {examples.length ? (
             <aside className="space-y-3">
@@ -209,7 +209,7 @@ export function HubMakePage({ hub, make }: { hub: Hub; make: Make }) {
 
       <Section eyebrow="Full list" title={`Every ${make.name} ${hub.key === "dashboards" ? "dashboard" : "interior"} listing`} className="!pt-0">
         <div className="border border-line">{data.items.slice(0, 60).map((p) => <ProductRowItem key={p.slug} p={p} />)}</div>
-        {data.total > 60 ? <Link to="/parts" search={{ make: make.slug, category: "interior" }} className="btn btn-line mt-4">Show more in the catalogue</Link> : null}
+        {data.total > 60 ? <Link to="/parts" search={{ make: make.slug, category: "interior" }} className="btn btn-line mt-4">Show more in the catalog</Link> : null}
       </Section>
 
       <section className="border-y border-line bg-panel">

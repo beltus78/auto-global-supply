@@ -83,7 +83,7 @@ function BrandPage() {
               <h2 className="mt-2 text-3xl">Engine families</h2>
               <div className="mt-5 flex flex-wrap gap-2">
                 {engines.map((e) => (
-                  <Link key={e!.code} to="/parts" search={{ engine: e!.code }} className="tag h-8 gap-2 px-2.5 hover:border-ink hover:bg-signal hover:text-signal-ink"><span className="font-medium">{e!.code}</span><span className="opacity-70">{e!.disp} {e!.fuel === "D" ? "diesel" : "petrol"}</span></Link>
+                  <Link key={e!.code} to="/parts" search={{ engine: e!.code }} className="tag h-8 gap-2 px-2.5 hover:border-ink hover:bg-signal hover:text-signal-ink"><span className="font-medium">{e!.code}</span><span className="opacity-70">{e!.disp} {e!.fuel === "D" ? "diesel" : "gas"}</span></Link>
                 ))}
               </div>
             </div>

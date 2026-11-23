@@ -31,7 +31,7 @@ function PartsPage() {
   const bits = [search.make ? makeBy.get(search.make)?.name : null, v ? (search.gen ? `${v.model} ${v.gen}` : v.model) : null, search.part ? partTypeBy.get(search.part)?.n : search.category ? categoryBy.get(search.category)?.name : null].filter(Boolean);
   return (
     <>
-      <PageHeader crumbs={[{ name: "Parts catalogue" }]} eyebrow="Catalogue" title={bits.length ? bits.join(" · ") : "Automotive parts catalogue"} intro="Filter by vehicle, category or part type. Add what you need to your quote list and we reply with price, condition and shipping." />
+      <PageHeader crumbs={[{ name: "Parts catalog" }]} eyebrow="Catalog" title={bits.length ? bits.join(" · ") : "Automotive parts catalog"} intro="Filter by vehicle, category or part type. Add what you need to your quote list and we reply with price, condition and shipping." />
       <Catalogue search={search} target={{ to: "/parts" }} />
     </>
   );

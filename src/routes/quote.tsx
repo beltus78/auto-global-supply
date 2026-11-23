@@ -16,7 +16,7 @@ export const Route = createFileRoute("/quote")({
   component: QuotePage,
 });
 
-const BUYER_TYPES = ["Vehicle owner", "Workshop / garage", "Dealer / reseller", "Fleet / company", "Other"] as const;
+const BUYER_TYPES = ["Vehicle owner", "Repair shop / garage", "Dealer / reseller", "Fleet / company", "Other"] as const;
 
 function QuotePage() {
   const basket = useQuoteBasket();
@@ -61,9 +61,9 @@ function QuotePage() {
         ) : basket.items.length === 0 ? (
           <div className="panel p-8">
             <h2 className="text-3xl">Your quote list is empty</h2>
-            <p className="mt-2 max-w-xl text-ink-2">Add parts from the catalogue, or describe what you need and we will identify it for you.</p>
+            <p className="mt-2 max-w-xl text-ink-2">Add parts from the catalog, or describe what you need and we will identify it for you.</p>
             <div className="mt-5 flex flex-wrap gap-3">
-              <Link to="/parts" className="btn btn-signal">Browse the catalogue</Link>
+              <Link to="/parts" className="btn btn-signal">Browse the catalog</Link>
               <Link to="/request-a-part" className="btn btn-line">Request a part</Link>
             </div>
           </div>
@@ -89,7 +89,7 @@ function QuotePage() {
                       </div>
                       <button type="button" onClick={() => basket.remove(i.slug)} className="flex h-9 w-9 items-center justify-center text-muted hover:text-danger" aria-label={`Remove ${i.name}`}><Trash2 className="h-4 w-4" /></button>
                     </div>
-                    <input className="field mt-3 h-9 text-[13.5px]" placeholder="Note for this part: side, colour, part number, condition…" value={i.note ?? ""} onChange={(e) => basket.setNote(i.slug, e.target.value)} aria-label={`Note for ${i.name}`} />
+                    <input className="field mt-3 h-9 text-[13.5px]" placeholder="Note for this part: side, color, part number, condition…" value={i.note ?? ""} onChange={(e) => basket.setNote(i.slug, e.target.value)} aria-label={`Note for ${i.name}`} />
                   </li>
                 ))}
               </ul>

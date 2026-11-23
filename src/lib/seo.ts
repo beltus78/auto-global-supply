@@ -68,5 +68,5 @@ export const organizationLd = {
   email: BUSINESS.email,
   telephone: BUSINESS.usPhone,
   address: { "@type": "PostalAddress", streetAddress: "13740 NW 19th Avenue, Unit 6", addressLocality: "Opa-locka", addressRegion: "FL", postalCode: "33054", addressCountry: "US" },
-  areaServed: "Worldwide",
+  areaServed: [{ "@type": "Country", name: "United States" }, "Worldwide"],
 };

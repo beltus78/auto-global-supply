@@ -24,7 +24,7 @@ function UpgradesPage() {
     <>
       <PageHeader crumbs={[{ name: "Parts & upgrades" }]} eyebrow="Upgrades · conversions · assemblies" title="Parts & upgrades" intro="Dashboard kits, new-look conversions, VIP interiors, front cuts and complete assemblies. These go beyond a single replacement part, so each one is specified and quoted individually." />
 
-      <Section eyebrow="In the catalogue" title="Upgrade and conversion types" intro="Each type is listed per vehicle generation in the catalogue. Open one to see the vehicles covered.">
+      <Section eyebrow="In the catalog" title="Upgrade and conversion types" intro="Each type is listed per vehicle generation in the catalog. Open one to see the vehicles covered.">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {TYPES.map((s) => {
             const pt = partTypeBy.get(s);

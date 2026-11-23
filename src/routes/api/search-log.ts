@@ -5,7 +5,7 @@ const s = z.string().trim().max(120).optional().nullable();
 const body = z.object({ q: s, make: s, model: s, gen: s, engine: s, category: s, part: s, results: z.number().int().min(0).max(100000), path: z.string().max(80).optional() });
 
 /**
- * Records a catalogue search (sent by the browser with navigator.sendBeacon after results render,
+ * Records a catalog search (sent by the browser with navigator.sendBeacon after results render,
  * so crawlers and cached pages don't distort it). Only searches with text or with no results are kept.
  */
 export const Route = createFileRoute("/api/search-log")({

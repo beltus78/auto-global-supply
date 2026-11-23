@@ -40,19 +40,19 @@ export const PAGES: Record<string, PageContent> = {
     ],
     blocks: [
       { h: "Conditions we supply", p: ["Each listing shows the conditions normally offered for that part type. The quotation states the condition of the specific part offered to you."], list: ["New: a new part, either original equipment or aftermarket built to the original specification. The quotation states which.", "Used, tested: an original part removed from a vehicle, inspected and tested as far as the part type allows. Photographs of the actual unit are supplied.", "Remanufactured: an original unit that has been disassembled, rebuilt with new wear components and tested."] },
-      { h: "Parts that need coding", p: ["Control units, instrument clusters, electric steering racks, mechatronic units, headlight modules and similar electronics are matched by hardware and software number and usually need coding or adaptation to the vehicle after fitting. We tell you when this applies. Coding itself is carried out by your workshop."] },
+      { h: "Parts that need coding", p: ["Control units, instrument clusters, electric steering racks, mechatronic units, headlight modules and similar electronics are matched by hardware and software number and usually need coding or adaptation to the vehicle after fitting. We tell you when this applies. Coding itself is carried out by your repair shop."] },
       { h: "Conversions and upgrades", p: ["Facelift kits, dashboard upgrades and interior conversions are not plug-and-play parts. We confirm the kit contents, wiring and steering side against your VIN and list every component in the quotation, so your installer knows exactly what will arrive."] },
-      { h: "Catalogue information", p: ["Catalogue listings show which vehicles a part type is listed for. They are a guide for browsing. Fitment for your vehicle is confirmed individually before an order is finalised."] },
+      { h: "Catalogue information", p: ["Catalog listings show which vehicles a part type is listed for. They are a guide for browsing. Fitment for your vehicle is confirmed individually before an order is finalised."] },
     ],
     cta: { label: "Send your VIN", to: "/request-a-part" },
   },
   wholesale: {
     path: "/wholesale",
     title: "Wholesale & Bulk Car Parts | Auto Global Supply",
-    description: "Bulk automotive parts from our Guangzhou warehouse for workshops, dealers, retailers, fleets and importers. Send a parts list for one consolidated quotation.",
+    description: "Bulk automotive parts from our Guangzhou warehouse for repair shops, dealers, retailers, fleets and importers. Send a parts list for one consolidated quotation.",
     eyebrow: "Wholesale & bulk orders",
     h1: "Wholesale and bulk parts",
-    intro: "Our parts are held in our own warehouse in Guangzhou, China. We sell in volume to workshops, dealers, parts retailers, fleets and importers. Send a parts list of any length and receive one consolidated quotation with shipping.",
+    intro: "Our parts are held in our own warehouse in Guangzhou, China. We sell in volume to repair shops, dealers, parts retailers, fleets and importers. Send a parts list of any length and receive one consolidated quotation with shipping.",
     cards: [
       { title: "Parts-list quoting", text: "Send the full list with part numbers or VINs. We check every line against our stock and quote what we hold, with quantities." },
       { title: "Mixed requirements", text: "Engines, gearboxes, body panels, lighting and service parts can be combined in one order and one shipment." },
@@ -67,6 +67,28 @@ export const PAGES: Record<string, PageContent> = {
     ],
     cta: { label: "Send a parts list", to: "/request-a-part" },
   },
+  usa: {
+    path: "/wholesale-auto-parts-usa",
+    title: "Wholesale Auto Parts for US Buyers | Auto Global Supply",
+    description: "Bulk car parts for US repair shops, dealers, parts stores and fleets. Florida-registered company, stock in our Guangzhou warehouse, quotes in US dollars.",
+    eyebrow: "United States",
+    h1: "Wholesale auto parts for US buyers",
+    intro: "Auto Global Supply is registered in Florida and sells parts from its own warehouse in Guangzhou, China to repair shops, dealers, parts stores, fleets and exporters across the United States. Send a parts list and get one quotation in US dollars, with shipping to your city.",
+    cards: [
+      { title: "US company", text: "AUTO SPARE PARTS IMPORT EXPORT LLC, registered in Florida, with a US phone line and a registered office in Opa-locka." },
+      { title: "Own warehouse stock", text: "Parts are held, inspected, packed and shipped from our warehouse in Guangzhou, China." },
+      { title: "Quotes in US dollars", text: "Every quotation is written in USD and lists price, condition, quantity and freight to your door or port." },
+      { title: "Bulk and repeat orders", text: "Mixed parts lists in one shipment, with volume pricing for larger quantities and regular orders." },
+    ],
+    blocks: [
+      { h: "Who we sell to", list: ["Independent repair shops and European specialists", "Used car and luxury car dealers", "Auto parts stores and online parts sellers", "Fleet operators and rental companies", "Body shops and collision repair centers", "Exporters shipping on to Latin America and the Caribbean"] },
+      { h: "Parts US buyers order most", p: ["Our deepest range is for European luxury vehicles driven in the US: BMW X5, X7 and 7 Series, Mercedes-Benz GLE, GLS, S-Class and Sprinter-based vans, Range Rover, Porsche Cayenne, Audi Q7 and Q8. We also stock parts for Ford F-150, Chevrolet Tahoe and Suburban, Cadillac Escalade, Jeep Wrangler and Grand Cherokee, Toyota and Lexus SUVs.", "The most requested lines are dashboards and interior parts, headlights, bumpers and body panels, air suspension, engines, transmissions and control units."] },
+      { h: "Shipping to the United States", p: ["Small and urgent orders travel by air courier to your door. Larger orders go by air freight or by sea freight to a US port, consolidated into one shipment. The quotation states the shipping method and an estimated transit time for your destination."] },
+      { h: "Customs, duties and tariffs", p: ["Parts ship from China, so US import duties and any additional tariffs on China-origin auto parts apply. Rates change and depend on the part, so confirm them with your customs broker before you order. The buyer is the importer of record unless the quotation says otherwise. We provide the commercial invoice, packing list and part numbers your broker needs."] },
+      { h: "How to order", p: ["Send your parts list with part numbers or VINs and quantities, by the request form, email or WhatsApp on our US number. Nothing is ordered until you approve a written quotation."] },
+    ],
+    cta: { label: "Send a parts list", to: "/request-a-part" },
+  },
   about: {
     path: "/about",
     title: "About Auto Global Supply | Wholesale Parts from Guangzhou",
@@ -77,11 +99,11 @@ export const PAGES: Record<string, PageContent> = {
     cards: [
       { title: "VIN & part number matching", text: "We use the information you provide to narrow the correct specification before quoting." },
       { title: "Own warehouse stock", text: "Parts are held, inspected, packed and shipped from our warehouse in Guangzhou." },
-      { title: "Bulk & trade orders", text: "From a mixed parts list to repeat volume orders for workshops, dealers and importers." },
+      { title: "Bulk & trade orders", text: "From a mixed parts list to repeat volume orders for repair shops, dealers and importers." },
       { title: "Quote before purchase", text: "Specification, availability, price and shipping are confirmed before an order is placed." },
     ],
     blocks: [
-      { h: "What we do", p: ["Auto Global Supply sells automotive parts from its own warehouse in Guangzhou, China. Our buyers are workshops, dealers, parts retailers, fleets and importers who buy in volume. You send a parts list, we check each line against our stock and the vehicle it is for, and we quote it with shipping to your country.", "Our range is widest for European premium vehicles, including BMW, Mercedes-Benz, Audi, Porsche, Range Rover, Land Rover, Bentley and Rolls-Royce, and it extends to Japanese, Korean and American makes."] },
+      { h: "What we do", p: ["Auto Global Supply sells automotive parts from its own warehouse in Guangzhou, China. Our buyers are repair shops, dealers, parts retailers, fleets and importers who buy in volume. You send a parts list, we check each line against our stock and the vehicle it is for, and we quote it with shipping to your country.", "Our range is widest for European premium vehicles, including BMW, Mercedes-Benz, Audi, Porsche, Range Rover, Land Rover, Bentley and Rolls-Royce, and it extends to Japanese, Korean and American makes."] },
       { h: "What customers ask us for", p: ["Complete engines and gearboxes, headlights and body panels, air suspension, control units, dashboards and seats make up most enquiries. We also supply conversion work: facelift kits, dashboard and infotainment upgrades, and full van interiors. These are quoted component by component so the scope is clear before you commit."] },
       { h: "Where we are", p: ["The business is operated by AUTO SPARE PARTS IMPORT EXPORT LLC, registered in Florida (document number L24000026269). The registered and principal office is at 13740 NW 19th Avenue, Unit 6, Opa-locka, FL 33054, United States.", "Our stock is held in our warehouse in Huadu District, Guangzhou, China, and orders are packed and shipped from there. This is not the company's US registered or principal office."] },
       { h: "Buyers, not suppliers", p: ["We hold our own stock and work with buyers only. We do not take on new suppliers, sourcing agents or partnership offers."] },
@@ -95,7 +117,7 @@ export const PAGES: Record<string, PageContent> = {
     description: "International shipping options for automotive parts depend on size, weight, destination, carrier and delivery method.",
     eyebrow: "International shipping",
     h1: "Worldwide automotive parts shipping",
-    intro: "We ship automotive parts worldwide for individual customers, workshops, dealers and wholesale buyers. Options and costs depend on part size, weight, destination, carrier and delivery method.",
+    intro: "We ship automotive parts worldwide for individual customers, repair shops, dealers and wholesale buyers. Options and costs depend on part size, weight, destination, carrier and delivery method.",
     cards: [
       { title: "Air freight", text: "May suit time-sensitive shipments where part size, weight and destination allow." },
       { title: "Sea freight", text: "May suit heavy assemblies, larger consignments and bulk orders." },
@@ -141,7 +163,7 @@ export const PAGES: Record<string, PageContent> = {
   terms: {
     path: "/terms",
     title: "Terms & Conditions | Auto Global Supply",
-    description: "Auto Global Supply terms for quotations, orders, payment, catalogue information, fitment, delivery, warranty, returns and trade accounts.",
+    description: "Auto Global Supply terms for quotations, orders, payment, catalog information, fitment, delivery, warranty, returns and trade accounts.",
     eyebrow: "Legal",
     h1: "Terms & conditions",
     intro: "These general terms explain how enquiries and quotations are handled. The written quotation records the specific terms for an order.",
@@ -180,7 +202,7 @@ export const FAQ: { group: string; items: [string, string][] }[] = [
   {
     group: "Ordering",
     items: [
-      ["How do I get a price?", "Add parts to your quote list or send a request with your VIN or part number. We reply by email with a written quotation covering price, condition, lead time and shipping. The catalogue does not show list prices because the price depends on the exact version, condition and destination."],
+      ["How do I get a price?", "Add parts to your quote list or send a request with your VIN or part number. We reply by email with a written quotation covering price, condition, lead time and shipping. The catalog does not show list prices because the price depends on the exact version, condition and destination."],
       ["Do I need an account?", "No. Anyone can request a quotation. Trade accounts are available for businesses that buy regularly and are granted by application."],
       ["What information do you need?", "Your VIN is the most useful single item. A part number from the old part, a photograph, the quantity, the condition you prefer and the destination country complete the picture."],
       ["Is an enquiry a commitment to buy?", "No. An order exists only when you approve a written quotation and payment is arranged."],
@@ -193,9 +215,9 @@ export const FAQ: { group: string; items: [string, string][] }[] = [
       ["How do you make sure the part fits?", "We check the part against your vehicle build using the VIN and part numbers, and check the actual unit in our warehouse before quoting. If more than one version could apply, we ask before we quote."],
       ["Are the parts new or used?", "Both, depending on the part. Each listing shows the conditions normally offered: new, used and tested, or remanufactured. Your quotation states the condition of the part offered."],
       ["Are the parts original?", "New parts are either original equipment or aftermarket built to the original specification, and the quotation states which. Used and remanufactured parts are original units."],
-      ["Why do listings show drawings instead of photos?", "The catalogue covers thousands of part types and versions. Listings use a technical illustration of the part type. Photographs of the actual part are supplied with your quotation, and always for used parts."],
-      ["The part I need is not listed. Can you still supply it?", "Often, yes. The catalogue shows our most requested lines, not every part we hold. Send the part name or number with your VIN and we will check our stock."],
-      ["Do control units need coding?", "Most do. Engine and gearbox control units, clusters, electric steering racks and similar parts are matched by number and normally need coding to the vehicle after fitting. Your workshop carries out the coding."],
+      ["Why do listings show drawings instead of photos?", "The catalog covers thousands of part types and versions. Listings use a technical illustration of the part type. Photographs of the actual part are supplied with your quotation, and always for used parts."],
+      ["The part I need is not listed. Can you still supply it?", "Often, yes. The catalog shows our most requested lines, not every part we hold. Send the part name or number with your VIN and we will check our stock."],
+      ["Do control units need coding?", "Most do. Engine and gearbox control units, clusters, electric steering racks and similar parts are matched by number and normally need coding to the vehicle after fitting. Your repair shop carries out the coding."],
     ],
   },
   {
@@ -203,7 +225,7 @@ export const FAQ: { group: string; items: [string, string][] }[] = [
     items: [
       ["Do you supply facelift and conversion kits?", "Yes. Facelift kits, dashboard and infotainment upgrades and full van interiors are among our most frequent requests. Every component in the kit is listed in the quotation."],
       ["Are upgrade kits plug-and-play?", "Treat them as conversions. Wiring, coding and left- or right-hand drive all matter. We check the kit against your VIN and tell you what installation involves before you order."],
-      ["Do you install?", "No. We supply the parts. Installation is carried out by your own workshop."],
+      ["Do you install?", "No. We supply the parts. Installation is carried out by your own repair shop."],
     ],
   },
   {

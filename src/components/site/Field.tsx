@@ -34,7 +34,7 @@ export function Success({ title, children, reference }: { title: string; childre
       {reference ? <p className="mono mt-3 inline-block border border-line-strong bg-paper px-3 py-1.5 text-sm">Reference {reference}</p> : null}
       <div className="mt-3 space-y-2 text-ink-2">{children}</div>
       <div className="mt-6 flex flex-wrap gap-3">
-        <Link to="/parts" className="btn btn-dark">Back to catalogue</Link>
+        <Link to="/parts" className="btn btn-dark">Back to catalog</Link>
         <Link to="/" className="btn btn-line">Home</Link>
       </div>
     </div>

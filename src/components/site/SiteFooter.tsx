@@ -14,7 +14,7 @@ export function SiteFooter() {
       <div className="wrap grid gap-10 py-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <Logo />
-          <p className="mt-5 max-w-sm text-[14px] text-steel-muted">Wholesale automotive parts shipped from our own warehouse in Guangzhou, China. We sell to workshops, dealers, parts retailers, fleets and importers buying in volume.</p>
+          <p className="mt-5 max-w-sm text-[14px] text-steel-muted">Wholesale automotive parts shipped from our own warehouse in Guangzhou, China. We sell to repair shops, dealers, parts retailers, fleets and importers buying in volume.</p>
           <div className="mt-5 grid gap-1.5 text-[14px]">
             <a href={`mailto:${BUSINESS.email}`} className="hover:text-signal">{BUSINESS.email}</a>
             <a href={BUSINESS.usPhoneHref} className="hover:text-signal"><span className="text-steel-muted">US contact</span> {BUSINESS.usPhone}</a>
@@ -23,7 +23,7 @@ export function SiteFooter() {
           <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="btn btn-sm mt-5 bg-whatsapp text-white hover:brightness-110"><WhatsAppIcon className="h-4 w-4" /> Enquire on WhatsApp</a>
         </div>
         <div>
-          <p className={col}>Catalogue</p>
+          <p className={col}>Catalog</p>
           <div className="mt-3">
             {CATEGORIES.slice(0, 8).map((c) => <Link key={c.slug} to="/category/$slug" params={{ slug: c.slug }} className={link}>{c.name}</Link>)}
             <Link to="/dashboards" className={link}>Dashboards & dashboard kits</Link>
@@ -42,6 +42,7 @@ export function SiteFooter() {
             <Link to="/returns" className={link}>Returns</Link>
             <Link to="/warranty" className={link}>Warranty information</Link>
             <Link to="/wholesale" className={link}>Wholesale orders</Link>
+            <Link to="/wholesale-auto-parts-usa" className={link}>US buyers</Link>
             <Link to="/trade" className={link}>Trade accounts</Link>
           </div>
           <p className={`${col} mt-7`}>Company</p>

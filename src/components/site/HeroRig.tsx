@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { PartArt } from "./PartArt";
 
 const RIG = [
-  { icon: "dashboard", name: "Dashboard assembly", ref: "INT-DSH", spec: "LHD / RHD · HUD · trim colour" },
+  { icon: "dashboard", name: "Dashboard assembly", ref: "INT-DSH", spec: "LHD / RHD · HUD · trim color" },
   { icon: "engine", name: "Complete engine", ref: "ENG-CMP", spec: "Code · index · ancillaries" },
   { icon: "headlight", name: "Matrix LED headlight", ref: "LGT-HDL", spec: "Halogen · LED · matrix · laser" },
   { icon: "seat", name: "Front seat set", ref: "INT-SEA", spec: "Heat · vent · memory · massage" },
