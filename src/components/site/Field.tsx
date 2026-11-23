@@ -41,4 +41,4 @@ export function Success({ title, children, reference }: { title: string; childre
   );
 }
 
-export const COUNTRIES_HINT = "Country the parts will be shipped to";
+export const COUNTRIES_HINT = "US state the parts will be shipped to";

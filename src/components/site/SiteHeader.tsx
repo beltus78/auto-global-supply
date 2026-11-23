@@ -48,10 +48,9 @@ export function SiteHeader() {
     <header data-site-header className="sticky top-0 z-50 bg-steel text-steel-text">
       <div className="hidden border-b border-steel-line lg:block">
         <div className="wrap mono flex h-9 items-center justify-between text-[11px] uppercase tracking-[0.1em] text-steel-muted">
-          <span>Worldwide parts supply · Quote before purchase · VIN-checked fitment</span>
+          <span>US registered company · Quote before purchase · VIN-checked fitment</span>
           <span className="flex items-center gap-5">
             <a href={BUSINESS.usPhoneHref} className="flex items-center gap-1.5 hover:text-signal"><Phone className="h-3 w-3" /> US {BUSINESS.usPhone}</a>
-            <a href={BUSINESS.internationalPhoneHref} className="hover:text-signal">Intl {BUSINESS.internationalPhone}</a>
             <a href={`mailto:${BUSINESS.email}`} className="hover:text-signal">{BUSINESS.email}</a>
           </span>
         </div>
@@ -125,7 +124,6 @@ export function SiteHeader() {
             </ul>
             <div className="mt-8 grid gap-2 text-[14px] text-steel-muted">
               <a href={BUSINESS.usPhoneHref}>US {BUSINESS.usPhone}</a>
-              <a href={BUSINESS.internationalPhoneHref}>International {BUSINESS.internationalPhone}</a>
               <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
             </div>
           </div>

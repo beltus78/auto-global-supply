@@ -38,3 +38,9 @@ Linked from the /dashboards and /interior-parts hubs.
 - Owner: focus SEO on US buyers for now. Switched site copy to American English (catalog, color, center, windshield, hood, gas, repair shop), html lang en-US, og:locale en_US, Organization areaServed United States first.
 - New landing page /wholesale-auto-parts-usa (US buyers, USD quotes, shipping and customs to the US), linked from footer and home. Home title now "Wholesale Car Parts for US Buyers".
 - Listing names and slugs left unchanged (British spellings in part type names stay, to keep URLs).
+
+## 2026-11-23 — US-only presentation
+- Owner: site must show strictly the US company. Removed every mention of China/Guangzhou, the China warehouse address and the Hong Kong (+852) number; contact is US only (+1 719-512-5025 phone/WhatsApp, Opa-locka FL office).
+- Shipping page rewritten for every US state (courier, freight, pallet); "worldwide", air/sea freight and export wording removed; forms ask for US state instead of country.
+- Guide how-to-import-auto-parts-from-china removed; its URL 301-redirects to /shipping.
+- Quotations state where each order ships from and any duties, so the site makes no claim about shipping origin.

@@ -5,7 +5,7 @@ const abs = (path: string) => `${BUSINESS.website}${path.startsWith("/") ? path 
 // [text to add, word that means the description already says it]
 const PADDING: [string, RegExp][] = [
   [" Fitment is confirmed against your VIN before quoting.", /\bVIN\b/],
-  [" Shipped worldwide from our warehouse in China.", /shipping/i],
+  [" Shipping to every US state.", /shipping/i],
   [" Written quotation before purchase.", /quot/i],
   [" Auto Global Supply.", /Auto Global Supply/],
 ];
@@ -68,5 +68,5 @@ export const organizationLd = {
   email: BUSINESS.email,
   telephone: BUSINESS.usPhone,
   address: { "@type": "PostalAddress", streetAddress: "13740 NW 19th Avenue, Unit 6", addressLocality: "Opa-locka", addressRegion: "FL", postalCode: "33054", addressCountry: "US" },
-  areaServed: [{ "@type": "Country", name: "United States" }, "Worldwide"],
+  areaServed: { "@type": "Country", name: "United States" },
 };

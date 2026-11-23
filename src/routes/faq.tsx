@@ -9,7 +9,7 @@ export const Route = createFileRoute("/faq")({
   head: () =>
     pageHead({
       title: "Automotive Parts Supply FAQ | Auto Global Supply",
-      description: "Answers about quotations, fitment checks, part condition, upgrade kits, shipping, customs, returns and warranty.",
+      description: "Answers about quotations, fitment checks, part condition, upgrade kits, shipping, returns and warranty.",
       path: "/faq",
       ld: [{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQ.flatMap((g) => g.items).map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) }],
     }),

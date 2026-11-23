@@ -10,7 +10,7 @@ import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
   staticData: { sitemap: true },
-  head: () => pageHead({ title: "Contact Auto Global Supply | Automotive Parts Enquiries", description: "Contact Auto Global Supply by email, phone or WhatsApp. US registered office in Opa-locka, Florida, with a warehouse in Guangzhou, China.", path: "/contact" }),
+  head: () => pageHead({ title: "Contact Auto Global Supply | Automotive Parts Enquiries", description: "Contact Auto Global Supply by email, phone or WhatsApp. Registered and principal office in Opa-locka, Florida, USA.", path: "/contact" }),
   component: ContactPage,
 });
 
@@ -45,7 +45,6 @@ function ContactPage() {
             <a href={`mailto:${BUSINESS.email}`} className="bg-panel p-5 hover:bg-paper"><Mail className="h-5 w-5" /><p className="label mt-3">Email</p><p className="font-semibold">{BUSINESS.email}</p></a>
             <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="bg-panel p-5 hover:bg-paper"><WhatsAppIcon className="h-5 w-5 text-whatsapp" /><p className="label mt-3">WhatsApp</p><p className="font-semibold">{BUSINESS.usPhone}</p></a>
             <a href={BUSINESS.usPhoneHref} className="bg-panel p-5 hover:bg-paper"><Phone className="h-5 w-5" /><p className="label mt-3">US contact</p><p className="font-semibold">{BUSINESS.usPhone}</p></a>
-            <a href={BUSINESS.internationalPhoneHref} className="bg-panel p-5 hover:bg-paper"><Phone className="h-5 w-5" /><p className="label mt-3">International contact</p><p className="font-semibold">{BUSINESS.internationalPhone}</p></a>
           </div>
           <div className="panel p-5">
             <MapPin className="h-5 w-5" />
@@ -53,12 +52,6 @@ function ContactPage() {
             <p className="font-semibold">{BUSINESS.legalName}</p>
             <p className="text-ink-2">{BUSINESS.address}</p>
             <p className="mono mt-1 text-[12px] text-muted">Florida document number {BUSINESS.registration}</p>
-          </div>
-          <div className="panel p-5">
-            <MapPin className="h-5 w-5" />
-            <p className="label mt-3">{BUSINESS.chinaWarehouse.label}</p>
-            <p className="text-ink-2">{BUSINESS.chinaWarehouse.address}</p>
-            <p className="mt-1 text-[13px] text-muted">{BUSINESS.chinaWarehouse.role}</p>
           </div>
         </div>
 

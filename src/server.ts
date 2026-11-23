@@ -13,7 +13,7 @@ async function getServerEntry(): Promise<ServerEntry> {
 }
 
 // Pages from the previous site that no longer exist, sent to their closest replacement.
-const REDIRECTS: Record<string, string> = { "/auth": "/trade", "/account": "/trade/account", "/garage": "/trade", "/wishlist": "/quote", "/factory": "/about" };
+const REDIRECTS: Record<string, string> = { "/auth": "/trade", "/account": "/trade/account", "/garage": "/trade", "/wishlist": "/quote", "/factory": "/about", "/guides/how-to-import-auto-parts-from-china": "/shipping" };
 
 // h3 swallows in-handler throws into a normal 500 Response with body
 // {"unhandled":true,"message":"HTTPError"}; try/catch alone never fires for those.

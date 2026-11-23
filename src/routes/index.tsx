@@ -15,10 +15,10 @@ import { pageHead } from "@/lib/seo";
 
 const FEATURES = [
   { Icon: CarFront, title: "VIN-based fitment", text: "Vehicle details identify the required specification before an order is finalized." },
-  { Icon: Globe2, title: "Our own warehouse stock", text: "Parts are held and dispatched from our warehouse in Guangzhou, China." },
+  { Icon: Globe2, title: "US registered company", text: "AUTO SPARE PARTS IMPORT EXPORT LLC, registered in Opa-locka, Florida." },
   { Icon: Boxes, title: "New & replacement parts", text: "New, used and remanufactured options, depending on the part and your preference." },
   { Icon: PackageSearch, title: "Built for bulk buyers", text: "Send a full parts list and get one quotation, with volume pricing for repeat orders." },
-  { Icon: Truck, title: "Worldwide shipping support", text: "Air, sea and courier options, with customs documentation where applicable." },
+  { Icon: Truck, title: "Shipping to every US state", text: "Courier, freight and pallet delivery, consolidated into one shipment for mixed orders." },
 ];
 
 const STEPS = [
@@ -26,7 +26,7 @@ const STEPS = [
   ["We verify the specification", "The information is checked against the vehicle build before anything is offered."],
   ["We check our stock", "Availability and quantities are confirmed in our warehouse."],
   ["You receive a quotation", "Price, condition, lead time and shipping, in writing."],
-  ["Shipping is arranged", "Packed for export and shipped by the agreed method."],
+  ["Shipping is arranged", "Packed securely and shipped by the agreed method."],
 ];
 
 // Requests our parts desk handles most often. Each links to the matching catalog view.
@@ -50,7 +50,7 @@ export const Route = createFileRoute("/")({
   head: () =>
     pageHead({
       title: "Wholesale Car Parts for US Buyers | Auto Global Supply",
-      description: "Wholesale car parts for US repair shops, dealers, parts stores and fleets, from a Florida-registered company with its own Guangzhou warehouse. Bulk quotes in USD.",
+      description: "Wholesale car parts for US repair shops, dealers, parts stores and fleets, from a Florida-registered company. Bulk quotes in US dollars.",
       path: "/",
     }),
   loader: ({ context }) => context.queryClient.ensureQueryData(featuredQuery({ limit: 8 })),
@@ -69,10 +69,10 @@ function HomePage() {
             <h1 className="mt-5 text-[2.9rem] sm:text-6xl lg:text-7xl">
               <span data-reveal className="block" style={{ "--i": 1 } as React.CSSProperties}>Car parts in volume.</span>
               <span data-reveal className="block" style={{ "--i": 2 } as React.CSSProperties}>From our own warehouse.</span>
-              <span data-reveal className="block text-signal" style={{ "--i": 3 } as React.CSSProperties}>Shipped worldwide.</span>
+              <span data-reveal className="block text-signal" style={{ "--i": 3 } as React.CSSProperties}>Shipped across the US.</span>
             </h1>
             <p data-reveal style={{ "--i": 4 } as React.CSSProperties} className="mt-5 max-w-xl text-base text-steel-muted sm:text-lg">
-              Auto Global Supply holds automotive parts in its own warehouse in Guangzhou, China and sells them to repair shops, dealers, parts retailers, fleets and importers. Our registered U.S. business is in Opa-locka, Florida. Send your parts list for a bulk quotation.
+              Auto Global Supply is a Florida-registered parts wholesaler selling to repair shops, dealers, parts stores and fleets across the United States, from its own stock. Send your parts list for a bulk quotation in US dollars.
             </p>
             <p data-reveal style={{ "--i": 5 } as React.CSSProperties} className="mono mt-5 text-[12px] uppercase tracking-[0.1em] text-steel-muted">
               Customers are searching for: <TypeCycle className="text-steel-text" phrases={["W447 V-Class dashboard kit", "S-Class W222 dashboard", "X5 G05 front seats", "Range Rover L405 steering wheel", "B58 turbocharger", "Cayenne 9YA matrix headlight"]} />

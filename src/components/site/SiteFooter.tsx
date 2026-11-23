@@ -14,11 +14,10 @@ export function SiteFooter() {
       <div className="wrap grid gap-10 py-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <Logo />
-          <p className="mt-5 max-w-sm text-[14px] text-steel-muted">Wholesale automotive parts shipped from our own warehouse in Guangzhou, China. We sell to repair shops, dealers, parts retailers, fleets and importers buying in volume.</p>
+          <p className="mt-5 max-w-sm text-[14px] text-steel-muted">Wholesale automotive parts for repair shops, dealers, parts stores and fleets across the United States. Florida-registered company.</p>
           <div className="mt-5 grid gap-1.5 text-[14px]">
             <a href={`mailto:${BUSINESS.email}`} className="hover:text-signal">{BUSINESS.email}</a>
             <a href={BUSINESS.usPhoneHref} className="hover:text-signal"><span className="text-steel-muted">US contact</span> {BUSINESS.usPhone}</a>
-            <a href={BUSINESS.internationalPhoneHref} className="hover:text-signal"><span className="text-steel-muted">International contact</span> {BUSINESS.internationalPhone}</a>
           </div>
           <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="btn btn-sm mt-5 bg-whatsapp text-white hover:brightness-110"><WhatsAppIcon className="h-4 w-4" /> Enquire on WhatsApp</a>
         </div>
@@ -38,7 +37,7 @@ export function SiteFooter() {
             <Link to="/request-a-part" className={link}>Request a quote</Link>
             <Link to="/how-it-works" className={link}>How it works</Link>
             <Link to="/quality-fitment" className={link}>Quality & fitment</Link>
-            <Link to="/shipping" className={link}>International shipping</Link>
+            <Link to="/shipping" className={link}>Shipping</Link>
             <Link to="/returns" className={link}>Returns</Link>
             <Link to="/warranty" className={link}>Warranty information</Link>
             <Link to="/wholesale" className={link}>Wholesale orders</Link>
@@ -54,16 +53,11 @@ export function SiteFooter() {
           </div>
         </div>
         <div>
-          <p className={col}>Business locations</p>
+          <p className={col}>Company</p>
           <div className="mt-3 space-y-5 text-[14px]">
             <div>
               <p className="font-semibold">Florida, USA. Registered and principal office</p>
               <p className="mt-1 text-steel-muted">{BUSINESS.address}</p>
-            </div>
-            <div>
-              <p className="font-semibold">{BUSINESS.chinaWarehouse.label}</p>
-              <p className="mt-1 text-steel-muted">{BUSINESS.chinaWarehouse.address}</p>
-              <p className="mt-1 text-[12.5px] text-steel-muted">{BUSINESS.chinaWarehouse.role}</p>
             </div>
           </div>
         </div>

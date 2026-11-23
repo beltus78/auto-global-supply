@@ -11,11 +11,11 @@ import { pageHead } from "@/lib/seo";
 export const Route = createFileRoute("/trade/")({
   staticData: { sitemap: true },
   validateSearch: z.object({ link: z.string().optional().catch(undefined) }),
-  head: () => pageHead({ title: "Trade Accounts for Repair Shops, Dealers & Parts Stores", description: "Apply for an Auto Global Supply trade account. For repair shops, parts retailers, dealers, fleets and exporters who buy automotive parts regularly.", path: "/trade" }),
+  head: () => pageHead({ title: "Trade Accounts for Repair Shops, Dealers & Parts Stores", description: "Apply for an Auto Global Supply trade account. For repair shops, parts retailers, dealers, fleets and online parts sellers who buy automotive parts regularly.", path: "/trade" }),
   component: TradePage,
 });
 
-const TYPES = ["Repair shop / garage", "Parts retailer", "Parts wholesaler / distributor", "Vehicle dealer", "Fleet operator", "Body shop", "Exporter / importer", "Other"] as const;
+const TYPES = ["Repair shop / garage", "Parts retailer", "Parts wholesaler / distributor", "Vehicle dealer", "Fleet operator", "Body shop", "Online parts seller", "Other"] as const;
 const BENEFITS = [
   ["One request, whole parts list", "Send a multi-line list with part numbers or VINs and receive one consolidated quotation."],
   ["Quotation history", "Every request sent while signed in is kept in your trade area with its reference."],
@@ -114,7 +114,7 @@ function TradePage() {
                 <Field label="Work email" htmlFor="t-email" required><input id="t-email" type="email" className="field" required value={form.email} onChange={set("email")} autoComplete="email" /></Field>
                 <Field label="Phone / WhatsApp" htmlFor="t-phone" required><input id="t-phone" type="tel" className="field" required value={form.phone} onChange={set("phone")} autoComplete="tel" /></Field>
                 <Field label="Website or social page" htmlFor="t-web"><input id="t-web" className="field" value={form.website} onChange={set("website")} /></Field>
-                <Field label="Country" htmlFor="t-country" required><input id="t-country" className="field" required value={form.country} onChange={set("country")} autoComplete="country-name" /></Field>
+                <Field label="State" htmlFor="t-country" required><input id="t-country" className="field" required placeholder="e.g. Texas" value={form.country} onChange={set("country")} autoComplete="address-level1" /></Field>
                 <Field label="City" htmlFor="t-city"><input id="t-city" className="field" value={form.city} onChange={set("city")} /></Field>
                 <Field label="Typical monthly parts volume" htmlFor="t-vol"><input id="t-vol" className="field" value={form.monthly_volume} onChange={set("monthly_volume")} placeholder="e.g. 10 to 20 orders, or one container" /></Field>
                 <Field label="Brands you work on" htmlFor="t-brands"><input id="t-brands" className="field" value={form.brands} onChange={set("brands")} placeholder="e.g. BMW, Mercedes-Benz, Range Rover" /></Field>

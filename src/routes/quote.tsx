@@ -104,8 +104,8 @@ function QuotePage() {
                 <Field label="Email" htmlFor="q-email" required><input id="q-email" type="email" className="field" required value={form.email} onChange={set("email")} autoComplete="email" /></Field>
                 <Field label="Phone / WhatsApp" htmlFor="q-phone"><input id="q-phone" type="tel" className="field" value={form.phone} onChange={set("phone")} autoComplete="tel" placeholder="+1 555 000 0000" /></Field>
                 <Field label="Company" htmlFor="q-company"><input id="q-company" className="field" value={form.company} onChange={set("company")} autoComplete="organization" /></Field>
-                <Field label="Ship to country" htmlFor="q-country" required><input id="q-country" className="field" required value={form.country} onChange={set("country")} autoComplete="country-name" /></Field>
-                <Field label="City / port / postcode" htmlFor="q-dest"><input id="q-dest" className="field" value={form.destination} onChange={set("destination")} /></Field>
+                <Field label="Ship to state" htmlFor="q-country" required><input id="q-country" className="field" required placeholder="e.g. Texas" value={form.country} onChange={set("country")} autoComplete="address-level1" /></Field>
+                <Field label="City / ZIP code" htmlFor="q-dest"><input id="q-dest" className="field" value={form.destination} onChange={set("destination")} /></Field>
                 <Field label="I am a" htmlFor="q-type" className="sm:col-span-2"><select id="q-type" className="field" value={form.buyer_type} onChange={set("buyer_type")}>{BUYER_TYPES.map((b) => <option key={b}>{b}</option>)}</select></Field>
                 <Field label="VIN and notes" htmlFor="q-notes" className="sm:col-span-2" hint="Your VIN lets us confirm fitment for every part on the list."><textarea id="q-notes" className="field" value={form.notes} onChange={set("notes")} placeholder="VIN, preferred condition (new, used or remanufactured), deadline…" /></Field>
               </div>

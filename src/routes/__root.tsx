@@ -49,7 +49,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#1c2330" },
       { title: "Auto Global Supply" },
-      { name: "description", content: "Wholesale automotive parts from our warehouse in Guangzhou, China, for repair shops, dealers and importers. Send a parts list for a quotation." },
+      { name: "description", content: "Wholesale automotive parts for US repair shops, dealers, parts stores and fleets, from a Florida-registered company. Send a parts list for a quotation." },
       { property: "og:site_name", content: "Auto Global Supply" },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_US" },

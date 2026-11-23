@@ -14,7 +14,7 @@ import { pageHead } from "@/lib/seo";
 export const Route = createFileRoute("/request-a-part")({
   staticData: { sitemap: true },
   validateSearch: z.object({ part: z.string().max(300).optional().catch(undefined) }),
-  head: () => pageHead({ title: "Request an Automotive Parts Quote | Auto Global Supply", description: "Send a parts list, part numbers or VINs. We check stock in our Guangzhou warehouse and reply with a written quotation including shipping.", path: "/request-a-part" }),
+  head: () => pageHead({ title: "Request an Automotive Parts Quote | Auto Global Supply", description: "Send a parts list, part numbers or VINs. We check our stock and reply with a written quotation including shipping.", path: "/request-a-part" }),
   component: RequestPage,
 });
 
@@ -85,7 +85,7 @@ function RequestPage() {
               <Field label="Full name" htmlFor="r-name" required><input id="r-name" className="field" required value={form.name} onChange={set("name")} autoComplete="name" /></Field>
               <Field label="Email" htmlFor="r-email" required><input id="r-email" type="email" className="field" required value={form.email} onChange={set("email")} autoComplete="email" /></Field>
               <Field label="Phone / WhatsApp" htmlFor="r-phone"><input id="r-phone" type="tel" className="field" value={form.phone} onChange={set("phone")} autoComplete="tel" /></Field>
-              <Field label="Ship to country" htmlFor="r-country" required><input id="r-country" className="field" required value={form.country} onChange={set("country")} autoComplete="country-name" /></Field>
+              <Field label="Ship to state" htmlFor="r-country" required><input id="r-country" className="field" required placeholder="e.g. Texas" value={form.country} onChange={set("country")} autoComplete="address-level1" /></Field>
               <Field label="Anything else" htmlFor="r-notes" className="sm:col-span-2"><textarea id="r-notes" className="field" value={form.notes} onChange={set("notes")} placeholder="Deadline, city or port, how the fault shows up…" /></Field>
             </div>
             <Honeypot value={form.hp} onChange={(v) => setForm((f) => ({ ...f, hp: v }))} />
@@ -102,7 +102,6 @@ function RequestPage() {
             <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="btn mt-4 bg-whatsapp text-white hover:brightness-110"><WhatsAppIcon className="h-5 w-5" /> Open WhatsApp</a>
             <div className="mt-5 grid gap-1 border-t border-steel-line pt-4 text-[13.5px] text-steel-muted">
               <a href={BUSINESS.usPhoneHref} className="hover:text-signal">US {BUSINESS.usPhone}</a>
-              <a href={BUSINESS.internationalPhoneHref} className="hover:text-signal">International {BUSINESS.internationalPhone}</a>
               <a href={`mailto:${BUSINESS.email}`} className="hover:text-signal">{BUSINESS.email}</a>
             </div>
           </div>

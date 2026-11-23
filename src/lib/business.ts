@@ -7,13 +7,6 @@ export const BUSINESS = {
   website: "https://autoglobalsupply.com",
   usPhone: "+1 719-512-5025",
   usPhoneHref: "tel:+17195125025",
-  internationalPhone: "+852 4648 1747",
-  internationalPhoneHref: "tel:+85246481747",
-  chinaWarehouse: {
-    label: "China Warehouse, Guangzhou",
-    address: "Room 101, Building 1, No. 4 Niugushi Street, Huadong Town, Huadu District, Guangzhou, Guangdong, China",
-    role: "Warehouse and operational location. Not the company's US registered or principal office.",
-  },
   whatsapp: "17195125025",
 } as const;
 
