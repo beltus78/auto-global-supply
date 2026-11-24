@@ -111,7 +111,7 @@ export const HUBS: Record<Hub["key"], Hub> = {
       {
         h: "Interior parts matched to your car's trim",
         p: [
-          "Interior parts depend on more than the model. The same car can leave the factory with several seat designs, leather colours, stitching patterns, wood or carbon trims and equipment levels. We match interior parts by VIN and by photographs of your current interior, and for used parts we send photographs of the actual items before you confirm.",
+          "Interior parts depend on more than the model. The same car can leave the factory with several seat designs, leather colors, stitching patterns, wood or carbon trims and equipment levels. We match interior parts by VIN and by photographs of your current interior, and for used parts we send photographs of the actual items before you confirm.",
         ],
       },
       {

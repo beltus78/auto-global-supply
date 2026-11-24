@@ -1,4 +1,4 @@
-// Upgrade and conversion enquiries our parts desk has handled. Shown as examples of what can be requested.
+// Upgrade and conversion inquiries our parts desk has handled. Shown as examples of what can be requested.
 // No prices: every configuration is quoted individually.
 export type Upgrade = { id: string; make: string; model: string; year?: string; title: string; category: string; partType: string; icon: string; details: string[]; confirmation: string; featured?: boolean };
 

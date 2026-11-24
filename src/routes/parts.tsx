@@ -15,7 +15,7 @@ export const Route = createFileRoute("/parts")({
     const s = match.search;
     const filtered = Object.keys(s).length > 0;
     return pageHead({
-      title: "Automotive Parts Catalogue | Auto Global Supply",
+      title: "Automotive Parts Catalog | Auto Global Supply",
       description: `Browse ${TOTAL_PRODUCTS.toLocaleString("en-US")} automotive parts by make, model, generation, engine and category. Add parts to your quote list and receive a written quotation.`,
       path: "/parts",
       // filtered views are useful to visitors but duplicate the category and brand pages for search engines

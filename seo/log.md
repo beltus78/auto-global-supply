@@ -52,3 +52,11 @@ Linked from the /dashboards and /interior-parts hubs.
 - Added GMC, Ram, Dodge, Chrysler, Lincoln, Buick; expanded Ford, Chevrolet, Cadillac, Jeep, Tesla. +82 generations, +41 engine codes (EcoBoost, Power Stroke, Godzilla, EcoTec3 L84/L87, Duramax L5P/LML/LM2/LWN, LT1/LT2/LT4, HEMI SC, Hurricane, Cummins…), +7 transmissions (6L80, 10L1000, 6R80, 10R140, TorqueFlite 8HP, AS69RC). Catalog 15,536 → 19,841 listings; sitemap ~19,985 URLs.
 - IndexNow key added: 1ec7e6653cc9247630d3d9346cca3e73
 - 2026-11-24 IndexNow: full sitemap submitted (19,985 URLs)
+
+## 2026-11-25 — Daily check
+- Build OK (no test files). Local crawl: all 144 non-product sitemap URLs + 2×150 random product pages (two samples), ~5,250 internal links. All 200, one H1, unique titles, canonicals/OG/JSON-LD valid, lang en-US, og:locale en_US, areaServed United States, no prices, no China/HK/import/customs/worldwide wording, delivery always "1 to 3 business days". Live home and /sitemap.xml: 200.
+- Found & fixed (American English in visible copy): nav "Catalogue" → "Catalog"; "Enquire/enquiry/enquiries" → "Inquire/inquiry/inquiries" (header, footer, WhatsApp button, home, parts-upgrades, how-it-works, terms, privacy, FAQ, contact title); "Catalogue information" → "Catalog information"; "working days" → "business days"; finalised/fulfil/labour/colours/authorised → US spellings; /parts title "Automotive Parts Catalog".
+- Part-type and engine descriptions (descriptions only; listing names and slugs untouched, catalogue-index.json and seed unchanged): centre → center, colour → color, bonnet → hood, windscreen → windshield, tyres → tires, aluminium → aluminum, silencers → mufflers, kerb → curb, boot lid → trunk lid; engine fuel label "Petrol" → "Gasoline"; Body & Exterior category text "hoods, fenders".
+- /guides meta description no longer mentions "importing"; how-it-works "Destination country" → "Delivery state"; privacy "country" → "US state"; W447 guide "vary by country" → "vary by state".
+- fitDescription() could return 161 characters when cutting at a word; now max 160 (3 pages).
+- Left as intended: part type names inside listing names/slugs (Centre Console, Bonnet / Hood, Windscreen, Tailgate / Boot Lid), legal name "IMPORT EXPORT LLC", "we do not take on ... sourcing agents" deflection. 37 of 19,841 product titles are 66–72 chars (long listing names), minor.

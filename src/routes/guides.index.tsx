@@ -6,7 +6,7 @@ import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/guides/")({
   staticData: { sitemap: true },
-  head: () => pageHead({ title: "Automotive Parts Guides | Auto Global Supply", description: "Practical guides to identifying engines, finding part numbers, checking fitment, planning upgrades and importing automotive parts.", path: "/guides" }),
+  head: () => pageHead({ title: "Automotive Parts Guides | Auto Global Supply", description: "Practical guides to identifying engines, finding part numbers, checking fitment, planning upgrades and buying automotive parts in bulk.", path: "/guides" }),
   component: GuidesPage,
 });
 

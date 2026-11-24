@@ -75,10 +75,10 @@ export function SiteHeader() {
           <button type="button" className="flex h-full items-center gap-1.5 bg-signal px-4 text-signal-ink" onMouseEnter={() => setMega(true)} onClick={() => setMega((v) => !v)} aria-expanded={mega}>
             <Menu className="h-4 w-4" /> All parts <ChevronDown className="h-4 w-4" />
           </button>
-          <Link to="/parts" className="flex h-full items-center px-3 hover:text-signal" activeOptions={{ exact: true }} activeProps={{ className: "text-signal" }}>Catalogue</Link>
+          <Link to="/parts" className="flex h-full items-center px-3 hover:text-signal" activeOptions={{ exact: true }} activeProps={{ className: "text-signal" }}>Catalog</Link>
           <Link to="/brands" className="flex h-full items-center px-3 hover:text-signal" activeProps={{ className: "text-signal" }}>Brands</Link>
           {NAV.map((n) => <Link key={n.to} to={n.to} className="flex h-full items-center px-3 hover:text-signal" activeProps={{ className: "text-signal" }}>{n.label}</Link>)}
-          <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="ml-auto flex h-full items-center px-3 text-steel-muted hover:text-signal">WhatsApp enquiry</a>
+          <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="ml-auto flex h-full items-center px-3 text-steel-muted hover:text-signal">WhatsApp inquiry</a>
 
           {mega ? (
             <div className="absolute left-4 right-4 top-full z-50 grid grid-cols-[1.5fr_1fr] gap-8 border border-t-0 border-line bg-panel p-6 font-sans text-[14px] font-normal normal-case tracking-normal text-ink shadow-2xl sm:left-6 sm:right-6">

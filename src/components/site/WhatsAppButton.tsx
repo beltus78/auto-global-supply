@@ -11,7 +11,7 @@ export function WhatsAppIcon({ className }: { className?: string }) {
 
 export function WhatsAppButton() {
   return (
-    <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" aria-label="Enquire on WhatsApp" className="fixed bottom-20 right-4 z-40 flex h-13 w-13 items-center justify-center rounded-full bg-whatsapp p-3 text-white shadow-lg shadow-black/25 transition-transform hover:scale-105 lg:bottom-6 lg:right-6">
+    <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" aria-label="Inquire on WhatsApp" className="fixed bottom-20 right-4 z-40 flex h-13 w-13 items-center justify-center rounded-full bg-whatsapp p-3 text-white shadow-lg shadow-black/25 transition-transform hover:scale-105 lg:bottom-6 lg:right-6">
       <WhatsAppIcon className="h-7 w-7" />
     </a>
   );

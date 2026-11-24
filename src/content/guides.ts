@@ -119,7 +119,7 @@ A later-design dashboard was made for a later electrical system. Expect wiring a
 Camera systems, sound systems, climate controls and driver assistance functions all connect through the dashboard. Tell us what your vehicle has so we can flag anything that changes.
 
 ## 5. Installation
-We supply the kit. Fitting is carried out by your own repair shop, so agree the labour and the timescale with them before you order.`,
+We supply the kit. Fitting is carried out by your own repair shop, so agree the labor and the timescale with them before you order.`,
   },
   {
     slug: "front-cut-or-individual-parts-after-front-end-damage",
@@ -202,7 +202,7 @@ Some packages also include the steering wheel and driver airbag. Your quotation 
 Dashboards are built for left- or right-hand drive only. Tell us which you have. It is the first thing we confirm, because a dashboard for the other side cannot be adapted.
 
 ## Wiring and coding
-A later dashboard was designed around a later electrical system. Expect your installer to adapt wiring and code the new modules to the van. Plug-and-play fitment is not something we promise. Ask your installer whether they have done a W447 conversion before, and agree the labour and the timescale with them before you order.
+A later dashboard was designed around a later electrical system. Expect your installer to adapt wiring and code the new modules to the van. Plug-and-play fitment is not something we promise. Ask your installer whether they have done a W447 conversion before, and agree the labor and the timescale with them before you order.
 
 ## Existing equipment
 Cameras, sound systems, climate controls, parking sensors and driver-assistance functions all connect through the dashboard area. Tell us what your van has, including 4MATIC, the trim line and any factory options, so we can flag anything that changes.
@@ -337,7 +337,7 @@ Yes. The W222 changed in 2017, and the dashboard was updated with it. When order
 6. **Trim strips.** Wood, aluminum or piano black inlays may need to be ordered separately.
 
 ## Fitting
-Replacing a W222 dashboard is a repair shop job. The windshield area, airbags, displays and wiring are all involved. Agree the labour and the timescale with your installer before you order, and ask whether they have done one on this model before.
+Replacing a W222 dashboard is a repair shop job. The windshield area, airbags, displays and wiring are all involved. Agree the labor and the timescale with your installer before you order, and ask whether they have done one on this model before.
 
 ## While the dashboard is out
 If the dashboard is coming out anyway, it is a good moment to deal with anything else in that area: a failing display, a worn trim strip or a cracked vent. Our [W222 parts list](/parts?make=mercedes-benz&model=s-class&gen=w222) shows the interior and electrical parts we supply for this model.
@@ -383,7 +383,7 @@ Captain chairs are the center of most VIP builds. Each chair adds weight and nee
 - the wheelbase of your van (compact, long or extra long), because it decides how many rows fit
 - whether the existing seat rails will be used or new mounting points are needed
 - which functions the chairs need: electric recline, leg rest, heating, ventilation or massage
-- whether the seats must face forward for the routes you drive. Rules on seating and seat belts vary by country, so check what applies where the van is registered.
+- whether the seats must face forward for the routes you drive. Rules on seating and seat belts vary by state, so check what applies where the van is registered.
 
 ## 3. Partition, roof and floor
 - **Partition:** separates the driver's cab from the passengers. It can include a screen, a sliding window or a privacy glass panel, and it needs wiring for whatever it carries.
@@ -477,7 +477,7 @@ Fitting seats from a higher trim level, such as sport or comfort seats, is a pop
 ## Common mistakes
 - **Buying by model name only.** The same model can be built with several seat designs and equipment levels. The VIN shows what your car has.
 - **Ignoring the passenger seat sensor.** It is the most common cause of an airbag warning light after a seat swap.
-- **Mixing colours.** Two shades of the same leather color look very different side by side, especially after years of sun. Compare photos in daylight.
+- **Mixing colors.** Two shades of the same leather color look very different side by side, especially after years of sun. Compare photos in daylight.
 - **Forgetting the rear seats.** If you change the front seats to a new color, the rear seats, door panels and center console may also need to match. See [door panels and other interior trim](/interior-parts).
 - **Not checking the headrests.** Headrests with built-in screens or adjustable wings must match the seat they go on.
 

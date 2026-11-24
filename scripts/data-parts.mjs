@@ -6,7 +6,7 @@ export const CATEGORIES = [
   ["transmission", "Transmission & Drivetrain", "Gearboxes, mechatronics, torque converters, transfer cases, differentials and driveshafts.", "gearbox"],
   ["suspension", "Suspension & Steering", "Air suspension, shock absorbers, control arms, subframes, steering racks and hubs.", "strut"],
   ["brakes", "Brakes", "Brake discs, pads, calipers, ABS and stability control units.", "disc"],
-  ["body-parts", "Body & Exterior", "Bumpers, bonnets, wings, doors, tailgates, grilles, mirrors and body kits.", "bumper"],
+  ["body-parts", "Body & Exterior", "Bumpers, hoods, fenders, doors, tailgates, grilles, mirrors and body kits.", "bumper"],
   ["lighting", "Lighting", "LED, laser and matrix headlights, tail lights, fog lights and lighting control modules.", "headlight"],
   ["cooling", "Cooling & Climate", "Radiators, fans, water pumps, thermostats, condensers and A/C compressors.", "radiator"],
   ["electrical", "Electrical & Electronics", "Control units, sensors, cameras, clusters, infotainment, alternators and starters.", "ecu"],
@@ -78,7 +78,7 @@ t("v", "transmission", [
   ["transfer-case", "Transfer Case", "differential", 2, "awd noev", 2, "NUR", "Transfer case for all-wheel-drive models. Ratio and actuator design are confirmed against the VIN."],
   ["front-differential", "Front Differential", "differential", 2, "awd noev", 1, "NU", "Front axle differential. The ratio must match the rear axle, so we confirm it from the VIN or the label on your unit."],
   ["rear-differential", "Rear Differential", "differential", 2, "noev", 1, "NU", "Rear axle differential. Open, locking and electronically controlled units are all used in this model range and are matched by ratio and part number."],
-  ["propshaft", "Propshaft", "driveshaft", 2, "noev", 0, "NU", "Propeller shaft with centre bearing and joints. Length differs with engine, gearbox and wheelbase."],
+  ["propshaft", "Propshaft", "driveshaft", 2, "noev", 0, "NU", "Propeller shaft with center bearing and joints. Length differs with engine, gearbox and wheelbase."],
   ["front-driveshaft", "Front Driveshaft (CV Axle)", "driveshaft", 2, "awd", 0, "NU", "Front driveshaft with inner and outer constant-velocity joints. Left and right shafts are quoted individually."],
   ["rear-driveshaft", "Rear Driveshaft (CV Axle)", "driveshaft", 3, "", 0, "NU", "Rear driveshaft with constant-velocity joints. Left and right shafts are quoted individually."],
   ["drive-unit", "Electric Drive Unit", "motor", 1, "ev", 2, "UR", "Electric drive unit with motor, inverter and reduction gear. Front and rear units differ, and the part number must match the vehicle configuration."],
@@ -96,7 +96,7 @@ t("v", "suspension", [
   ["rear-subframe", "Rear Subframe", "subframe", 3, "", 0, "NU", "Rear axle subframe, supplied bare unless a complete axle is requested."],
   ["steering-rack", "Steering Rack", "rack", 1, "", 2, "NUR", "Steering rack. Electric racks carry their own control unit and usually need coding to the vehicle. Rear-wheel-steering and active-steering versions are separate part numbers."],
   ["steering-column", "Steering Column", "rack", 3, "", 0, "NU", "Steering column with adjustment motors where fitted."],
-  ["steering-knuckle", "Steering Knuckle", "hub", 2, "", 0, "NU", "Front steering knuckle. Left and right are quoted individually. Often replaced after kerb or impact damage."],
+  ["steering-knuckle", "Steering Knuckle", "hub", 2, "", 0, "NU", "Front steering knuckle. Left and right are quoted individually. Often replaced after curb or impact damage."],
   ["wheel-hub-bearing", "Wheel Hub & Bearing", "hub", 1, "", 1, "N", "Wheel hub with bearing. Front and rear, left and right are quoted individually."],
   ["anti-roll-bar", "Anti-Roll Bar", "controlarm", 3, "", 0, "NU", "Anti-roll bar. Active stabiliser bars with hydraulic or electric actuators are matched by part number."],
 ]);
@@ -112,21 +112,21 @@ t("v", "brakes", [
 t("v", "body-parts", [
   ["front-bumper", "Front Bumper", "bumper", 1, "", 2, "NU", "Front bumper cover. New bumpers are supplied primed for painting. Tell us whether the car has parking sensors, headlight washers, cameras or a sport package, because each changes the part number."],
   ["rear-bumper", "Rear Bumper", "bumper", 1, "", 2, "NU", "Rear bumper cover. New bumpers are supplied primed for painting. Sensor, tow bar and exhaust-trim configurations are confirmed before quoting."],
-  ["bonnet", "Bonnet / Hood", "bonnet", 1, "", 2, "NU", "Bonnet panel. New panels are supplied in primer. Hinges, struts and insulation are quoted separately."],
+  ["bonnet", "Bonnet / Hood", "bonnet", 1, "", 2, "NU", "Hood panel. New panels are supplied in primer. Hinges, struts and insulation are quoted separately."],
   ["front-fender", "Front Wing / Fender", "fender", 1, "", 1, "NU", "Front wing panel. Left and right are quoted individually. New panels are supplied in primer."],
   ["front-grille", "Front Grille", "grille", 1, "", 2, "NU", "Front radiator grille. Versions differ by trim line, camera and radar equipment and model year."],
   ["front-door", "Front Door", "door", 2, "", 1, "NU", "Front door shell. Left and right are quoted individually. Supplied bare unless a complete door with glass and trim is requested."],
   ["rear-door", "Rear Door", "door", 2, "no2door", 0, "NU", "Rear door shell. Left and right are quoted individually. Supplied bare unless a complete door is requested."],
-  ["tailgate", "Tailgate / Boot Lid", "tailgate", 1, "", 1, "NU", "Tailgate or boot lid panel. Supplied bare, or complete with glass, wiring and lock on request."],
+  ["tailgate", "Tailgate / Boot Lid", "tailgate", 1, "", 1, "NU", "Tailgate or trunk lid panel. Supplied bare, or complete with glass, wiring and lock on request."],
   ["wing-mirror", "Wing Mirror", "mirror", 1, "", 1, "NU", "Complete door mirror. Functions such as power folding, auto-dimming, blind spot warning and cameras change the part number, so the VIN is needed.", { sides: 1 }],
   ["radiator-support", "Front Panel / Radiator Support", "bumper", 2, "", 1, "NU", "Front panel that carries the radiators and headlights. Commonly replaced after frontal damage."],
   ["bumper-reinforcement", "Bumper Reinforcement Bar", "bumper", 2, "", 0, "NU", "Front or rear bumper crash bar with crush boxes."],
   ["body-kit", "Body Kit", "bumper", 3, "", 1, "N", "Complete styling kit, typically front bumper, rear bumper, side skirts and trims in the factory sport or performance design. Supplied primed for painting, with a list of every component included."],
-  ["front-cut", "Front Cut (Complete Front End)", "bumper", 2, "", 2, "U", "Complete front section taken from a donor vehicle, typically bumper, headlights, bonnet, wings, front panel and radiator pack. Supplied with or without the engine, as agreed. The quotation lists every panel and component included, with photographs of the actual unit."],
+  ["front-cut", "Front Cut (Complete Front End)", "bumper", 2, "", 2, "U", "Complete front section taken from a donor vehicle, typically bumper, headlights, hood, fenders, front panel and radiator pack. Supplied with or without the engine, as agreed. The quotation lists every panel and component included, with photographs of the actual unit."],
   ["facelift-conversion-kit", "Facelift / New-Look Conversion Kit", "bumper", 2, "", 2, "N", "Kit to update an earlier car to the later facelift appearance. Contents vary by model and normally include bumpers, lights, grille and the brackets and wiring adapters needed to fit them. We list every component in the quotation."],
   ["side-step-set", "Side Step / Running Board Set", "panel", 2, "suvvan", 0, "N", "Pair of side steps with mounting brackets. Fixed and electrically deployable versions are available for some models."],
   ["panoramic-roof", "Panoramic Sunroof Assembly", "panel", 3, "", 0, "NU", "Panoramic roof cassette with glass, frame and motors. Glass panels and blinds can also be quoted on their own."],
-  ["windscreen", "Windscreen", "panel", 3, "", 0, "N", "Laminated windscreen. Rain sensor, camera bracket, head-up display and acoustic options are confirmed against the VIN."],
+  ["windscreen", "Windscreen", "panel", 3, "", 0, "N", "Laminated windshield. Rain sensor, camera bracket, head-up display and acoustic options are confirmed against the VIN."],
 ]);
 t("v", "lighting", [
   ["headlight", "Headlight", "headlight", 1, "", 2, "NU", "Complete headlight unit. Halogen, xenon, LED, matrix and laser versions are not interchangeable without additional parts and coding. Send the part number on your existing light or the VIN so we match the correct version.", { sides: 1 }],
@@ -160,26 +160,26 @@ t("v", "electrical", [
   ["charge-port", "Charge Port Assembly", "sensor", 1, "ev", 0, "NU", "Charge port with wiring. The connector standard depends on the market the car was built for."],
 ]);
 t("v", "interior", [
-  ["dashboard", "Dashboard Assembly", "dashboard", 2, "", 2, "NU", "Dashboard panel. Tell us the trim material and colour, whether the car is left- or right-hand drive, and whether it has a head-up display. Supplied bare or with vents and trims, as agreed in the quotation."],
-  ["dashboard-upgrade-kit", "Dashboard & Infotainment Upgrade Kit", "dashboard", 2, "", 2, "N", "Kit to update the cabin to a later dashboard design. Kits normally cover the dashboard, vents, screens, centre console, controller and wiring. This is a conversion, not a plug-and-play part: wiring, coding and left- or right-hand drive are checked against your VIN, and the quotation lists every component included."],
+  ["dashboard", "Dashboard Assembly", "dashboard", 2, "", 2, "NU", "Dashboard panel. Tell us the trim material and color, whether the car is left- or right-hand drive, and whether it has a head-up display. Supplied bare or with vents and trims, as agreed in the quotation."],
+  ["dashboard-upgrade-kit", "Dashboard & Infotainment Upgrade Kit", "dashboard", 2, "", 2, "N", "Kit to update the cabin to a later dashboard design. Kits normally cover the dashboard, vents, screens, center console, controller and wiring. This is a conversion, not a plug-and-play part: wiring, coding and left- or right-hand drive are checked against your VIN, and the quotation lists every component included."],
   ["interior-upgrade-package", "Interior Upgrade Package", "seat", 3, "", 1, "N", "Package to refresh or upgrade the cabin: seats or seat covers, door cards, console, trims and ambient lighting, as specified. Send photographs of the current interior and tell us the result you want. We confirm what can be supplied for your vehicle."],
   ["vip-interior-conversion", "VIP Interior Conversion", "seat", 1, "van", 2, "N", "Full passenger-cabin conversion for vans: captain chairs, partition, roof and floor trim, lighting, tables and entertainment equipment, built to the layout you specify. Cabin dimensions, seat layout, electrical requirements and installation scope are confirmed before quoting."],
   ["complete-seat-set", "Complete Seat Set (Front & Rear)", "seat", 2, "", 1, "U", "Front and rear seats supplied as a matched set. Mounts, electrical functions and trim are checked against your vehicle, and photographs of the actual seats are supplied before you confirm."],
-  ["front-seat-set", "Front Seat Set", "seat", 2, "", 1, "U", "Pair of front seats. Trim colour, heating, ventilation, massage and memory functions vary from car to car, so photographs of the actual seats are supplied before you confirm."],
+  ["front-seat-set", "Front Seat Set", "seat", 2, "", 1, "U", "Pair of front seats. Trim color, heating, ventilation, massage and memory functions vary from car to car, so photographs of the actual seats are supplied before you confirm."],
   ["rear-seat", "Rear Seat Assembly", "seat", 3, "", 0, "U", "Rear seat bench or individual rear seats. Photographs of the actual seats are supplied before you confirm."],
   ["steering-wheel", "Steering Wheel", "steeringwheel", 1, "", 2, "NU", "Steering wheel. Heated rim, shift paddles, driver-assistance buttons and trim design all change the part number. Supplied without airbag module."],
-  ["centre-console", "Centre Console", "dashboard", 2, "", 1, "NU", "Centre console assembly or trim panel, matched by colour and equipment."],
-  ["door-panel-set", "Door Panel Set", "door", 2, "", 0, "NU", "Interior door cards, matched by trim colour, speaker system and ambient lighting."],
-  ["headliner", "Headliner", "panel", 3, "", 0, "NU", "Roof lining, matched by colour and roof type."],
-  ["interior-trim-set", "Interior Trim Set", "dashboard", 3, "", 0, "N", "Decorative trim strips for the dashboard, console and doors in wood, aluminium, piano black or carbon finishes."],
+  ["centre-console", "Centre Console", "dashboard", 2, "", 1, "NU", "Center console assembly or trim panel, matched by color and equipment."],
+  ["door-panel-set", "Door Panel Set", "door", 2, "", 0, "NU", "Interior door cards, matched by trim color, speaker system and ambient lighting."],
+  ["headliner", "Headliner", "panel", 3, "", 0, "NU", "Roof lining, matched by color and roof type."],
+  ["interior-trim-set", "Interior Trim Set", "dashboard", 3, "", 0, "N", "Decorative trim strips for the dashboard, console and doors in wood, aluminum, piano black or carbon finishes."],
 ]);
 t("v", "fuel-exhaust", [
-  ["exhaust-system", "Exhaust System", "exhaust", 2, "noev", 1, "NU", "Exhaust system from the centre section back, or individual silencers and tailpipe trims on request."],
+  ["exhaust-system", "Exhaust System", "exhaust", 2, "noev", 1, "NU", "Exhaust system from the center section back, or individual mufflers and tailpipe trims on request."],
   ["catalytic-converter", "Catalytic Converter", "exhaust", 2, "noev", 1, "N", "Catalytic converter. Emissions parts are specific to the market and emissions standard of the vehicle, so the VIN is required."],
   ["fuel-tank", "Fuel Tank", "tank", 3, "noev", 0, "NU", "Fuel tank, supplied with or without pump module."],
 ]);
 t("v", "wheels", [
-  ["alloy-wheel-set", "Alloy Wheel Set", "wheel", 1, "", 2, "NU", "Set of four alloy wheels. Tell us the diameter and design you want, or send a photograph. Supplied with or without tyres and pressure sensors."],
+  ["alloy-wheel-set", "Alloy Wheel Set", "wheel", 1, "", 2, "NU", "Set of four alloy wheels. Tell us the diameter and design you want, or send a photograph. Supplied with or without tires and pressure sensors."],
 ]);
 
 export const PART_TYPES = P;

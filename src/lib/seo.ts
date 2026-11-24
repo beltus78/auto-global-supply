@@ -19,7 +19,7 @@ export function fitDescription(text: string, min = 120, max = 160): string {
   if (d.length > max) {
     const cut = d.slice(0, max + 1);
     const sentence = cut.lastIndexOf(". ");
-    d = sentence >= min - 20 ? cut.slice(0, sentence + 1) : `${cut.slice(0, cut.lastIndexOf(" ")).replace(/[,;:.\s]+$/, "")}.`;
+    d = sentence >= min - 20 ? cut.slice(0, sentence + 1) : `${cut.slice(0, cut.lastIndexOf(" ", max - 1)).replace(/[,;:.\s]+$/, "")}.`;
   }
   for (const [pad, has] of PADDING) {
     if (d.length >= min) break;

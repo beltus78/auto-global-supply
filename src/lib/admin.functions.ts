@@ -44,7 +44,7 @@ export const adminLoad = createServerFn({ method: "POST" })
 export const adminDecideTrade = createServerFn({ method: "POST" })
   .inputValidator((d: unknown) => keySchema.extend({ id: z.string().max(60), approve: z.boolean() }).parse(d))
   .handler(async ({ data }) => {
-    if (!(await limit()) || !(await checkKey(data.key))) return { ok: false as const, error: "Not authorised." };
+    if (!(await limit()) || !(await checkKey(data.key))) return { ok: false as const, error: "Not authorized." };
     const { getDb } = await import("./env.server");
     const db = getDb();
     const account = await db.prepare("SELECT id, email, contact_name, company FROM trade_accounts WHERE id = ?").bind(data.id).first<{ id: string; email: string; contact_name: string; company: string }>();
@@ -72,7 +72,7 @@ export const adminDecideTrade = createServerFn({ method: "POST" })
 export const adminSetStatus = createServerFn({ method: "POST" })
   .inputValidator((d: unknown) => keySchema.extend({ table: z.enum(["quotes", "part_requests"]), id: z.string().max(60), status: z.enum(["new", "quoted", "ordered", "closed"]) }).parse(d))
   .handler(async ({ data }) => {
-    if (!(await limit()) || !(await checkKey(data.key))) return { ok: false as const, error: "Not authorised." };
+    if (!(await limit()) || !(await checkKey(data.key))) return { ok: false as const, error: "Not authorized." };
     const { getDb } = await import("./env.server");
     await getDb().prepare(`UPDATE ${data.table} SET status = ? WHERE id = ?`).bind(data.status, data.id).run();
     return { ok: true as const };

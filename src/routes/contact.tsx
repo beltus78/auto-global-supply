@@ -10,7 +10,7 @@ import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
   staticData: { sitemap: true },
-  head: () => pageHead({ title: "Contact Auto Global Supply | Automotive Parts Enquiries", description: "Contact Auto Global Supply by email, phone or WhatsApp. Registered and principal office in Opa-locka, Florida, USA.", path: "/contact" }),
+  head: () => pageHead({ title: "Contact Auto Global Supply | Automotive Parts Inquiries", description: "Contact Auto Global Supply by email, phone or WhatsApp. Registered and principal office in Opa-locka, Florida, USA.", path: "/contact" }),
   component: ContactPage,
 });
 
@@ -62,7 +62,7 @@ function ContactPage() {
         </div>
 
         {done ? (
-          <div className="panel h-fit border-l-4 border-l-ok p-6"><h2 className="text-3xl">Message sent</h2><p className="mt-2 text-ink-2">Thank you. We reply by email, normally within one to two working days.</p></div>
+          <div className="panel h-fit border-l-4 border-l-ok p-6"><h2 className="text-3xl">Message sent</h2><p className="mt-2 text-ink-2">Thank you. We reply by email, normally within one to two business days.</p></div>
         ) : (
           <form onSubmit={onSubmit} className="panel relative h-fit border-t-4 border-t-signal p-5 sm:p-7">
             <h2 className="text-2xl">Send a message</h2>

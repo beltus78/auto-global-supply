@@ -19,7 +19,7 @@ export function SiteFooter() {
             <a href={`mailto:${BUSINESS.email}`} className="hover:text-signal">{BUSINESS.email}</a>
             <a href={BUSINESS.usPhoneHref} className="hover:text-signal"><span className="text-steel-muted">US contact</span> {BUSINESS.usPhone}</a>
           </div>
-          <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="btn btn-sm mt-5 bg-whatsapp text-white hover:brightness-110"><WhatsAppIcon className="h-4 w-4" /> Enquire on WhatsApp</a>
+          <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" className="btn btn-sm mt-5 bg-whatsapp text-white hover:brightness-110"><WhatsAppIcon className="h-4 w-4" /> Inquire on WhatsApp</a>
         </div>
         <div>
           <p className={col}>Catalog</p>

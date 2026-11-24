@@ -140,7 +140,7 @@ function HomePage() {
       <section className="border-y border-line bg-panel">
         <div className="wrap grid gap-8 py-12 lg:grid-cols-[0.8fr_1.2fr] lg:py-16">
           <div>
-            <p className="eyebrow text-muted">From our enquiry desk</p>
+            <p className="eyebrow text-muted">From our inquiry desk</p>
             <h2 className="mt-2 text-3xl sm:text-4xl">What customers ask us for most</h2>
             <p className="mt-3 text-ink-2">These are the requests that reach our parts desk most often, from single components to complete conversions. Each opens the matching part of the catalog.</p>
             <Link to="/parts-upgrades" className="btn btn-dark mt-5">Parts & upgrades</Link>
@@ -202,7 +202,7 @@ function HomePage() {
         </div>
       </section>
 
-      <Section eyebrow="How it works" title="From enquiry to quotation in five clear steps" action={<Link to="/how-it-works" className="btn btn-line">See the parts supply process</Link>}>
+      <Section eyebrow="How it works" title="From inquiry to quotation in five clear steps" action={<Link to="/how-it-works" className="btn btn-line">See the parts supply process</Link>}>
         <ol className="grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-5">
           {STEPS.map(([title, text], i) => (
             <li key={title} data-reveal style={{ "--i": i } as React.CSSProperties} className="group bg-panel p-5 transition-colors hover:bg-steel hover:text-steel-text">

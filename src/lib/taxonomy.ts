@@ -29,7 +29,7 @@ export const engineBySlug = by(ENGINES, "slug");
 export const gearboxBy = by(GEARBOXES, "slug");
 
 export const years = (v: Pick<Vehicle, "from" | "to">) => `${v.from}–${v.to || "present"}`;
-export const fuelName = (f: string) => (f === "D" ? "Diesel" : "Petrol");
+export const fuelName = (f: string) => (f === "D" ? "Diesel" : "Gasoline");
 export const aspName = (a: string) => (a === "T" ? "Turbocharged" : a === "S" ? "Supercharged" : "Naturally aspirated");
 export const CONDITION_NAMES: Record<string, string> = { N: "New", U: "Used and tested", R: "Remanufactured" };
 export const conditions = (pt: PartType | undefined) => (pt?.cond ?? "N").split("").map((c) => CONDITION_NAMES[c] ?? c);

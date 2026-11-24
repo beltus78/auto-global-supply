@@ -45,7 +45,7 @@ function UpgradesPage() {
 
       <section className="border-y border-line bg-panel">
         <div className="wrap py-12 sm:py-16">
-          <p className="eyebrow text-muted">From our enquiry desk</p>
+          <p className="eyebrow text-muted">From our inquiry desk</p>
           <h2 className="mt-2 text-3xl sm:text-4xl">Configurations customers have requested</h2>
           <p className="mt-3 max-w-2xl text-ink-2">Real requests handled by our parts desk, shown as examples of scope. Availability, contents and price are confirmed for your vehicle in a written quotation.</p>
 
@@ -65,7 +65,7 @@ function UpgradesPage() {
                   <ul className="mt-2 space-y-1 text-[13.5px] text-ink-2">{u.details.map((d) => <li key={d}>{d}</li>)}</ul>
                   <p className="mt-3 border-l-2 border-signal-deep pl-3 text-[13px]"><span className="font-semibold">Before quoting:</span> {u.confirmation}</p>
                   <div className="mt-auto pt-4">
-                    <Link to="/request-a-part" search={{ part: `${u.title} (${u.make} ${u.model}${u.year ? ` ${u.year}` : ""})` }} className="btn btn-dark btn-sm">Enquire about this</Link>
+                    <Link to="/request-a-part" search={{ part: `${u.title} (${u.make} ${u.model}${u.year ? ` ${u.year}` : ""})` }} className="btn btn-dark btn-sm">Inquire about this</Link>
                   </div>
                 </div>
               </article>

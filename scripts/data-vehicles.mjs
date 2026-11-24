@@ -42,7 +42,7 @@ export const ENGINES = [
   ["bmw", "B38", "1.5L", "P", "T", "inline-3", "BMW and MINI 1.5L turbo three-cylinder."],
   ["bmw", "B48", "2.0L", "P", "T", "inline-4", "BMW 2.0L turbo four-cylinder used across 20i, 30i and MINI Cooper S applications."],
   ["bmw", "N20", "2.0L", "P", "T", "inline-4", "BMW 2.0L turbo four-cylinder, predecessor to the B48."],
-  ["bmw", "N52", "3.0L", "P", "N", "inline-6", "BMW naturally aspirated magnesium-aluminium inline-six."],
+  ["bmw", "N52", "3.0L", "P", "N", "inline-6", "BMW naturally aspirated magnesium-aluminum inline-six."],
   ["bmw", "N54", "3.0L", "P", "T", "inline-6", "BMW 3.0L twin-turbo inline-six used in 35i models before the N55."],
   ["bmw", "N55", "3.0L", "P", "T", "inline-6", "BMW 3.0L single-turbo inline-six, predecessor to the B58."],
   ["bmw", "B58", "3.0L", "P", "T", "inline-6", "BMW 3.0L turbocharged inline-six used across 40i models, X5, X6, X7 and the Toyota Supra."],
@@ -79,7 +79,7 @@ export const ENGINES = [
   ["mercedes-benz", "OM642", "3.0L", "D", "T", "V6", "Mercedes 3.0L V6 diesel."],
   ["mercedes-benz", "OM656", "2.9L", "D", "T", "inline-6", "Mercedes 2.9L inline-six diesel."],
 
-  ["audi", "EA211", "1.4L", "P", "T", "inline-4", "Volkswagen Group 1.0L to 1.5L TSI petrol family."],
+  ["audi", "EA211", "1.4L", "P", "T", "inline-4", "Volkswagen Group 1.0L to 1.5L TSI gasoline family."],
   ["audi", "EA888", "2.0L", "P", "T", "inline-4", "Volkswagen Group 1.8L and 2.0L TFSI / TSI turbo four-cylinder. Generation must be matched."],
   ["audi", "EA855", "2.5L", "P", "T", "inline-5", "Audi 2.5L TFSI five-cylinder used in RS3, TT RS and RS Q3."],
   ["audi", "EA837", "3.0L", "P", "S", "V6", "Audi 3.0L TFSI supercharged V6."],
@@ -101,10 +101,10 @@ export const ENGINES = [
 
   ["land-rover", "224DT", "2.2L", "D", "T", "inline-4", "Jaguar Land Rover 2.2L four-cylinder diesel."],
   ["land-rover", "204DT", "2.0L", "D", "T", "inline-4", "Jaguar Land Rover Ingenium 2.0L diesel."],
-  ["land-rover", "PT204", "2.0L", "P", "T", "inline-4", "Jaguar Land Rover Ingenium 2.0L petrol."],
+  ["land-rover", "PT204", "2.0L", "P", "T", "inline-4", "Jaguar Land Rover Ingenium 2.0L gasoline."],
   ["land-rover", "306DT", "3.0L", "D", "T", "V6", "Jaguar Land Rover 3.0L TDV6 / SDV6 diesel."],
   ["land-rover", "DT306", "3.0L", "D", "T", "inline-6", "Jaguar Land Rover Ingenium 3.0L inline-six diesel."],
-  ["land-rover", "PT306", "3.0L", "P", "T", "inline-6", "Jaguar Land Rover Ingenium 3.0L inline-six petrol."],
+  ["land-rover", "PT306", "3.0L", "P", "T", "inline-6", "Jaguar Land Rover Ingenium 3.0L inline-six gasoline."],
   ["land-rover", "448DT", "4.4L", "D", "T", "V8", "Jaguar Land Rover 4.4L SDV8 diesel."],
   ["land-rover", "AJ126", "3.0L", "P", "S", "V6", "Jaguar Land Rover 3.0L supercharged V6."],
   ["land-rover", "AJ133", "5.0L", "P", "S", "V8", "Jaguar Land Rover 5.0L V8, supercharged in most applications."],
@@ -113,7 +113,7 @@ export const ENGINES = [
   ["maserati", "F154", "3.8L", "P", "T", "V8", "Maserati 3.8L twin-turbo V8."],
   ["maserati", "A630", "3.0L", "D", "T", "V6", "Maserati 3.0L V6 diesel."],
 
-  ["volvo", "B4204", "2.0L", "P", "T", "inline-4", "Volvo Drive-E 2.0L four-cylinder petrol, turbo or twin-charged."],
+  ["volvo", "B4204", "2.0L", "P", "T", "inline-4", "Volvo Drive-E 2.0L four-cylinder gasoline, turbo or twin-charged."],
   ["volvo", "D4204", "2.0L", "D", "T", "inline-4", "Volvo Drive-E 2.0L four-cylinder diesel."],
 
   ["toyota", "2ZR-FE", "1.8L", "P", "N", "inline-4", "Toyota 1.8L four-cylinder."],
@@ -157,7 +157,7 @@ export const ENGINES = [
   ["ford", "5.2 Predator", "5.2L", "P", "S", "V8", "Ford 5.2L supercharged Predator V8 used in the Shelby GT500."],
 
   ["honda", "L15B7", "1.5L", "P", "T", "inline-4", "Honda 1.5L turbo four-cylinder."],
-  ["honda", "LEB", "1.5L", "P", "N", "inline-4", "Honda 1.5L petrol engine used with the i-DCD hybrid system."],
+  ["honda", "LEB", "1.5L", "P", "N", "inline-4", "Honda 1.5L gasoline engine used with the i-DCD hybrid system."],
   ["honda", "K20C", "2.0L", "P", "T", "inline-4", "Honda 2.0L turbo four-cylinder."],
 
   ["hyundai", "G4KJ", "2.4L", "P", "N", "inline-4", "Hyundai / Kia Theta II 2.4L GDi."],
