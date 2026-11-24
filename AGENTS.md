@@ -38,3 +38,6 @@ Hub copy, FAQs and linked guides: src/content/hubs.ts. Most requested configurat
 ## Reviews (owner decision, Nov 24 2026)
 - Google review link: https://g.page/r/CUk1T9_-lfp1EBM/review (BUSINESS.googleReviewUrl) — in footer, Contact page and every email footer.
 - Reviews shown on the site live in src/content/reviews.ts and must be real, verifiable reviews copied word for word from the Google Business Profile. Never write, generate, edit or import review lists; never add review/rating schema for self-hosted reviews.
+
+## IndexNow
+- Key: 1ec7e6653cc9247630d3d9346cca3e73 (public/1ec7e6653cc9247630d3d9346cca3e73.txt). After publishing new or changed URLs, POST them to https://api.indexnow.org/indexnow as JSON {host:"autoglobalsupply.com", key, keyLocation:"https://autoglobalsupply.com/<key>.txt", urlList}.
