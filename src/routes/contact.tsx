@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Star } from "lucide-react";
 import { PageHeader } from "@/components/site/PageHeader";
 import { Field, FormError, Honeypot } from "@/components/site/Field";
 import { WhatsAppIcon } from "@/components/site/WhatsAppButton";
@@ -53,6 +53,12 @@ function ContactPage() {
             <p className="text-ink-2">{BUSINESS.address}</p>
             <p className="mono mt-1 text-[12px] text-muted">Florida document number {BUSINESS.registration}</p>
           </div>
+          <a href={BUSINESS.googleReviewUrl} target="_blank" rel="noopener noreferrer" className="panel block p-5 hover:bg-paper">
+            <Star className="h-5 w-5 text-signal-deep" />
+            <p className="label mt-3">Bought from us?</p>
+            <p className="font-semibold">Leave a review on Google</p>
+            <p className="mt-1 text-[13px] text-muted">It takes about 30 seconds and helps other shops find a supplier they can trust.</p>
+          </a>
         </div>
 
         {done ? (

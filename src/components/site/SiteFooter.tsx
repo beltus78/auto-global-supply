@@ -50,6 +50,7 @@ export function SiteFooter() {
             <Link to="/contact" className={link}>Contact</Link>
             <Link to="/faq" className={link}>FAQ</Link>
             <Link to="/guides" className={link}>Parts guides</Link>
+            <a href={BUSINESS.googleReviewUrl} target="_blank" rel="noopener noreferrer" className={link}>Review us on Google</a>
           </div>
         </div>
         <div>

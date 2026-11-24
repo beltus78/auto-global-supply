@@ -8,6 +8,7 @@ import { HeroRig, Ticker } from "@/components/site/HeroRig";
 import { CountUp, TypeCycle } from "@/components/site/Motion";
 import { ProductCard } from "@/components/site/ProductCard";
 import { CtaBand } from "@/components/site/CtaBand";
+import { Reviews } from "@/components/site/Reviews";
 import { Section } from "@/components/site/PageHeader";
 import { featuredQuery } from "@/lib/catalog.functions";
 import { CATEGORIES, ENGINES, MAKES, TOTAL_PRODUCTS, VEHICLES } from "@/lib/taxonomy";
@@ -233,6 +234,7 @@ function HomePage() {
         </div>
       </section>
 
+      <Reviews />
       <CtaBand />
     </>
   );

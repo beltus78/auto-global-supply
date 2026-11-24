@@ -34,3 +34,7 @@ Hub copy, FAQs and linked guides: src/content/hubs.ts. Most requested configurat
 
 ## Checks before pushing
 `npm install --legacy-peer-deps && npx vite build`. Local data: `npx wrangler d1 migrations apply DB --local && npm run db:seed:local`; test the remote sync logic locally with `D1_LOCAL=1 node scripts/deploy-ci.mjs`, then `npx vite preview --port 4173`.
+
+## Reviews (owner decision, Nov 24 2026)
+- Google review link: https://g.page/r/CUk1T9_-lfp1EBM/review (BUSINESS.googleReviewUrl) — in footer, Contact page and every email footer.
+- Reviews shown on the site live in src/content/reviews.ts and must be real, verifiable reviews copied word for word from the Google Business Profile. Never write, generate, edit or import review lists; never add review/rating schema for self-hosted reviews.

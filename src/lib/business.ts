@@ -8,6 +8,7 @@ export const BUSINESS = {
   usPhone: "+1 719-512-5025",
   usPhoneHref: "tel:+17195125025",
   whatsapp: "17195125025",
+  googleReviewUrl: "https://g.page/r/CUk1T9_-lfp1EBM/review",
 } as const;
 
 export function whatsappUrl(message = "Hello Auto Global Supply, I'm interested in an auto part.") {

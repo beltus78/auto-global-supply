@@ -21,7 +21,7 @@ ${opts.items?.length ? `<h2 style="margin:22px 0 8px;font-size:15px">Parts</h2><
 ${opts.button ? `<p style="margin:22px 0 0"><a href="${esc(opts.button.url)}" style="display:inline-block;background:#f5c518;color:#1c2330;font-weight:bold;text-decoration:none;padding:12px 20px">${esc(opts.button.label)}</a></p>` : ""}
 ${opts.outro ? `<p style="margin:18px 0 0;font-size:14px;line-height:1.5">${esc(opts.outro)}</p>` : ""}
 </td></tr>
-<tr><td style="padding:16px 24px;background:#f7f8fa;border-top:1px solid #e6e8ec;font-size:12px;color:#5b6472;line-height:1.5">${esc(BUSINESS.legalName)} · ${esc(BUSINESS.address)}<br>${esc(BUSINESS.email)} · ${esc(BUSINESS.usPhone)}</td></tr>
+<tr><td style="padding:16px 24px;background:#f7f8fa;border-top:1px solid #e6e8ec;font-size:12px;color:#5b6472;line-height:1.5">${esc(BUSINESS.legalName)} · ${esc(BUSINESS.address)}<br>${esc(BUSINESS.email)} · ${esc(BUSINESS.usPhone)}<br><a href="${esc(BUSINESS.googleReviewUrl)}" style="color:#5b6472">Bought from us before? Leave a quick Google review</a></td></tr>
 </table></td></tr></table></body></html>`;
 }
 
