@@ -51,3 +51,4 @@ Linked from the /dashboards and /interior-parts hubs.
 ## 2026-11-24 — US makes added
 - Added GMC, Ram, Dodge, Chrysler, Lincoln, Buick; expanded Ford, Chevrolet, Cadillac, Jeep, Tesla. +82 generations, +41 engine codes (EcoBoost, Power Stroke, Godzilla, EcoTec3 L84/L87, Duramax L5P/LML/LM2/LWN, LT1/LT2/LT4, HEMI SC, Hurricane, Cummins…), +7 transmissions (6L80, 10L1000, 6R80, 10R140, TorqueFlite 8HP, AS69RC). Catalog 15,536 → 19,841 listings; sitemap ~19,985 URLs.
 - IndexNow key added: 1ec7e6653cc9247630d3d9346cca3e73
+- 2026-11-24 IndexNow: full sitemap submitted (19,985 URLs)
