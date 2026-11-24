@@ -47,3 +47,6 @@ Linked from the /dashboards and /interior-parts hubs.
 
 ## 2026-11-23 — Free US shipping
 - Owner: shipping is free within the US and takes 1 to 3 business days, bulk orders included. Updated shipping page, US page, FAQ, hubs, guides, product pages, trade page, home and meta descriptions; removed customs/duties wording.
+
+## 2026-11-24 — US makes added
+- Added GMC, Ram, Dodge, Chrysler, Lincoln, Buick; expanded Ford, Chevrolet, Cadillac, Jeep, Tesla. +82 generations, +41 engine codes (EcoBoost, Power Stroke, Godzilla, EcoTec3 L84/L87, Duramax L5P/LML/LM2/LWN, LT1/LT2/LT4, HEMI SC, Hurricane, Cummins…), +7 transmissions (6L80, 10L1000, 6R80, 10R140, TorqueFlite 8HP, AS69RC). Catalog 15,536 → 19,841 listings; sitemap ~19,985 URLs.

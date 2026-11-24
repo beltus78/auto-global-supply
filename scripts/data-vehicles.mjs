@@ -17,17 +17,23 @@ export const MAKES = [
   ["volvo", "Volvo", 1, "Parts for XC90, XC60, XC40, S90 and S60 on the SPA and CMA platforms."],
   ["volkswagen", "Volkswagen", 1, "Parts for Touareg, Tiguan, Golf, Passat, Arteon, Amarok and Transporter."],
   ["mini", "MINI", 1, "Parts for MINI Hatch and Countryman with BMW B38 and B48 engines."],
-  ["tesla", "Tesla", 1, "Body, lighting, suspension, brake and drive unit parts for Model 3, Model Y, Model S and Model X."],
+  ["tesla", "Tesla", 1, "Body panels, lighting, suspension, brakes, screens, seats and drive unit parts for Model 3, Model Y, Model S, Model X and Cybertruck."],
   ["toyota", "Toyota", 0, "Parts for Land Cruiser, Prado, Hilux, Fortuner, Camry, RAV4 and Corolla."],
   ["lexus", "Lexus", 0, "Parts for LX, GX, RX, ES, IS and LS."],
   ["nissan", "Nissan", 0, "Parts for Patrol, X-Trail, Qashqai, Navara and GT-R."],
-  ["ford", "Ford", 0, "Parts for F-150, Ranger, Mustang and Explorer."],
+  ["ford", "Ford", 0, "Parts for the F-150, Super Duty, Ranger, Maverick, Bronco, Explorer, Expedition, Escape, Edge, Mustang, Mach-E and Transit, from EcoBoost and Coyote engines to 10R80 transmissions, body panels, lighting and interior parts."],
   ["honda", "Honda", 0, "Parts for Civic, Accord and CR-V."],
   ["hyundai", "Hyundai", 0, "Parts for Tucson and Santa Fe."],
   ["kia", "Kia", 0, "Parts for Sportage and Sorento."],
-  ["jeep", "Jeep", 0, "Parts for Wrangler and Grand Cherokee."],
-  ["chevrolet", "Chevrolet", 0, "Parts for Tahoe and Suburban."],
-  ["cadillac", "Cadillac", 0, "Parts for Escalade."],
+  ["jeep", "Jeep", 0, "Parts for Wrangler JK and JL, Gladiator, Grand Cherokee, Grand Wagoneer, Wagoneer, Cherokee and Compass, including Pentastar, HEMI and Hurricane engines, axles, air suspension and body parts."],
+  ["chevrolet", "Chevrolet", 0, "Parts for Silverado 1500 and HD, Tahoe, Suburban, Colorado, Traverse, Blazer, Equinox, Malibu, Camaro, Corvette and Bolt, including EcoTec3 V8s, Duramax diesels and 8- and 10-speed transmissions."],
+  ["cadillac", "Cadillac", 0, "Parts for Escalade, Escalade ESV, XT4, XT5, XT6, CT5 and Lyriq, including 6.2L V8 and Duramax engines, Magnetic Ride and air suspension, lighting, screens and interior trim."],
+  ["gmc", "GMC", 0, "Parts for Sierra 1500 and HD, Yukon and Yukon XL, Canyon, Acadia and Hummer EV, sharing GM's EcoTec3 V8, Duramax and 10-speed drivetrains."],
+  ["ram", "Ram", 0, "Parts for Ram 1500, Ram 1500 Classic, TRX, 2500 and 3500 Heavy Duty and ProMaster, including HEMI, Pentastar, EcoDiesel and Cummins engines and air suspension."],
+  ["dodge", "Dodge", 0, "Parts for Challenger, Charger and Durango, including Pentastar V6, 5.7 and 6.4 HEMI and supercharged 6.2 HEMI engines, body panels and lighting."],
+  ["chrysler", "Chrysler", 0, "Parts for the Chrysler 300 and Pacifica, including Pentastar V6 and HEMI V8 engines."],
+  ["lincoln", "Lincoln", 0, "Parts for Navigator, Aviator, Nautilus and Corsair, including EcoBoost engines, air suspension, lighting and interior trim."],
+  ["buick", "Buick", 0, "Parts for Enclave, Envision and Encore GX."],
   ["peugeot", "Peugeot", 0, "Parts for 308 and 3008, including OEM-style infotainment upgrades."],
 ];
 
@@ -139,6 +145,16 @@ export const ENGINES = [
   ["ford", "2.2 TDCi", "2.2L", "D", "T", "inline-4", "Ford 2.2L Duratorq diesel."],
   ["ford", "3.2 TDCi", "3.2L", "D", "T", "inline-5", "Ford 3.2L Duratorq five-cylinder diesel."],
   ["ford", "2.0 EcoBlue", "2.0L", "D", "T", "inline-4", "Ford 2.0L EcoBlue diesel."],
+  ["ford", "1.5 EcoBoost", "1.5L", "P", "T", "inline-3", "Ford 1.5L EcoBoost three-cylinder used in the Escape and Bronco Sport."],
+  ["ford", "2.0 EcoBoost", "2.0L", "P", "T", "inline-4", "Ford 2.0L EcoBoost four-cylinder used in the Escape, Edge, Maverick, Bronco Sport and Lincoln models."],
+  ["ford", "3.0 EcoBoost", "3.0L", "P", "T", "V6", "Ford 3.0L twin-turbo EcoBoost V6 used in the Explorer ST and Platinum and the Lincoln Aviator."],
+  ["ford", "3.3 Ti-VCT", "3.3L", "P", "N", "V6", "Ford 3.3L naturally aspirated V6, base engine in the F-150."],
+  ["ford", "3.5 Ti-VCT", "3.5L", "P", "N", "V6", "Ford 3.5L naturally aspirated V6 used in the Explorer, F-150 and Transit."],
+  ["ford", "5.4 Triton", "5.4L", "P", "N", "V8", "Ford 5.4L 3-valve Triton V8 used in the F-150 and Expedition."],
+  ["ford", "6.2 Boss", "6.2L", "P", "N", "V8", "Ford 6.2L SOHC V8 used in the F-150 Raptor and Super Duty."],
+  ["ford", "7.3 Godzilla", "7.3L", "P", "N", "V8", "Ford 7.3L pushrod V8 used in the Super Duty from 2020."],
+  ["ford", "6.7 Power Stroke", "6.7L", "D", "T", "V8", "Ford 6.7L Power Stroke turbo-diesel V8 used in the Super Duty."],
+  ["ford", "5.2 Predator", "5.2L", "P", "S", "V8", "Ford 5.2L supercharged Predator V8 used in the Shelby GT500."],
 
   ["honda", "L15B7", "1.5L", "P", "T", "inline-4", "Honda 1.5L turbo four-cylinder."],
   ["honda", "LEB", "1.5L", "P", "N", "inline-4", "Honda 1.5L petrol engine used with the i-DCD hybrid system."],
@@ -154,11 +170,34 @@ export const ENGINES = [
   ["jeep", "6.4 HEMI", "6.4L", "P", "N", "V8", "Chrysler 6.4L HEMI V8."],
   ["jeep", "2.0 Hurricane", "2.0L", "P", "T", "inline-4", "FCA 2.0L turbo four-cylinder."],
   ["jeep", "3.0 EcoDiesel", "3.0L", "D", "T", "V6", "VM Motori 3.0L V6 diesel."],
+  ["jeep", "2.4 Tigershark", "2.4L", "P", "N", "inline-4", "FCA 2.4L Tigershark MultiAir four-cylinder used in the Cherokee and Compass."],
+  ["jeep", "3.0 Hurricane", "3.0L", "P", "T", "inline-6", "Stellantis 3.0L twin-turbo Hurricane inline-six used in the Wagoneer, Grand Wagoneer and Ram 1500."],
+  ["dodge", "6.2 HEMI SC", "6.2L", "P", "S", "V8", "Stellantis 6.2L supercharged HEMI V8 used in Hellcat, Trackhawk and TRX models."],
+  ["ram", "6.7 Cummins", "6.7L", "D", "T", "inline-6", "Cummins 6.7L turbo-diesel inline-six used in the Ram 2500 and 3500."],
 
   ["peugeot", "EB2", "1.2L", "P", "T", "inline-3", "PSA 1.2L PureTech turbo three-cylinder."],
   ["peugeot", "DV6", "1.6L", "D", "T", "inline-4", "PSA 1.6L BlueHDi diesel."],
   ["chevrolet", "L83", "5.3L", "P", "N", "V8", "GM 5.3L EcoTec3 V8."],
   ["chevrolet", "L86", "6.2L", "P", "N", "V8", "GM 6.2L EcoTec3 V8."],
+  ["chevrolet", "L84", "5.3L", "P", "N", "V8", "GM 5.3L EcoTec3 V8 with Dynamic Fuel Management, used in T1 trucks and SUVs from 2019."],
+  ["chevrolet", "L87", "6.2L", "P", "N", "V8", "GM 6.2L EcoTec3 V8 with Dynamic Fuel Management, used in T1 trucks, SUVs and the Escalade from 2019."],
+  ["chevrolet", "L3B", "2.7L", "P", "T", "inline-4", "GM 2.7L TurboMax four-cylinder used in the Silverado and Sierra 1500."],
+  ["chevrolet", "LM2", "3.0L", "D", "T", "inline-6", "GM 3.0L Duramax inline-six diesel used in the Silverado, Sierra, Tahoe, Suburban, Yukon and Escalade."],
+  ["chevrolet", "L5P", "6.6L", "D", "T", "V8", "GM 6.6L Duramax turbo-diesel V8 used in HD pickups from 2017."],
+  ["chevrolet", "LML", "6.6L", "D", "T", "V8", "GM 6.6L Duramax turbo-diesel V8 used in HD pickups from 2011 to 2016."],
+  ["chevrolet", "L8T", "6.6L", "P", "N", "V8", "GM 6.6L gasoline V8 used in HD pickups from 2020."],
+  ["chevrolet", "L96", "6.0L", "P", "N", "V8", "GM 6.0L Vortec V8 used in HD pickups and vans."],
+  ["chevrolet", "LT1", "6.2L", "P", "N", "V8", "GM 6.2L small-block V8 used in the Camaro SS and Corvette C7."],
+  ["chevrolet", "LT2", "6.2L", "P", "N", "V8", "GM 6.2L small-block V8 used in the mid-engine Corvette C8."],
+  ["chevrolet", "LT4", "6.2L", "P", "S", "V8", "GM 6.2L supercharged V8 used in the Camaro ZL1, Corvette Z06 C7, CT5-V Blackwing and Escalade-V."],
+  ["chevrolet", "LGX", "3.6L", "P", "N", "V6", "GM 3.6L V6 used in the Camaro, Blazer, Acadia, XT5 and XT6."],
+  ["chevrolet", "LFY", "3.6L", "P", "N", "V6", "GM 3.6L V6 used in the Traverse and Buick Enclave."],
+  ["chevrolet", "LGZ", "3.6L", "P", "N", "V6", "GM 3.6L V6 used in the Colorado and Canyon."],
+  ["chevrolet", "LWN", "2.8L", "D", "T", "inline-4", "GM 2.8L Duramax four-cylinder diesel used in the Colorado and Canyon."],
+  ["chevrolet", "LTG", "2.0L", "P", "T", "inline-4", "GM 2.0L turbo four-cylinder used in the Camaro, Malibu, Equinox and Traverse."],
+  ["chevrolet", "LSY", "2.0L", "P", "T", "inline-4", "GM 2.0L turbo four-cylinder used in Cadillac XT4, XT5, XT6, CT5, the Blazer and Buick Envision."],
+  ["chevrolet", "LYV", "1.5L", "P", "T", "inline-4", "GM 1.5L turbo four-cylinder used in the Malibu and Equinox."],
+  ["chevrolet", "LGY", "3.0L", "P", "T", "V6", "GM 3.0L twin-turbo V6 used in the Cadillac CT5 and CT6."],
 ];
 
 // Vehicles: [make, model, generation, from, to(0 = current), body, tier, flags, engines, popular]
@@ -348,6 +387,7 @@ add("volvo", [
   ["S60", "SPA", 2018, 0, "sedan", "lite", "awd", "B4204"],
 ]);
 add("tesla", [
+  ["Cybertruck", "2023 on", 2023, 0, "pickup", "lite", "awd ev", ""],
   ["Model 3", "2017 on", 2017, 0, "sedan", "std", "awd ev", ""],
   ["Model Y", "2020 on", 2020, 0, "suv", "std", "awd ev", "", 1],
   ["Model S", "2012 on", 2012, 0, "sedan", "std", "air awd ev", ""],
@@ -380,6 +420,25 @@ add("nissan", [
   ["GT-R", "R35", 2007, 0, "sports", "lite", "awd", "VR38DETT"],
 ]);
 add("ford", [
+  ["F-150", "P702", 2021, 0, "pickup", "std", "awd", "2.7 EcoBoost 3.5 EcoBoost 5.0 Coyote 3.3 Ti-VCT", 1],
+  ["F-150", "P415", 2009, 2014, "pickup", "std", "awd", "3.5 EcoBoost 5.0 Coyote 5.4 Triton 6.2 Boss"],
+  ["F-150 Lightning", "2022 on", 2022, 0, "pickup", "lite", "awd ev", ""],
+  ["F-250 Super Duty", "P558", 2017, 2022, "pickup", "std", "awd", "6.2 Boss 7.3 Godzilla 6.7 Power Stroke", 1],
+  ["F-250 Super Duty", "P708", 2023, 0, "pickup", "std", "awd", "7.3 Godzilla 6.7 Power Stroke"],
+  ["F-350 Super Duty", "P558", 2017, 2022, "pickup", "lite", "awd", "6.2 Boss 7.3 Godzilla 6.7 Power Stroke"],
+  ["Ranger", "P703", 2024, 0, "pickup", "lite", "awd", "2.3 EcoBoost 2.7 EcoBoost"],
+  ["Maverick", "P758", 2022, 0, "pickup", "lite", "awd", "2.0 EcoBoost"],
+  ["Bronco", "U725", 2021, 0, "suv", "std", "awd", "2.3 EcoBoost 2.7 EcoBoost", 1],
+  ["Bronco Sport", "CX430", 2021, 0, "suv", "lite", "awd", "1.5 EcoBoost 2.0 EcoBoost"],
+  ["Explorer", "U502", 2011, 2019, "suv", "std", "awd", "3.5 Ti-VCT 2.0 EcoBoost 2.3 EcoBoost 3.5 EcoBoost"],
+  ["Expedition", "U553", 2018, 0, "suv", "std", "awd", "3.5 EcoBoost", 1],
+  ["Expedition", "U324", 2007, 2017, "suv", "lite", "awd", "5.4 Triton 3.5 EcoBoost"],
+  ["Escape", "CX482", 2020, 0, "suv", "lite", "awd", "1.5 EcoBoost 2.0 EcoBoost"],
+  ["Edge", "CD539", 2015, 2024, "suv", "lite", "awd", "2.0 EcoBoost 2.7 EcoBoost"],
+  ["Mustang", "S650", 2024, 0, "coupe", "lite", "", "2.3 EcoBoost 5.0 Coyote"],
+  ["Mustang Shelby GT500", "S550", 2020, 2022, "coupe", "lite", "", "5.2 Predator"],
+  ["Mustang Mach-E", "2021 on", 2021, 0, "suv", "lite", "awd ev", ""],
+  ["Transit", "V363", 2015, 0, "van", "std", "awd", "3.5 Ti-VCT 3.5 EcoBoost"],
   ["F-150", "P552", 2015, 2020, "pickup", "std", "awd", "2.7 EcoBoost 3.5 EcoBoost 5.0 Coyote"],
   ["Ranger", "T6", 2011, 2022, "pickup", "std", "awd", "2.2 TDCi 3.2 TDCi 2.0 EcoBlue"],
   ["Mustang", "S550", 2015, 2023, "coupe", "lite", "", "2.3 EcoBoost 5.0 Coyote"],
@@ -403,11 +462,33 @@ add("kia", [
   ["Sorento", "MQ4", 2020, 0, "suv", "lite", "awd", "D4HB"],
 ]);
 add("jeep", [
+  ["Wrangler", "JK", 2007, 2018, "suv", "std", "awd", "3.6 Pentastar", 1],
+  ["Gladiator", "JT", 2020, 0, "pickup", "std", "awd", "3.6 Pentastar 3.0 EcoDiesel"],
+  ["Grand Cherokee Trackhawk", "WK2", 2018, 2021, "suv", "lite", "awd", "6.2 HEMI SC"],
+  ["Grand Wagoneer", "WS", 2022, 0, "suv", "std", "air awd", "6.4 HEMI 3.0 Hurricane", 1],
+  ["Wagoneer", "WS", 2022, 0, "suv", "lite", "air awd", "5.7 HEMI 3.0 Hurricane"],
+  ["Cherokee", "KL", 2014, 2023, "suv", "lite", "awd", "2.4 Tigershark 3.6 Pentastar 2.0 Hurricane"],
+  ["Compass", "MP", 2017, 0, "suv", "lite", "awd", "2.4 Tigershark 2.0 Hurricane"],
   ["Wrangler", "JL", 2018, 0, "suv", "lite", "awd", "3.6 Pentastar 2.0 Hurricane"],
   ["Grand Cherokee", "WK2", 2011, 2021, "suv", "std", "air awd", "3.6 Pentastar 5.7 HEMI 6.4 HEMI 3.0 EcoDiesel"],
   ["Grand Cherokee", "WL", 2021, 0, "suv", "lite", "air awd", "3.6 Pentastar 2.0 Hurricane"],
 ]);
 add("chevrolet", [
+  ["Silverado 1500", "T1XX", 2019, 0, "pickup", "std", "awd", "L84 L87 L3B LM2", 1],
+  ["Silverado 1500", "K2XX", 2014, 2018, "pickup", "std", "awd", "L83 L86"],
+  ["Silverado 2500HD", "T1XX-HD", 2020, 0, "pickup", "std", "awd", "L8T L5P", 1],
+  ["Silverado 2500HD", "K2XX-HD", 2015, 2019, "pickup", "lite", "awd", "L96 LML L5P"],
+  ["Tahoe", "T1XX", 2021, 0, "suv", "std", "air awd", "L84 L87 LM2", 1],
+  ["Suburban", "T1XX", 2021, 0, "suv", "std", "air awd", "L84 L87 LM2"],
+  ["Colorado", "31XX", 2015, 2022, "pickup", "lite", "awd", "LGZ LWN"],
+  ["Traverse", "C1XX", 2018, 2023, "suv", "lite", "awd", "LFY LTG"],
+  ["Blazer", "C1XX", 2019, 0, "suv", "lite", "awd", "LSY LGX"],
+  ["Equinox", "D2XX", 2018, 2024, "suv", "lite", "awd", "LYV LTG"],
+  ["Malibu", "E2XX", 2016, 2025, "sedan", "lite", "", "LYV LTG"],
+  ["Camaro", "A1XX", 2016, 2024, "coupe", "lite", "", "LTG LGX LT1 LT4"],
+  ["Corvette", "C7", 2014, 2019, "sports", "lite", "", "LT1 LT4"],
+  ["Corvette", "C8", 2020, 0, "sports", "lite", "", "LT2"],
+  ["Bolt EV", "2017 on", 2017, 2023, "hatch", "lite", "ev", ""],
   ["Tahoe", "K2UC", 2015, 2020, "suv", "lite", "awd", "L83 L86"],
   ["Suburban", "K2YC", 2015, 2020, "suv", "lite", "awd", "L83 L86"],
 ]);
@@ -415,7 +496,55 @@ add("peugeot", [
   ["308", "T9", 2013, 2021, "hatch", "lite", "", "EB2 DV6"],
   ["3008", "P84", 2016, 0, "suv", "lite", "", "EB2 DV6"],
 ]);
-add("cadillac", [["Escalade", "K2XL", 2015, 2020, "suv", "lite", "awd", "L86"]]);
+add("cadillac", [
+  ["Escalade", "K2XL", 2015, 2020, "suv", "lite", "awd", "L86"],
+  ["Escalade", "T1XL", 2021, 0, "suv", "std", "air awd", "L87 LM2 LT4", 1],
+  ["Escalade ESV", "T1XL", 2021, 0, "suv", "lite", "air awd", "L87 LM2"],
+  ["XT4", "E2XX", 2019, 2025, "suv", "lite", "awd", "LSY"],
+  ["XT5", "C1XX", 2017, 2025, "suv", "lite", "awd", "LSY LGX"],
+  ["XT6", "C1XX", 2020, 2025, "suv", "lite", "awd", "LSY LGX"],
+  ["CT5", "2020 on", 2020, 0, "sedan", "lite", "awd", "LSY LGY LT4"],
+  ["Lyriq", "2023 on", 2023, 0, "suv", "lite", "awd ev", ""],
+]);
+add("gmc", [
+  ["Sierra 1500", "T1XX", 2019, 0, "pickup", "std", "awd", "L84 L87 L3B LM2", 1],
+  ["Sierra 1500", "K2XX", 2014, 2018, "pickup", "std", "awd", "L83 L86"],
+  ["Sierra 2500HD", "T1XX-HD", 2020, 0, "pickup", "std", "awd", "L8T L5P"],
+  ["Yukon", "T1XX", 2021, 0, "suv", "std", "air awd", "L84 L87 LM2", 1],
+  ["Yukon", "K2XX", 2015, 2020, "suv", "std", "awd", "L83 L86"],
+  ["Yukon XL", "T1XX", 2021, 0, "suv", "lite", "air awd", "L84 L87 LM2"],
+  ["Canyon", "31XX", 2015, 2022, "pickup", "lite", "awd", "LGZ LWN"],
+  ["Acadia", "C1XX", 2017, 2023, "suv", "lite", "awd", "LSY LGX"],
+  ["Hummer EV", "2022 on", 2022, 0, "pickup", "lite", "air awd ev", ""],
+]);
+add("ram", [
+  ["1500", "DT", 2019, 0, "pickup", "std", "air awd", "3.6 Pentastar 5.7 HEMI 3.0 EcoDiesel 3.0 Hurricane", 1],
+  ["1500 Classic", "DS", 2009, 2024, "pickup", "std", "awd", "3.6 Pentastar 5.7 HEMI 3.0 EcoDiesel"],
+  ["1500 TRX", "DT", 2021, 2024, "pickup", "lite", "awd", "6.2 HEMI SC"],
+  ["2500", "2019 on", 2019, 0, "pickup", "std", "air awd", "6.4 HEMI 6.7 Cummins", 1],
+  ["3500", "2019 on", 2019, 0, "pickup", "lite", "awd", "6.4 HEMI 6.7 Cummins"],
+  ["ProMaster", "VF", 2014, 0, "van", "lite", "", "3.6 Pentastar"],
+]);
+add("dodge", [
+  ["Challenger", "LC", 2008, 2023, "coupe", "std", "awd", "3.6 Pentastar 5.7 HEMI 6.4 HEMI 6.2 HEMI SC", 1],
+  ["Charger", "LD", 2011, 2023, "sedan", "std", "awd", "3.6 Pentastar 5.7 HEMI 6.4 HEMI 6.2 HEMI SC", 1],
+  ["Durango", "WD", 2011, 0, "suv", "std", "awd", "3.6 Pentastar 5.7 HEMI 6.4 HEMI 6.2 HEMI SC"],
+]);
+add("chrysler", [
+  ["300", "LX", 2011, 2023, "sedan", "lite", "awd", "3.6 Pentastar 5.7 HEMI"],
+  ["Pacifica", "RU", 2017, 0, "van", "lite", "awd", "3.6 Pentastar"],
+]);
+add("lincoln", [
+  ["Navigator", "U554", 2018, 0, "suv", "std", "awd", "3.5 EcoBoost", 1],
+  ["Aviator", "U611", 2020, 0, "suv", "std", "air awd", "3.0 EcoBoost"],
+  ["Nautilus", "U540", 2019, 2023, "suv", "lite", "awd", "2.0 EcoBoost 2.7 EcoBoost"],
+  ["Corsair", "CX483", 2020, 0, "suv", "lite", "awd", "2.0 EcoBoost"],
+]);
+add("buick", [
+  ["Enclave", "C1XX", 2018, 2024, "suv", "lite", "awd", "LFY"],
+  ["Envision", "2021 on", 2021, 0, "suv", "lite", "awd", "LSY"],
+  ["Encore GX", "2020 on", 2020, 0, "suv", "lite", "awd", ""],
+]);
 
 export const VEHICLES = V;
 
@@ -452,4 +581,10 @@ export const GEARBOXES = [
   ["ford", "ford-10r80", "Ford 10R80 10-Speed", "auto", "Ford F-150, Mustang, Ranger and Explorer"],
   ["chevrolet", "gm-8l90", "GM 8L90 8-Speed", "auto", "Chevrolet Tahoe and Suburban, GMC Yukon, Cadillac Escalade"],
   ["chevrolet", "gm-10l80", "GM 10L80 10-Speed", "auto", "Chevrolet Tahoe and Silverado, GMC Yukon, Cadillac Escalade"],
+  ["chevrolet", "gm-6l80", "GM 6L80 6-Speed", "auto", "Chevrolet Silverado, Tahoe and Suburban, GMC Sierra and Yukon, Cadillac Escalade and Chevrolet Camaro from 2006"],
+  ["chevrolet", "allison-10l1000", "Allison 10L1000 10-Speed", "auto", "Chevrolet Silverado and GMC Sierra 2500HD and 3500HD from 2020"],
+  ["ford", "ford-6r80", "Ford 6R80 6-Speed", "auto", "Ford F-150, Expedition, Mustang and Lincoln Navigator to 2017"],
+  ["ford", "ford-10r140", "Ford 10R140 10-Speed", "auto", "Ford F-250, F-350 and F-450 Super Duty from 2020"],
+  ["ram", "torqueflite-8hp70", "TorqueFlite 8HP70 / 8HP75 8-Speed", "auto", "Ram 1500, Jeep Grand Cherokee, Dodge Challenger, Charger and Durango, Chrysler 300"],
+  ["ram", "aisin-as69rc", "Aisin AS69RC 6-Speed", "auto", "Ram 2500 and 3500 with the 6.7 Cummins high-output engine"],
 ];
