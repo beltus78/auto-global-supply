@@ -60,3 +60,8 @@ Linked from the /dashboards and /interior-parts hubs.
 - /guides meta description no longer mentions "importing"; how-it-works "Destination country" → "Delivery state"; privacy "country" → "US state"; W447 guide "vary by country" → "vary by state".
 - fitDescription() could return 161 characters when cutting at a word; now max 160 (3 pages).
 - Left as intended: part type names inside listing names/slugs (Centre Console, Bonnet / Hood, Windscreen, Tailgate / Boot Lid), legal name "IMPORT EXPORT LLC", "we do not take on ... sourcing agents" deflection. 37 of 19,841 product titles are 66–72 chars (long listing names), minor.
+
+## 2026-11-26 — Daily check
+- Build OK (no test files). Local crawl: all 144 non-product sitemap URLs + 150 random product pages + nav pages (296 pages, ~5,500 internal links/images). All 200, one H1, unique titles ≤65 chars, descriptions 110–160, canonicals/OG/JSON-LD valid, lang en-US, og:locale en_US, no prices, no China/HK/worldwide/customs/freight wording, delivery always "1 to 3 business days". /quote noindex (intended). Live home and /sitemap.xml: 200.
+- Found & fixed (American English in visible copy): part-type description "Windscreen wiper motor" → "Windshield wiper motor" (scripts/data-parts.mjs, all Wiper Motor & Linkage pages); BMW brand intro "saloons" → "sedans" (scripts/data-vehicles.mjs); two guides "saloons"/"saloon seats" → "sedans"/"sedan seats". `npm run catalogue` rerun: only taxonomy.json changed (catalogue-index.json and seed unchanged).
+- Left as intended: part type names inside listing names/slugs and filter labels (Centre Console, Bonnet / Hood, Windscreen, Tailgate / Boot Lid), legal name "IMPORT EXPORT LLC", "we do not take on ... sourcing agents" deflection.

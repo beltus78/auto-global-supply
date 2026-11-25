@@ -153,7 +153,7 @@ t("v", "electrical", [
   ["parking-sensor-set", "Parking Sensor Set", "sensor", 1, "", 0, "N", "Ultrasonic parking sensors for the front or rear bumper, supplied unpainted."],
   ["window-regulator", "Window Regulator", "regulator", 1, "", 0, "N", "Door window regulator with or without motor. Front and rear, left and right are quoted individually."],
   ["door-lock-actuator", "Door Lock Actuator", "regulator", 2, "", 0, "N", "Door latch with central locking actuator. Soft-close and keyless versions are separate part numbers."],
-  ["wiper-motor-linkage", "Wiper Motor & Linkage", "regulator", 2, "", 0, "N", "Windscreen wiper motor with linkage."],
+  ["wiper-motor-linkage", "Wiper Motor & Linkage", "regulator", 2, "", 0, "N", "Windshield wiper motor with linkage."],
   ["power-tailgate-strut", "Power Tailgate Strut", "strut", 2, "suvvan", 1, "N", "Electric tailgate lifting strut. Left and right units are quoted individually or as a pair."],
   ["fuel-pump-module", "Fuel Pump Module", "pump", 1, "noev", 1, "N", "In-tank fuel pump module with level sender, plus the fuel pump control unit where it is a separate part."],
   ["onboard-charger", "On-Board Charger", "ecu", 1, "ev", 1, "NU", "On-board charging unit. Matched by part number to the battery and charging specification of the vehicle."],

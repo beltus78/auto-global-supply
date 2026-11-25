@@ -3,7 +3,7 @@
 
 // [slug, name, premium, intro]
 export const MAKES = [
-  ["bmw", "BMW", 1, "Engines, gearboxes, body, lighting, suspension and electronics for BMW saloons, coupes and X models, from E-series to the current G-series."],
+  ["bmw", "BMW", 1, "Engines, gearboxes, body, lighting, suspension and electronics for BMW sedans, coupes and X models, from E-series to the current G-series."],
   ["mercedes-benz", "Mercedes-Benz", 1, "Parts for Mercedes-Benz passenger cars, SUVs, AMG models and vans, including the V-Class and Vito W447."],
   ["audi", "Audi", 1, "Parts for Audi A, Q, S and RS models, including TFSI and TDI engines, S tronic gearboxes, Matrix lighting and air suspension."],
   ["porsche", "Porsche", 1, "Parts for Cayenne, Macan, Panamera, 911, 718 and Taycan, from body and lighting to PDK gearboxes and air suspension."],

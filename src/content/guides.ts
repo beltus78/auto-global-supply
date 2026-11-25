@@ -155,7 +155,7 @@ Send your VIN and photographs of the damage, and we will quote both routes where
     description: "Car sitting low? How to tell whether an air suspension fault points to an air strut, the compressor or the valve block before you order parts.",
     tags: ["Suspension", "Guides"],
     published: "2026-11-09",
-    body: `Air suspension parts are among the most requested items for large SUVs and saloons. The symptoms overlap, so it helps to narrow the fault before ordering.
+    body: `Air suspension parts are among the most requested items for large SUVs and sedans. The symptoms overlap, so it helps to narrow the fault before ordering.
 
 ## One corner drops overnight
 This usually points to a leak in that corner's air strut or air spring. The compressor is often still healthy.
@@ -459,7 +459,7 @@ List every function your current seats have, then make sure the replacements mat
 More functions usually mean more connectors under the seat. A seat with fewer functions than the car expects may need the car's settings changed. A seat with more functions than the car expects may not work without extra wiring and coding.
 
 ## 3. Rails and mounting
-Seat rails and mounting points are usually shared within a model generation, but not always across generations or body styles. Coupe and convertible seats often differ from saloon seats, for example in how the backrest folds for rear access.
+Seat rails and mounting points are usually shared within a model generation, but not always across generations or body styles. Coupe and convertible seats often differ from sedan seats, for example in how the backrest folds for rear access.
 
 ## 4. Trim, color and condition
 - Leather color, stitching and perforation pattern
