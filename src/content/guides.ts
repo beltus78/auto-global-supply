@@ -29,7 +29,7 @@ Turbocharger position, wiring plugs and mounting brackets vary between applicati
     description: "Where OEM part numbers are printed on car parts, why they matter more than the part name, and what to send us if you cannot find the number.",
     tags: ["Guides", "OEM"],
     published: "2026-09-12",
-    body: `An OEM number identifies a part exactly as the manufacturer catalogued it.
+    body: `An OEM number identifies a part exactly as the manufacturer cataloged it.
 
 ## Where to look
 - Printed or stamped on the part itself, often on a label or moulded boss
