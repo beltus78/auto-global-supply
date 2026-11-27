@@ -559,6 +559,79 @@ Fitting a gearbox is a repair shop job. Allow for the fluid, the coding or adapt
 ## Getting a quotation
 Send photographs of the type plate, your VIN, the engine code and the drive type. Browse [automatic and dual-clutch gearboxes](/parts?part=gearbox), including the [ZF 8HP70](/part/zf-8hp70-automatic-gearbox), and [request a quote](/request-a-part).`,
   },
+  {
+    slug: "ford-f-150-dashboard-replacement-guide",
+    title: "Ford F-150 Dashboard Replacement: What to Check by Generation",
+    excerpt: "Cracked, sun-damaged or airbag-deployed F-150 dashboard? How to identify the right replacement for 2009–2014, 2015–2020 and 2021-on trucks before you order.",
+    description: "Ford F-150 dashboard replacement for 2009–2014, 2015–2020 and 2021-on trucks: what changes by trim and screen, used vs new, and what to send for a quote.",
+    tags: ["Ford", "Dashboards"],
+    published: "2026-11-27",
+    body: `The Ford F-150 works harder than most vehicles on the road, and its dashboard takes a beating: years of sun through a large windshield, tools and paperwork thrown on top, and airbag deployments after front-end collisions. For repair shops, body shops and fleet managers, a replacement dashboard is often the part that decides whether a truck goes back into service quickly.
+
+The catch is that "F-150 dashboard" covers a lot of different parts. This guide explains what changes between generations and trims, when a used or a new dashboard makes sense, and what to send so the quotation matches the truck the first time.
+
+## When the dashboard needs replacing
+- **Airbag deployment.** When the passenger airbag deploys, the dashboard panel around it is usually torn or distorted, and the mounting area may be damaged. The panel is normally replaced along with the airbag components.
+- **Sun damage.** Cracks across the top pad, warping near the windshield and faded, chalky surfaces are common on trucks that spend their days parked outside.
+- **Broken mounts and clips.** Rattles that never go away often come from cracked mounting points behind the panel rather than the trim pieces you can see.
+- **Interior refresh.** A fleet truck being prepared for resale, or a used truck being reconditioned by a dealer, can look years older than it is with a damaged dashboard.
+
+If only a bezel, vent or small trim piece is damaged, replacing that piece is usually enough. A full dashboard assembly is worth it when the main panel itself is cracked, deformed or damaged around the airbag.
+
+## Know your generation
+The F-150 dashboard changed substantially with each generation, and parts do not cross between them. Start with the model year.
+
+### 2009–2014 (P415)
+The older layout, with a large center stack and many physical controls. Trims range from basic work trucks to well-equipped versions with navigation, and the center stack and trim panels differ to match. Used dashboards in good condition are the usual route here.
+
+### 2015–2020 (P552)
+The aluminum-body generation brought a new cabin. Depending on trim and options, trucks have different center screen sizes, a different instrument cluster display and different trim finishes. A dashboard from a work-truck trim will not simply match a higher trim, so the trim level matters as much as the year.
+
+### 2021 on (P702)
+The current generation uses a larger infotainment screen on many trims, an available fully digital instrument cluster and a redesigned center console area. Ford updated the truck again for 2024, so always give the exact model year. The screen size and the cluster type both change the dashboard cut-outs and the trim around them.
+
+The F-150 Lightning has its own interior details and should be quoted separately from gas F-150s, even when the cabins look similar.
+
+## What changes the part, even within one generation
+The VIN settles most of these, but it helps to know what to look at:
+1. **Center screen size.** Different screens use different openings and surrounds.
+2. **Instrument cluster type.** Analog-style clusters with a small display and fully digital clusters sit in different housings.
+3. **Head-up display.** Where fitted, it changes the top of the dashboard.
+4. **Shifter position.** Trucks with a column shifter and a front bench seat use different lower dashboard and console trim from trucks with a console shifter and bucket seats.
+5. **Color and finish.** Dashboard colors, stitching and accent trim follow the trim level. Photograph the current dashboard in daylight.
+6. **Speaker and sensor openings.** Premium audio and sun or light sensors add cut-outs.
+
+## Used, new or an upgrade kit?
+**A used dashboard** from a donor truck in the same generation and trim is usually the most economical way to put a damaged truck back to original condition. Ask for photographs of the actual unit, including the top surface near the windshield, the airbag area and the mounting points.
+
+**A new dashboard** suits a truck you plan to keep for a long time, or a job where the finish has to be perfect. Availability depends on the exact version, and the quotation states it.
+
+**A dashboard and infotainment upgrade kit** changes the cabin to a later design or a larger screen. That is a conversion, not a straight swap: wiring, coding and trim all need planning with your installer. Our guide to [dashboard upgrade kits](/guides/dashboard-upgrade-kits-what-to-check-before-ordering) explains what to check before ordering one.
+
+## Airbags and safety systems
+The passenger airbag, knee airbags where fitted and the airbag control module are safety parts. After a deployment they must be replaced, and the work belongs with a qualified repair shop. Tell us whether the airbags deployed and which ones, and the quotation states clearly whether airbag components are included or quoted separately. After fitting, the repair shop should scan the truck and clear any stored faults.
+
+## Fitting
+Removing an F-150 dashboard means taking out the steering column covers, the center stack, the cluster, the screen and the wiring behind them, and on most trucks the steering column has to be lowered. It is a repair shop job. Agree the labor time with your installer before ordering, and keep the original cluster and head unit unless they are also being replaced, because they hold vehicle data.
+
+## While the dashboard is out
+If the dashboard is coming out anyway, look at anything else behind it: a failing screen or head unit, a cracked center console, or a worn steering wheel. Replacing those parts at the same time saves a second round of labor.
+
+## Ordering for several trucks
+Fleets and dealers often need the same dashboard for several trucks at once. Send one VIN per truck. Trucks that look the same can differ in screen, cluster or color, and checking each VIN avoids a wrong part arriving for one of them. Quotations are in USD, and the [wholesale page for US buyers](/wholesale-auto-parts-usa) explains how trade and bulk orders work.
+
+## Common questions
+**Will a dashboard from a 2018 F-150 fit a 2016?** Within the 2015–2020 generation, often yes, as long as the trim, screen, cluster and color match. The VIN confirms it.
+
+**Can I fit a 2021-on dashboard in an older F-150?** Not as a direct swap. The mounting, wiring and electronics are different. That would be a full conversion and is rarely practical.
+
+**Does the dashboard come with the screen and cluster?** Usually not. The quotation lists exactly what is included: bare panel, panel with vents and trims, or a complete assembly.
+
+**How do you ship a dashboard?** Crated or in reinforced cartons, with the surface protected and loose trims packed separately. Shipping is free to every US state, bulk orders included, and takes 1 to 3 business days.
+
+## Getting a quotation
+Send the VIN, the model year and trim, photographs of the current dashboard and a note of any airbag deployment. See the [2021-on F-150 dashboard assembly](/part/ford-f-150-p702-dashboard-assembly), browse all [Ford dashboards](/dashboards/ford) or every [dashboard and dashboard kit](/dashboards) we list, and [request a quote](/request-a-part) when you are ready.`,
+  },
 ];
 
 export const guideBy = new Map(GUIDES.map((g) => [g.slug, g]));

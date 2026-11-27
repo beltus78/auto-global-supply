@@ -82,7 +82,7 @@ export const HUBS: Record<Hub["key"], Hub> = {
       ["What do you need to quote a dashboard?", "Your VIN, the steering side, photographs of the current dashboard and, for upgrade kits, a description or photo of the look you want. The VIN settles most of the fitment questions."],
       ["Do you ship dashboards to every US state?", "Yes, and shipping is free. Dashboards are crated or packed in reinforced cartons and arrive in 1 to 3 business days."],
     ],
-    guides: ["mercedes-w447-dashboard-upgrade-guide", "mercedes-s-class-w222-dashboard-peeling-replacement", "dashboard-upgrade-kits-what-to-check-before-ordering", "replacement-car-dashboard-new-used-or-upgrade"],
+    guides: ["mercedes-w447-dashboard-upgrade-guide", "mercedes-s-class-w222-dashboard-peeling-replacement", "ford-f-150-dashboard-replacement-guide", "dashboard-upgrade-kits-what-to-check-before-ordering", "replacement-car-dashboard-new-used-or-upgrade"],
     upgradeCategories: ["Interior & Infotainment"],
     makeTitle: (make) => `${make} Dashboards & Dashboard Kits`,
     makeDescription: (make, models, count) => `${make} dashboards, upgrade kits, instrument clusters and screens for ${models}. ${count} listings, matched to your VIN. Free US shipping.`,
